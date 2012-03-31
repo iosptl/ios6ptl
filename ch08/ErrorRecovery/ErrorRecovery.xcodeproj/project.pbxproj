@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB32E8BB13DDEBD80052DDFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB32E8BA13DDEBD80052DDFB /* UIKit.framework */; };
+		FB32E8BD13DDEBD80052DDFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB32E8BC13DDEBD80052DDFB /* Foundation.framework */; };
+		FB32E8BF13DDEBD80052DDFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB32E8BE13DDEBD80052DDFB /* CoreGraphics.framework */; };
+		FB32E8C513DDEBD90052DDFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB32E8C313DDEBD90052DDFB /* InfoPlist.strings */; };
+		FB32E8C713DDEBD90052DDFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB32E8C613DDEBD90052DDFB /* main.m */; };
+		FB32E8CB13DDEBD90052DDFB /* ErrorRecoveryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB32E8CA13DDEBD90052DDFB /* ErrorRecoveryAppDelegate.m */; };
+		FB32E8CE13DDEBD90052DDFB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB32E8CC13DDEBD90052DDFB /* MainStoryboard.storyboard */; };
+		FB32E8D113DDEBD90052DDFB /* ErrorRecoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB32E8D013DDEBD90052DDFB /* ErrorRecoveryViewController.m */; };
+		FB32E8D913DDF1810052DDFB /* RNErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB32E8D813DDF1810052DDFB /* RNErrorManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB32E8B613DDEBD80052DDFB /* ErrorRecovery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErrorRecovery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB32E8BA13DDEBD80052DDFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB32E8BC13DDEBD80052DDFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB32E8BE13DDEBD80052DDFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB32E8C213DDEBD80052DDFB /* ErrorRecovery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ErrorRecovery-Info.plist"; sourceTree = "<group>"; };
+		FB32E8C413DDEBD90052DDFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB32E8C613DDEBD90052DDFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB32E8C813DDEBD90052DDFB /* ErrorRecovery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ErrorRecovery-Prefix.pch"; sourceTree = "<group>"; };
+		FB32E8C913DDEBD90052DDFB /* ErrorRecoveryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorRecoveryAppDelegate.h; sourceTree = "<group>"; };
+		FB32E8CA13DDEBD90052DDFB /* ErrorRecoveryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorRecoveryAppDelegate.m; sourceTree = "<group>"; };
+		FB32E8CD13DDEBD90052DDFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FB32E8CF13DDEBD90052DDFB /* ErrorRecoveryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorRecoveryViewController.h; sourceTree = "<group>"; };
+		FB32E8D013DDEBD90052DDFB /* ErrorRecoveryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorRecoveryViewController.m; sourceTree = "<group>"; };
+		FB32E8D713DDF1810052DDFB /* RNErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RNErrorManager.h; sourceTree = "<group>"; };
+		FB32E8D813DDF1810052DDFB /* RNErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNErrorManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB32E8B313DDEBD80052DDFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB32E8BB13DDEBD80052DDFB /* UIKit.framework in Frameworks */,
+				FB32E8BD13DDEBD80052DDFB /* Foundation.framework in Frameworks */,
+				FB32E8BF13DDEBD80052DDFB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB32E8AB13DDEBD80052DDFB = {
+			isa = PBXGroup;
+			children = (
+				FB32E8C013DDEBD80052DDFB /* ErrorRecovery */,
+				FB32E8B913DDEBD80052DDFB /* Frameworks */,
+				FB32E8B713DDEBD80052DDFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB32E8B713DDEBD80052DDFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB32E8B613DDEBD80052DDFB /* ErrorRecovery.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB32E8B913DDEBD80052DDFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB32E8BA13DDEBD80052DDFB /* UIKit.framework */,
+				FB32E8BC13DDEBD80052DDFB /* Foundation.framework */,
+				FB32E8BE13DDEBD80052DDFB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB32E8C013DDEBD80052DDFB /* ErrorRecovery */ = {
+			isa = PBXGroup;
+			children = (
+				FB32E8D713DDF1810052DDFB /* RNErrorManager.h */,
+				FB32E8D813DDF1810052DDFB /* RNErrorManager.m */,
+				FB32E8CF13DDEBD90052DDFB /* ErrorRecoveryViewController.h */,
+				FB32E8D013DDEBD90052DDFB /* ErrorRecoveryViewController.m */,
+				FB32E8C913DDEBD90052DDFB /* ErrorRecoveryAppDelegate.h */,
+				FB32E8CA13DDEBD90052DDFB /* ErrorRecoveryAppDelegate.m */,
+				FB32E8CC13DDEBD90052DDFB /* MainStoryboard.storyboard */,
+				FB32E8C113DDEBD80052DDFB /* Supporting Files */,
+			);
+			path = ErrorRecovery;
+			sourceTree = "<group>";
+		};
+		FB32E8C113DDEBD80052DDFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB32E8C213DDEBD80052DDFB /* ErrorRecovery-Info.plist */,
+				FB32E8C313DDEBD90052DDFB /* InfoPlist.strings */,
+				FB32E8C613DDEBD90052DDFB /* main.m */,
+				FB32E8C813DDEBD90052DDFB /* ErrorRecovery-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB32E8B513DDEBD80052DDFB /* ErrorRecovery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB32E8D413DDEBD90052DDFB /* Build configuration list for PBXNativeTarget "ErrorRecovery" */;
+			buildPhases = (
+				FB32E8B213DDEBD80052DDFB /* Sources */,
+				FB32E8B313DDEBD80052DDFB /* Frameworks */,
+				FB32E8B413DDEBD80052DDFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ErrorRecovery;
+			productName = ErrorRecovery;
+			productReference = FB32E8B613DDEBD80052DDFB /* ErrorRecovery.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB32E8AD13DDEBD80052DDFB /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FB32E8B013DDEBD80052DDFB /* Build configuration list for PBXProject "ErrorRecovery" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB32E8AB13DDEBD80052DDFB;
+			productRefGroup = FB32E8B713DDEBD80052DDFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB32E8B513DDEBD80052DDFB /* ErrorRecovery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB32E8B413DDEBD80052DDFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB32E8C513DDEBD90052DDFB /* InfoPlist.strings in Resources */,
+				FB32E8CE13DDEBD90052DDFB /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB32E8B213DDEBD80052DDFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB32E8C713DDEBD90052DDFB /* main.m in Sources */,
+				FB32E8CB13DDEBD90052DDFB /* ErrorRecoveryAppDelegate.m in Sources */,
+				FB32E8D113DDEBD90052DDFB /* ErrorRecoveryViewController.m in Sources */,
+				FB32E8D913DDF1810052DDFB /* RNErrorManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB32E8C313DDEBD90052DDFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB32E8C413DDEBD90052DDFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB32E8CC13DDEBD90052DDFB /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB32E8CD13DDEBD90052DDFB /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB32E8D213DDEBD90052DDFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB32E8D313DDEBD90052DDFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB32E8D513DDEBD90052DDFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ErrorRecovery/ErrorRecovery-Prefix.pch";
+				INFOPLIST_FILE = "ErrorRecovery/ErrorRecovery-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB32E8D613DDEBD90052DDFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ErrorRecovery/ErrorRecovery-Prefix.pch";
+				INFOPLIST_FILE = "ErrorRecovery/ErrorRecovery-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB32E8B013DDEBD80052DDFB /* Build configuration list for PBXProject "ErrorRecovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB32E8D213DDEBD90052DDFB /* Debug */,
+				FB32E8D313DDEBD90052DDFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB32E8D413DDEBD90052DDFB /* Build configuration list for PBXNativeTarget "ErrorRecovery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB32E8D513DDEBD90052DDFB /* Debug */,
+				FB32E8D613DDEBD90052DDFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB32E8AD13DDEBD80052DDFB /* Project object */;
+}

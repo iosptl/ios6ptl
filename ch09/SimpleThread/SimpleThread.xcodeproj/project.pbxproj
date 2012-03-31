@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB662C8C13F824D800061D52 /* CounterThread.m in Sources */ = {isa = PBXBuildFile; fileRef = FB662C8B13F824D800061D52 /* CounterThread.m */; };
+		FB662C9013F8272200061D52 /* SimpleCounterThread.m in Sources */ = {isa = PBXBuildFile; fileRef = FB662C8F13F8272200061D52 /* SimpleCounterThread.m */; };
+		FB662C9313F8769900061D52 /* RunLoopThread.m in Sources */ = {isa = PBXBuildFile; fileRef = FB662C9213F8769900061D52 /* RunLoopThread.m */; };
+		FB9F9FA313F6161100599046 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9F9FA213F6161100599046 /* UIKit.framework */; };
+		FB9F9FA513F6161100599046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9F9FA413F6161100599046 /* Foundation.framework */; };
+		FB9F9FAB13F6161100599046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB9F9FA913F6161100599046 /* InfoPlist.strings */; };
+		FB9F9FAD13F6161100599046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F9FAC13F6161100599046 /* main.m */; };
+		FB9F9FB113F6161100599046 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F9FB013F6161100599046 /* STAppDelegate.m */; };
+		FB9F9FB413F6161100599046 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9F9FB213F6161100599046 /* MainStoryboard.storyboard */; };
+		FB9F9FB713F6161100599046 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9F9FB613F6161100599046 /* STViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB662C8A13F824D800061D52 /* CounterThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterThread.h; sourceTree = "<group>"; };
+		FB662C8B13F824D800061D52 /* CounterThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterThread.m; sourceTree = "<group>"; };
+		FB662C8E13F8272200061D52 /* SimpleCounterThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCounterThread.h; sourceTree = "<group>"; };
+		FB662C8F13F8272200061D52 /* SimpleCounterThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCounterThread.m; sourceTree = "<group>"; };
+		FB662C9113F8769900061D52 /* RunLoopThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopThread.h; sourceTree = "<group>"; };
+		FB662C9213F8769900061D52 /* RunLoopThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopThread.m; sourceTree = "<group>"; };
+		FB9F9F9E13F6161100599046 /* SimpleThread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleThread.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9F9FA213F6161100599046 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB9F9FA413F6161100599046 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB9F9FA813F6161100599046 /* SimpleThread-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleThread-Info.plist"; sourceTree = "<group>"; };
+		FB9F9FAA13F6161100599046 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB9F9FAC13F6161100599046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB9F9FAE13F6161100599046 /* SimpleThread-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleThread-Prefix.pch"; sourceTree = "<group>"; };
+		FB9F9FAF13F6161100599046 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
+		FB9F9FB013F6161100599046 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
+		FB9F9FB313F6161100599046 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FB9F9FB513F6161100599046 /* STViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
+		FB9F9FB613F6161100599046 /* STViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB9F9F9B13F6161100599046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9F9FA313F6161100599046 /* UIKit.framework in Frameworks */,
+				FB9F9FA513F6161100599046 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB9F9F9313F6161100599046 = {
+			isa = PBXGroup;
+			children = (
+				FB9F9FA613F6161100599046 /* SimpleThread */,
+				FB9F9FA113F6161100599046 /* Frameworks */,
+				FB9F9F9F13F6161100599046 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB9F9F9F13F6161100599046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB9F9F9E13F6161100599046 /* SimpleThread.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB9F9FA113F6161100599046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB9F9FA213F6161100599046 /* UIKit.framework */,
+				FB9F9FA413F6161100599046 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB9F9FA613F6161100599046 /* SimpleThread */ = {
+			isa = PBXGroup;
+			children = (
+				FB9F9FAF13F6161100599046 /* STAppDelegate.h */,
+				FB9F9FB013F6161100599046 /* STAppDelegate.m */,
+				FB9F9FB213F6161100599046 /* MainStoryboard.storyboard */,
+				FB9F9FB513F6161100599046 /* STViewController.h */,
+				FB9F9FB613F6161100599046 /* STViewController.m */,
+				FB9F9FA713F6161100599046 /* Supporting Files */,
+				FB662C8A13F824D800061D52 /* CounterThread.h */,
+				FB662C8B13F824D800061D52 /* CounterThread.m */,
+				FB662C8E13F8272200061D52 /* SimpleCounterThread.h */,
+				FB662C8F13F8272200061D52 /* SimpleCounterThread.m */,
+				FB662C9113F8769900061D52 /* RunLoopThread.h */,
+				FB662C9213F8769900061D52 /* RunLoopThread.m */,
+			);
+			path = SimpleThread;
+			sourceTree = "<group>";
+		};
+		FB9F9FA713F6161100599046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB9F9FA813F6161100599046 /* SimpleThread-Info.plist */,
+				FB9F9FA913F6161100599046 /* InfoPlist.strings */,
+				FB9F9FAC13F6161100599046 /* main.m */,
+				FB9F9FAE13F6161100599046 /* SimpleThread-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB9F9F9D13F6161100599046 /* SimpleThread */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB9F9FBA13F6161100599046 /* Build configuration list for PBXNativeTarget "SimpleThread" */;
+			buildPhases = (
+				FB9F9F9A13F6161100599046 /* Sources */,
+				FB9F9F9B13F6161100599046 /* Frameworks */,
+				FB9F9F9C13F6161100599046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleThread;
+			productName = SimpleThread;
+			productReference = FB9F9F9E13F6161100599046 /* SimpleThread.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB9F9F9513F6161100599046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FB9F9F9813F6161100599046 /* Build configuration list for PBXProject "SimpleThread" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB9F9F9313F6161100599046;
+			productRefGroup = FB9F9F9F13F6161100599046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB9F9F9D13F6161100599046 /* SimpleThread */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB9F9F9C13F6161100599046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9F9FAB13F6161100599046 /* InfoPlist.strings in Resources */,
+				FB9F9FB413F6161100599046 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB9F9F9A13F6161100599046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB9F9FAD13F6161100599046 /* main.m in Sources */,
+				FB9F9FB113F6161100599046 /* STAppDelegate.m in Sources */,
+				FB9F9FB713F6161100599046 /* STViewController.m in Sources */,
+				FB662C8C13F824D800061D52 /* CounterThread.m in Sources */,
+				FB662C9013F8272200061D52 /* SimpleCounterThread.m in Sources */,
+				FB662C9313F8769900061D52 /* RunLoopThread.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB9F9FA913F6161100599046 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB9F9FAA13F6161100599046 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB9F9FB213F6161100599046 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB9F9FB313F6161100599046 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB9F9FB813F6161100599046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB9F9FB913F6161100599046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB9F9FBB13F6161100599046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleThread/SimpleThread-Prefix.pch";
+				INFOPLIST_FILE = "SimpleThread/SimpleThread-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB9F9FBC13F6161100599046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleThread/SimpleThread-Prefix.pch";
+				INFOPLIST_FILE = "SimpleThread/SimpleThread-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB9F9F9813F6161100599046 /* Build configuration list for PBXProject "SimpleThread" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9F9FB813F6161100599046 /* Debug */,
+				FB9F9FB913F6161100599046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB9F9FBA13F6161100599046 /* Build configuration list for PBXNativeTarget "SimpleThread" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB9F9FBB13F6161100599046 /* Debug */,
+				FB9F9FBC13F6161100599046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB9F9F9513F6161100599046 /* Project object */;
+}

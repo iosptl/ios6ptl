@@ -1,0 +1,77 @@
+{
+"menuitems" : 
+[
+{
+"id":"JAP122",
+"image":"http://d1.myhotel.com/food_image1.jpg",
+"name":"Teriyaki Bento",
+"spicyLevel":2,
+"rating":4,
+"description":"Teriyaki Bento is one of the best lorem ipsum dolor sit",
+"waitingTime":"930",
+"reviewCount":4,
+"reviews":[
+{
+"reviewId":"CUST121",
+"rating":"5",
+"reviewText":"Nice ambience, great food. The teriyaki is a must try!",
+"reviewerName":"Awesome Man",
+"reviewDate":129262192261
+},
+{
+"reviewId":"CUST121",
+"rating":"5",
+"reviewText":"One of the best Japanese food on town",
+"reviewDate":129262192261
+},
+{
+"reviewId":"CUST121",
+"rating":"5",
+"reviewText":"One of the best Japanese food on town",
+"reviewDate":129262192261
+},
+{
+"reviewId":"CUST121",
+"rating":"5",
+"reviewText":"Nice ambience, great food. The teriyaki is a must try!",
+"reviewerName":"Awesome Man",
+"reviewDate":129262192261
+}
+]
+},
+{
+"id":"JAP122",
+"image":"http://d1.myhotel.com/food_image2.jpg",
+"name":"Italian Chicken Baked Rice",
+"spicyLevel":3,
+"rating":3,
+"description":"Italian Chicken baked rice comes straight from Italy",
+"waitingTime":"720",
+"reviewCount":3,
+"reviews":[
+{
+"reviewId":"CUST121",
+"rating":"5",
+"reviewText":"One of the best italian food on town",
+"reviewerName":"Awesome Man",
+"reviewDate":129262192261
+},
+{
+"reviewId":"CUST121",
+"rating":"5",
+"reviewText":"Nice ambience, great food. The baked rice is a must try!",
+"reviewerName":"Awesome Man",
+"reviewDate":129262192261
+},
+{
+"reviewId":"CUST121",
+"rating":"5",
+"reviewText":"Nice ambience, great food. The baked rice is a must try!",
+"reviewerName":"Awesome Man",
+"reviewDate":129262192261
+}
+]
+}
+],
+"status" : "OK"
+}
