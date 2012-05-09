@@ -5,75 +5,84 @@
 
 #import "GraphView.h"
 
-@implementation GraphView
-@synthesize values=values_;
-@synthesize timer=timer_;
+@implementation GraphView {
+  dispatch_source_t _timer;
+}
+@synthesize values= _values;
 
-const double kXScale = 5.0;
-const double kYScale = 100.0;
+const CGFloat kXScale = 5.0;
+const CGFloat kYScale = 100.0;
 
 static inline CGAffineTransform
 CGAffineTransformMakeScaleTranslate(CGFloat sx, CGFloat sy,
-                                    CGFloat dx, CGFloat dy)
-{
+    CGFloat dx, CGFloat dy) {
   return CGAffineTransformMake(sx, 0.f, 0.f, sy, dx, dy);
 }
 
 - (void)awakeFromNib {
   [self setContentMode:UIViewContentModeRight];
-  values_ = [NSMutableArray array];
-  timer_ = [NSTimer scheduledTimerWithTimeInterval:0.25
-                                            target:self 
-                                          selector:@selector(updateValues:)
-                                          userInfo:nil
-                                           repeats:YES];
+  _values = [NSMutableArray array];
+
+  __weak id weakSelf = self;
+  double delayInSeconds = 0.25;
+  _timer =
+      dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,
+          dispatch_get_main_queue());
+  dispatch_source_set_timer(
+      _timer, dispatch_walltime(NULL, 0),
+      (unsigned)(delayInSeconds * NSEC_PER_SEC), 0);
+  dispatch_source_set_event_handler(_timer, ^{
+    [weakSelf updateValues];
+  });
+  dispatch_resume(_timer);
 }
 
-- (void)updateValues:(NSTimer *)timer {
+- (void)updateValues {
   double nextValue = sin(CFAbsoluteTimeGetCurrent())
-                      + ((double)rand()/(double)RAND_MAX);
+      + ((double)rand()/(double)RAND_MAX);
   [self.values addObject:
-                    [NSNumber numberWithDouble:nextValue]];
+      [NSNumber numberWithDouble:nextValue]];
   CGSize size = self.bounds.size;
   CGFloat maxDimension = MAX(size.height, size.width);
   NSUInteger maxValues =
-                  floorl(maxDimension / kXScale);
+      (NSUInteger)floorl(maxDimension / kXScale);
 
   if ([self.values count] > maxValues) {
     [self.values removeObjectsInRange:
-     NSMakeRange(0, [self.values count] - maxValues)];
+        NSMakeRange(0, [self.values count] - maxValues)];
   }
-  
+
   [self setNeedsDisplay];
 }
 
 - (void)dealloc {
-  [timer_ invalidate];
+  dispatch_source_cancel(_timer);
+  dispatch_release(_timer);
 }
 
 - (void)drawRect:(CGRect)rect {
   if ([self.values count] == 0) {
     return;
   }
-  
-  CGContextRef ctx = UIGraphicsGetCurrentContext();  
-  CGContextSetStrokeColorWithColor(ctx, 
-                             [[UIColor redColor] CGColor]);
+
+  CGContextRef ctx = UIGraphicsGetCurrentContext();
+  CGContextSetStrokeColorWithColor(ctx,
+                                   [[UIColor redColor] CGColor]);
   CGContextSetLineJoin(ctx, kCGLineJoinRound);
   CGContextSetLineWidth(ctx, 5);
 
   CGMutablePathRef path = CGPathCreateMutable();
-  
+
   CGFloat yOffset = self.bounds.size.height / 2;
-  CGAffineTransform transform = 
-  CGAffineTransformMakeScaleTranslate(kXScale, kYScale,
-                                      0, yOffset);
-  
-  double y = [[self.values objectAtIndex:0] doubleValue];
+  CGAffineTransform transform =
+      CGAffineTransformMakeScaleTranslate(kXScale, kYScale,
+                                          0, yOffset);
+
+  CGFloat y = [[self.values objectAtIndex:0] floatValue];
   CGPathMoveToPoint(path, &transform, 0, y);
-  
+
   for (NSUInteger x = 1; x < [self.values count]; ++x) {
-    y = [[self.values objectAtIndex:x] doubleValue];
+    y = [[self.values objectAtIndex:x] floatValue];
     CGPathAddLineToPoint(path, &transform, x, y);
   }
 

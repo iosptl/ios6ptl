@@ -10,5 +10,4 @@
 
 @interface GraphView : UIView
 @property (nonatomic, readonly, strong) NSMutableArray *values;
-@property (nonatomic, readonly, strong) NSTimer *timer;
 @end
