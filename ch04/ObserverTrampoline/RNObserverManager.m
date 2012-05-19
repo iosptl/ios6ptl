@@ -32,14 +32,14 @@
 
 @implementation RNObserverManager
 
-@synthesize observers = observers_;
-@synthesize protocol = protocol_;
+@synthesize observers = _observers;
+@synthesize protocol = _protocol;
 
 - (id)initWithProtocol:(Protocol *)protocol
              observers:(NSSet *)observers {
 	if ((self = [super init])) {
-		protocol_ = protocol;
-		observers_ = [NSMutableSet setWithSet:observers];
+		_protocol = protocol;
+		_observers = [NSMutableSet setWithSet:observers];
 	}
 	return self;
 }

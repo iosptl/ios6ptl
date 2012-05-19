@@ -25,11 +25,11 @@
 #import "RNMainThreadTrampoline.h"
 
 @implementation RNMainThreadTrampoline
-@synthesize target = target_;
+@synthesize target = _target;
 
 - (id)initWithTarget:(id)aTarget {
 	if ((self = [super init])) {
-		target_ = aTarget;
+		_target = aTarget;
 	}
 	return self;
 }

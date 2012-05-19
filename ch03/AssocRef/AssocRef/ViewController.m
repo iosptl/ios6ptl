@@ -28,7 +28,7 @@
 #import <objc/runtime.h>
 
 @implementation ViewController
-@synthesize buttonLabel=buttonLabel_;
+@synthesize buttonLabel=_buttonLabel;
 
 static const char kRepresentedObject;
 
