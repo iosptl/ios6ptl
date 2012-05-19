@@ -4,6 +4,7 @@
 //
 
 #import "RNErrorManager.h"
+#import <objc/runtime.h>
 
 static const char kRNErrorKey;
 

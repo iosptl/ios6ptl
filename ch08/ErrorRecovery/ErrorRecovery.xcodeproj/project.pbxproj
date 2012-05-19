@@ -32,7 +32,7 @@
 		FB32E8CD13DDEBD90052DDFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB32E8CF13DDEBD90052DDFB /* ErrorRecoveryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorRecoveryViewController.h; sourceTree = "<group>"; };
 		FB32E8D013DDEBD90052DDFB /* ErrorRecoveryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorRecoveryViewController.m; sourceTree = "<group>"; };
-		FB32E8D713DDF1810052DDFB /* RNErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RNErrorManager.h; sourceTree = "<group>"; };
+		FB32E8D713DDF1810052DDFB /* RNErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNErrorManager.h; sourceTree = "<group>"; };
 		FB32E8D813DDF1810052DDFB /* RNErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNErrorManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +128,9 @@
 /* Begin PBXProject section */
 		FB32E8AD13DDEBD80052DDFB /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
 			buildConfigurationList = FB32E8B013DDEBD80052DDFB /* Build configuration list for PBXProject "ErrorRecovery" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -277,6 +280,7 @@
 				FB32E8D613DDEBD90052DDFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
