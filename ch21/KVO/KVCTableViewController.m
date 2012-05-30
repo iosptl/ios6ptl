@@ -5,15 +5,16 @@
 
 #import "KVCTableViewController.h"
 #import "KVCTableViewCell.h"
+#import "RNTimer.h"
 
 @interface KVCTableViewController ()
-@property (readwrite, strong) NSTimer *timer;
+@property (readwrite, strong) RNTimer *timer;
 @property (readwrite, strong) NSDate *now;
 @end
 
 @implementation KVCTableViewController
-@synthesize timer=timer_;
-@synthesize now=now_;
+@synthesize timer=_timer;
+@synthesize now=_now;
 
 - (void)updateNow {
   self.now = [NSDate date];
@@ -21,16 +22,16 @@
 
 - (void)viewDidLoad {
   [self updateNow];
-  self.timer = [NSTimer
-    scheduledTimerWithTimeInterval:1
-                            target:self
-                          selector:@selector(updateNow)
-                          userInfo:nil 
-                           repeats:YES];
+
+  __weak id weakSelf = self;
+  self.timer =
+      [RNTimer repeatingTimerWithTimeInterval:1
+                                        block:^{
+                                          [weakSelf updateNow];
+                                        }];
 }
 
 - (void)viewDidUnload {
-  [self.timer invalidate];
   self.timer = nil;
   self.now = nil;
 }
@@ -56,10 +57,6 @@
   }
     
   return cell;
-}
-
-- (void)dealloc {
-  [timer_ invalidate];
 }
 
 @end
