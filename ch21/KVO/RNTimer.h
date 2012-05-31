@@ -26,14 +26,57 @@
 
 #import <Foundation/Foundation.h>
 
+/** Simple GCD-based timer based on NSTimer.
+
+ Starts immediately and stops when deallocated. This avoids many of the typical problems with NSTimer:
+
+ * RNTimer runs in all modes (unlike NSTimer)
+ * RNTimer runs when there is no runloop (unlike NSTimer)
+ * Repeating RNTimers can easily avoid retain loops (unlike NSTimer)
+*/
 
 @interface RNTimer : NSObject
 
-/**
-* Repeating timer that starts immediately and runs until invalidated or deallocated.
-* You will generally need to avoid retain loops in block with a weakSelf pointer.
+/**---------------------------------------------------------------------------------------
+ @name Creating a Timer
+ -----------------------------------------------------------------------------------------
 */
 
-+ (RNTimer *)repeatingTimerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)())block;
+/** Creates and returns a new repeating RNTimer object and starts running it
+
+ After `seconds` seconds have elapsed, the timer fires, executing the block.
+ You will generally need to use a weakSelf pointer to avoid a retain loop.
+ The timer is attached to the main GCD queue.
+
+ @param seconds The number of seconds between firings of the timer. Must be greater than 0.
+ @param block Block to execute. Must be non-nil
+
+ @return A new RNTimer object, configured according to the specified parameters.
+*/
++ (RNTimer *)repeatingTimerWithTimeInterval:(NSTimeInterval)seconds block:(void (^)(void))block;
+
+
+/**---------------------------------------------------------------------------------------
+ @name Firing a Timer
+ -----------------------------------------------------------------------------------------
+*/
+
+/** Causes the block to be executed.
+
+ This does not modify the timer. It will still fire on schedule.
+*/
+- (void)fire;
+
+
+/**---------------------------------------------------------------------------------------
+ @name Stopping a Timer
+ -----------------------------------------------------------------------------------------
+*/
+
+/** Stops the receiver from ever firing again
+
+ Once invalidated, a timer cannot be reused.
+
+*/
 - (void)invalidate;
 @end
