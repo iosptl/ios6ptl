@@ -1,40 +1,38 @@
 //
-//  RESTRequest.m
+//  RESTfulOperation.m
 //  iHotelApp
 //
+//  Created by Mugunth on 28/05/11.
+//  Copyright 2011 Steinlogic. All rights reserved.
+//
 
-#import "RESTRequest.h"
+#import "RESTfulOperation.h"
 
-@implementation RESTRequest
+@implementation RESTfulOperation
 @synthesize restError;
 
--(NSMutableDictionary*) responseDictionary
-{
-	return [[self responseString] mutableObjectFromJSONString];
-}
-
-- (void)requestFinished
+- (void)operationSucceeded
 {  
   // even when request completes without a HTTP Status code, it might be a benign error
   
-  NSMutableDictionary *errorDict = [[self responseDictionary] objectForKey:@"error"];
+  NSMutableDictionary *errorDict = [[self responseJSON] objectForKey:@"error"];
   
   if(errorDict)
   {
     self.restError = [[RESTError alloc] initWithDomain:kBusinessErrorDomain 
                                                 code:[[errorDict objectForKey:@"code"] intValue]
                                             userInfo:errorDict];
-    [super failWithError:self.restError];
+    [super operationFailedWithError:self.restError];
   }
 	else 
 	{		
-		[super requestFinished]; // normal successful request
+		[super operationSucceeded];
 	}	
 }
 
--(void) failWithError:(NSError *)theError
+-(void) operationFailedWithError:(NSError *)theError
 {
-  NSMutableDictionary *errorDict = [[self responseDictionary] objectForKey:@"error"];
+  NSMutableDictionary *errorDict = [[self responseJSON] objectForKey:@"error"];
 
   if(errorDict == nil)
   {
@@ -49,7 +47,7 @@
                                             userInfo:errorDict];    
   }
     
-  [super failWithError:theError];
+  [super operationFailedWithError:theError];
 }
 
 @end

@@ -2,29 +2,31 @@
 //  MenuItem.m
 //  iHotelApp
 //
+//  Created by Mugunth on 25/05/11.
+//  Copyright 2011 Steinlogic. All rights reserved.
+//
 
 #import "MenuItem.h"
 #import "Review.h"
 
 @implementation MenuItem
 
-@synthesize itemId = itemId_;
-@synthesize image = image_;
-@synthesize name = name_;
-@synthesize spicyLevel = spicyLevel_;
-@synthesize rating = rating_;
-@synthesize itemDescription = itemDescription_;
-@synthesize waitingTime = waitingTime_;
-@synthesize reviewCount = reviewCount_;
-@synthesize reviews = reviews_;
-
+@synthesize itemId;
+@synthesize image;
+@synthesize name;
+@synthesize spicyLevel;
+@synthesize rating;
+@synthesize itemDescription;
+@synthesize waitingTime;
+@synthesize reviewCount;
+@synthesize reviews;
 
 - (id)init
 {
   self = [super init];
   if (self) {
     // Initialization code here.
-    reviews_ = [[NSMutableArray alloc] init];
+    reviews = [[NSMutableArray alloc] init];
   }
   
   return self;

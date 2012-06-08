@@ -2,6 +2,9 @@
 //  RESTError.m
 //  iHotelApp
 //
+//  Created by Mugunth Kumar on 1-Jan-11.
+//  Copyright 2010 Steinlogic. All rights reserved.
+//
 
 #import "RESTError.h"
 
@@ -9,8 +12,8 @@ static NSDictionary *errorCodes;
 
 @implementation RESTError
 
-@synthesize message = message_;
-@synthesize errorCode = errorCode_;
+@synthesize message = _message;
+@synthesize errorCode = _errorCode;
 
 + (void) initialize
 {
@@ -27,6 +30,11 @@ static NSDictionary *errorCodes;
 		NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Errors_en_US" ofType:@"plist"];
 		errorCodes = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];			
 	}
+}
+
++ (void) dealloc
+{
+	[super dealloc];
 }
 
 
@@ -130,5 +138,12 @@ static NSDictionary *errorCodes;
     return self;
 }
 
+//=========================================================== 
+// dealloc
+//=========================================================== 
+- (void)dealloc
+{
+    _message = nil;	
+}
 
 @end

@@ -2,9 +2,12 @@
 //  iHotelAppAppDelegate.h
 //  iHotelApp
 //
+//  Created by Mugunth on 25/05/11.
+//  Copyright 2011 Steinlogic. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
-#import "RESTEngine.h"
+#import "RESTfulEngine.h"
 #define AppDelegate ((iHotelAppAppDelegate *)[UIApplication sharedApplication].delegate)
 
 @class iHotelAppViewController;
@@ -17,5 +20,5 @@
 
 @property (nonatomic, strong) IBOutlet iHotelAppViewController *viewController;
 
-@property (nonatomic, strong) RESTEngine *engine;
+@property (nonatomic, strong) RESTfulEngine *engine;
 @end

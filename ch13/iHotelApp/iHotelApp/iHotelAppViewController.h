@@ -2,15 +2,18 @@
 //  iHotelAppViewController.h
 //  iHotelApp
 //
+//  Created by Mugunth on 25/05/11.
+//  Copyright 2011 Steinlogic. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
-#import "RESTEngine.h"
+#import "RESTfulEngine.h"
 
-@interface iHotelAppViewController : UIViewController<RESTEngineDelegate> {
+@interface iHotelAppViewController : UIViewController {
     
 }
 
-@property (nonatomic, strong) RESTRequest *menuRequest; 
+@property (nonatomic) RESTfulOperation *menuRequest; 
 
 -(IBAction) loginButtonTapped:(id) sender;
 -(IBAction) fetchMenuItems:(id) sender;
