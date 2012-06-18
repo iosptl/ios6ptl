@@ -1,5 +1,5 @@
 //
-//  RESTEngine.m
+//  RESTfulEngine.m
 //  iHotelApp
 //
 //  Created by Mugunth on 25/05/11.
@@ -29,7 +29,7 @@
     
     // if you are going to have multiple accounts support, 
     // it's advisable to store the access token as a serialized object    
-    // this code will break when a second RESTEngine object is instantiated and a new token is issued for him
+    // this code will break when a second RESTfulEngine object is instantiated and a new token is issued for him
 
     [[NSUserDefaults standardUserDefaults] setObject:self.accessToken forKey:kAccessTokenDefaultsKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
