@@ -56,4 +56,8 @@
     [super setValue:value forKey:key];
 }
 
+-(NSString*) description {
+  
+  return [NSString stringWithFormat:@"%@ - %@", self.name, self.itemDescription];
+}
 @end

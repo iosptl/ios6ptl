@@ -62,14 +62,20 @@
   // localMenuItems is a stub code that fetches menu items from a json file in resource bundle
   [AppDelegate.engine fetchMenuItemsOnSucceeded:^(NSMutableArray *listOfModelBaseObjects) {
     
-    DLog(@"%@", listOfModelBaseObjects);
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Menu Items", @"") 
+                                message:[listOfModelBaseObjects description]
+                               delegate:self
+                      cancelButtonTitle:NSLocalizedString(@"Dismiss", @"")
+                      otherButtonTitles: nil] show];
   } onError:^(NSError *engineError) {
-    
+    [UIAlertView showWithError:engineError];
   }];
 }
 
--(IBAction) simulateServerError:(id) sender
+
+-(IBAction) simulateRequestError:(id) sender
 {    
+  // this request fails with a 404
   // we mock the method to return a error json from the error.json file
   [AppDelegate.engine fetchMenuItemsFromWrongLocationOnSucceeded:^(NSMutableArray *listOfModelBaseObjects) {
     
@@ -78,12 +84,6 @@
   } onError:^(NSError *engineError) {
     [UIAlertView showWithError:engineError];
   }];
-}
-
--(IBAction) simulateRequestError:(id) sender
-{    
-  // this request fails because example.com doesn't exist
-  //[AppDelegate.engine fetchMenuItems];
 }
 
 - (void)viewDidUnload

@@ -81,10 +81,12 @@
     
   [op onCompletion:^(MKNetworkOperation *completedOperation) {
       
-    NSMutableArray *responseArray = [completedOperation responseJSON];
+    NSMutableDictionary *responseDictionary = [completedOperation responseJSON];
+    NSMutableArray *menuItemsJson = [responseDictionary objectForKey:@"menuitems"];
+    
     NSMutableArray *menuItems = [NSMutableArray array];
     
-    [responseArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [menuItemsJson enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 
       [menuItems addObject:[[MenuItem alloc] initWithDictionary:obj]];
     }];
