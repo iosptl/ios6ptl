@@ -35,15 +35,13 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (RESTfulOperation*) prepareRequestForURLString:(NSString*) urlString
-{
-  RESTfulOperation *op = (RESTfulOperation*) [self operationWithPath:urlString];
-  
+-(void) prepareHeaders:(MKNetworkOperation *)operation {
+
   // this inserts a header like ''Authorization = Token blahblah''
-    if(self.accessToken)
-      [op setAuthorizationHeaderValue:self.accessToken forAuthType:@"Token"];
+  if(self.accessToken)
+    [operation setAuthorizationHeaderValue:self.accessToken forAuthType:@"Token"];
   
-  return op;
+  [super prepareHeaders:operation];
 }
 
 #pragma mark -
