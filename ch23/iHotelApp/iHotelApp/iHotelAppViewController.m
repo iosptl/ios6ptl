@@ -76,7 +76,6 @@
   }];
 }
 
-
 -(IBAction) simulateRequestError:(id) sender
 {    
   // this request fails with a 404
@@ -88,13 +87,6 @@
   } onError:^(NSError *engineError) {
     [UIAlertView showWithError:engineError];
   }];
-}
-
-- (void)viewDidUnload
-{
-  [super viewDidUnload];
-  // Release any retained subviews of the main view.
-  // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

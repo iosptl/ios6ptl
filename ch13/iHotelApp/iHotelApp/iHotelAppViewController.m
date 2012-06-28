@@ -10,9 +10,13 @@
 #import "RESTfulEngine.h"
 #import "iHotelAppAppDelegate.h"
 
-@implementation iHotelAppViewController
-@synthesize menuRequest;
+@interface iHotelAppViewController (/*Private Methods*/)
 
+@property (nonatomic) RESTfulOperation *menuRequest;
+
+@end
+
+@implementation iHotelAppViewController
 
 - (void)didReceiveMemoryWarning
 {
@@ -84,13 +88,6 @@
   } onError:^(NSError *engineError) {
     [UIAlertView showWithError:engineError];
   }];
-}
-
-- (void)viewDidUnload
-{
-  [super viewDidUnload];
-  // Release any retained subviews of the main view.
-  // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

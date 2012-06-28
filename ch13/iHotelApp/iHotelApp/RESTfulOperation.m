@@ -9,7 +9,6 @@
 #import "RESTfulOperation.h"
 
 @implementation RESTfulOperation
-@synthesize restError;
 
 - (void)operationSucceeded
 {  

@@ -11,12 +11,6 @@
 
 @implementation Review
 
-@synthesize rating;
-@synthesize reviewDate;
-@synthesize reviewerName;
-@synthesize reviewId;
-@synthesize reviewText;
-
 - (id)init
 {
     self = [super init];
@@ -25,19 +19,6 @@
     }
     
     return self;
-}
-
-//=========================================================== 
-// dealloc
-//=========================================================== 
-- (void)dealloc
-{
-    rating = nil;
-    reviewDate = nil;
-    reviewerName = nil;
-    reviewId = nil;
-    reviewText = nil;
-
 }
 
 //=========================================================== 
