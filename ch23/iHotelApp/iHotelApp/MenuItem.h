@@ -2,6 +2,9 @@
 //  MenuItem.h
 //  iHotelApp
 //
+//  Created by Mugunth on 25/05/11.
+//  Copyright 2011 Steinlogic. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
@@ -28,6 +31,6 @@
 @property (nonatomic, strong) NSString *waitingTime;
 @property (nonatomic, strong) NSString *reviewCount;
 
-@property (nonatomic, strong) NSMutableArray *reviews;
+@property (nonatomic) NSMutableArray *reviews;
 
 @end

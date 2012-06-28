@@ -2,17 +2,22 @@
 //  iHotelAppAppDelegate.m
 //  iHotelApp
 //
+//  Created by Mugunth on 25/05/11.
+//  Copyright 2011 Steinlogic. All rights reserved.
+//
 
 #import "iHotelAppAppDelegate.h"
 
 #import "iHotelAppViewController.h"
+
+NSString* const kBaseURL = @"restfulengine.iosptl.com";
 
 @implementation iHotelAppAppDelegate
 
 
 @synthesize window=_window;
 
-@synthesize navigationController=_navigationController;
+@synthesize viewController=_viewController;
 
 @synthesize engine;
 
@@ -20,8 +25,10 @@
 {
     // Override point for customization after application launch.
      
-    self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+  
+  self.engine = [[RESTfulEngine alloc] initWithHostName:kBaseURL];
     return YES;
 }
 

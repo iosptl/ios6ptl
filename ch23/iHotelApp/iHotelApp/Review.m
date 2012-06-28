@@ -1,17 +1,21 @@
 //
 //  Review.m
 //  
+//
+//  Created by Mugunth Kumar on 28/05/11.
+//  Copyright 2011 Steinlogic. All rights reserved.
+//
 
 #import "Review.h"
 
 
 @implementation Review
 
-@synthesize rating = rating_;
-@synthesize reviewDate = reviewDate_;
-@synthesize reviewerName = reviewerName_;
-@synthesize reviewId = reviewId_;
-@synthesize reviewText = reviewText_;
+@synthesize rating;
+@synthesize reviewDate;
+@synthesize reviewerName;
+@synthesize reviewId;
+@synthesize reviewText;
 
 - (id)init
 {
@@ -21,6 +25,19 @@
     }
     
     return self;
+}
+
+//=========================================================== 
+// dealloc
+//=========================================================== 
+- (void)dealloc
+{
+    rating = nil;
+    reviewDate = nil;
+    reviewerName = nil;
+    reviewId = nil;
+    reviewText = nil;
+
 }
 
 //=========================================================== 
