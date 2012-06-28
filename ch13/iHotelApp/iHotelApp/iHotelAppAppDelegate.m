@@ -18,7 +18,7 @@ NSString* const kBaseURL = @"restfulengine.iosptl.com";
 {
     // Override point for customization after application launch.
      
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
   
   self.engine = [[RESTfulEngine alloc] initWithHostName:kBaseURL];

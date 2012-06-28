@@ -22,7 +22,7 @@ NSString* const kBaseURL = @"restfulengine.iosptl.com";
     [self.window makeKeyAndVisible];
   
   self.engine = [[RESTfulEngine alloc] initWithHostName:kBaseURL];
-  [self.engine useCache];
+  //[self.engine useCache];
     return YES;
 }
 

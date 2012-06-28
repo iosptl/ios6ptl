@@ -12,9 +12,7 @@
 
 @class iHotelAppViewController;
 
-@interface iHotelAppAppDelegate : NSObject <UIApplicationDelegate> {
-
-}
+@interface iHotelAppAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 

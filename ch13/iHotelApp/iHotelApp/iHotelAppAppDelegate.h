@@ -12,13 +12,12 @@
 
 @class iHotelAppViewController;
 
-@interface iHotelAppAppDelegate : NSObject <UIApplicationDelegate> {
-
-}
+@interface iHotelAppAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 
-@property (nonatomic, strong) IBOutlet iHotelAppViewController *viewController;
+@property (nonatomic, strong) IBOutlet UINavigationController *navController;
 
 @property (nonatomic, strong) RESTfulEngine *engine;
 @end
+

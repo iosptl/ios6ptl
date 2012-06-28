@@ -9,6 +9,7 @@
 #import "iHotelAppMenuViewController.h"
 #import "MenuItem.h"
 #import "iHotelAppAppDelegate.h"
+#import "AppCache.h"
 
 @interface iHotelAppMenuViewController ()
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -19,41 +20,54 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  self.title = NSLocalizedString(@"Menu", @"");
+  [super viewDidLoad];
+  // Do any additional setup after loading the view from its nib.
 }
 
--(void) viewDidAppear:(BOOL)animated {
+-(void) viewWillAppear:(BOOL)animated {
   
-  // localMenuItems is a stub code that fetches menu items from a json file in resource bundle
-  [AppDelegate.engine fetchMenuItemsOnSucceeded:^(NSMutableArray *listOfModelBaseObjects) {
-
-    self.menuItems = listOfModelBaseObjects;
-    [self.tableView reloadData];
-  } onError:^(NSError *engineError) {
-    [UIAlertView showWithError:engineError];
-  }];
-
-  [super viewDidAppear:animated];
+  self.menuItems = [AppCache getCachedMenuItems];  
+  [self.tableView reloadData];
+  
+  if([AppCache isMenuItemsStale] || !self.menuItems) {
+    
+    [AppDelegate.engine fetchMenuItemsOnSucceeded:^(NSMutableArray *listOfModelBaseObjects) {
+      
+      self.menuItems = listOfModelBaseObjects;
+      [self.tableView reloadData];
+    } onError:^(NSError *engineError) {
+      [UIAlertView showWithError:engineError];
+    }];
+  }
+  
+  [super viewWillAppear:animated];
 }
+
+-(void) viewWillDisappear:(BOOL)animated {
+  
+  [AppCache cacheMenuItems:self.menuItems];
+  [super viewWillDisappear:animated];
+}
+
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+  return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 
@@ -85,6 +99,7 @@
   // Configure the cell...
   MenuItem *item = [self.menuItems objectAtIndex:indexPath.row];
   cell.textLabel.text = item.name;
+  cell.selectionStyle = UITableViewCellSelectionStyleNone;
   return cell;
 }
 

@@ -13,6 +13,7 @@
 		AB27FD571390A78D00696D56 /* RESTfulOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AB27FD561390A78A00696D56 /* RESTfulOperation.m */; };
 		AB45F0CE159C485900C03684 /* iHotelAppMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB45F0CC159C485900C03684 /* iHotelAppMenuViewController.m */; };
 		AB45F0CF159C485900C03684 /* iHotelAppMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB45F0CD159C485900C03684 /* iHotelAppMenuViewController.xib */; };
+		AB45F0D2159C4BA100C03684 /* AppCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB45F0D1159C4BA000C03684 /* AppCache.m */; };
 		AB529415138CDBDA00E5F2C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB529414138CDBDA00E5F2C6 /* UIKit.framework */; };
 		AB529417138CDBDA00E5F2C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB529416138CDBDA00E5F2C6 /* Foundation.framework */; };
 		AB529419138CDBDA00E5F2C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB529418138CDBDA00E5F2C6 /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 		AB45F0CB159C485900C03684 /* iHotelAppMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iHotelAppMenuViewController.h; sourceTree = "<group>"; };
 		AB45F0CC159C485900C03684 /* iHotelAppMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iHotelAppMenuViewController.m; sourceTree = "<group>"; };
 		AB45F0CD159C485900C03684 /* iHotelAppMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iHotelAppMenuViewController.xib; sourceTree = "<group>"; };
+		AB45F0D0159C4BA000C03684 /* AppCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCache.h; sourceTree = "<group>"; };
+		AB45F0D1159C4BA000C03684 /* AppCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCache.m; sourceTree = "<group>"; };
 		AB529410138CDBDA00E5F2C6 /* iHotelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHotelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB529414138CDBDA00E5F2C6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AB529416138CDBDA00E5F2C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,6 +164,8 @@
 		AB52941A138CDBDA00E5F2C6 /* iHotelApp */ = {
 			isa = PBXGroup;
 			children = (
+				AB45F0D0159C4BA000C03684 /* AppCache.h */,
+				AB45F0D1159C4BA000C03684 /* AppCache.m */,
 				AB529434138CDBE700E5F2C6 /* RESTfulEngine */,
 				AB529423138CDBDA00E5F2C6 /* iHotelAppAppDelegate.h */,
 				AB529424138CDBDA00E5F2C6 /* iHotelAppAppDelegate.m */,
@@ -351,6 +356,7 @@
 				ABE85FD41580895500C622FD /* MKNetworkOperation.m in Sources */,
 				ABE85FD51580895500C622FD /* Reachability.m in Sources */,
 				AB45F0CE159C485900C03684 /* iHotelAppMenuViewController.m in Sources */,
+				AB45F0D2159C4BA100C03684 /* AppCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
