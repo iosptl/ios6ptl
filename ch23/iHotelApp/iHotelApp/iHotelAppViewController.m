@@ -10,9 +10,13 @@
 #import "RESTfulEngine.h"
 #import "iHotelAppAppDelegate.h"
 
-@implementation iHotelAppViewController
-@synthesize menuRequest;
+@interface iHotelAppViewController (/*Private Methods*/)
 
+@property (nonatomic) RESTfulOperation *menuRequest;
+
+@end
+
+@implementation iHotelAppViewController
 
 - (void)didReceiveMemoryWarning
 {

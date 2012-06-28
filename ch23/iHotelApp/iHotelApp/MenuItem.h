@@ -30,7 +30,6 @@
 @property (nonatomic, strong) NSString *itemDescription;
 @property (nonatomic, strong) NSString *waitingTime;
 @property (nonatomic, strong) NSString *reviewCount;
-
-@property (nonatomic) NSMutableArray *reviews;
+@property (nonatomic, strong) NSMutableArray *reviews;
 
 @end

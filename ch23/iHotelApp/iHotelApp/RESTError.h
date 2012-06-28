@@ -16,6 +16,5 @@
 @property (nonatomic, strong) NSString *errorCode;
 
 - (NSString*) localizedOption;
-
 -(id) initWithDictionary:(NSMutableDictionary*) jsonObject;
 @end

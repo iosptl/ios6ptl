@@ -284,7 +284,7 @@
 		AB529407138CDBDA00E5F2C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Steinlogic;
 			};
 			buildConfigurationList = AB52940A138CDBDA00E5F2C6 /* Build configuration list for PBXProject "iHotelApp" */;

@@ -12,9 +12,6 @@ static NSDictionary *errorCodes;
 
 @implementation RESTError
 
-@synthesize message = _message;
-@synthesize errorCode = _errorCode;
-
 + (void) initialize
 {
 	NSString *fileName = [NSString stringWithFormat:@"Errors_%@", [[NSLocale currentLocale] localeIdentifier]];

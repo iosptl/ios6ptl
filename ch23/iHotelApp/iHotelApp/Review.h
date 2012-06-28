@@ -9,16 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
 
-@interface Review : JSONModel <NSCoding> {
-@private
-
-    NSString *rating;
-    NSString *reviewDate;
-    NSString *reviewerName;
-    NSString *reviewId;
-    NSString *reviewText;
-    
-}
+@interface Review : JSONModel
 
 @property (nonatomic, strong) NSString *rating;
 @property (nonatomic, strong) NSString *reviewDate;
