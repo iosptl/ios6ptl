@@ -9,6 +9,7 @@
 #import "iHotelAppViewController.h"
 #import "RESTfulEngine.h"
 #import "iHotelAppAppDelegate.h"
+#import "iHotelAppMenuViewController.h"
 
 @interface iHotelAppViewController (/*Private Methods*/)
 
@@ -63,17 +64,9 @@
 
 -(IBAction) fetchMenuItems:(id) sender
 {
-  // localMenuItems is a stub code that fetches menu items from a json file in resource bundle
-  [AppDelegate.engine fetchMenuItemsOnSucceeded:^(NSMutableArray *listOfModelBaseObjects) {
-    
-    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Menu Items", @"") 
-                                message:[listOfModelBaseObjects description]
-                               delegate:self
-                      cancelButtonTitle:NSLocalizedString(@"Dismiss", @"")
-                      otherButtonTitles: nil] show];
-  } onError:^(NSError *engineError) {
-    [UIAlertView showWithError:engineError];
-  }];
+  iHotelAppMenuViewController *controller = [[iHotelAppMenuViewController alloc] initWithNibName:nil
+                                                                                          bundle:nil];
+	[self.navigationController pushViewController:controller animated:YES];
 }
 
 -(IBAction) simulateRequestError:(id) sender
