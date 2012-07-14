@@ -35,8 +35,8 @@
 		FBB38A9D15B1F6B7007EEF8C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		FBB38AA415B1F6CC007EEF8C /* BubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleView.h; sourceTree = "<group>"; };
 		FBB38AA515B1F6CC007EEF8C /* BubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleView.m; sourceTree = "<group>"; };
-		FBB38AA715B20403007EEF8C /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bubble.h; path = Bubbles/Bubble.h; sourceTree = "<group>"; };
-		FBB38AA815B20403007EEF8C /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bubble.m; path = Bubbles/Bubble.m; sourceTree = "<group>"; };
+		FBB38AA715B20403007EEF8C /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bubble.h; sourceTree = "<group>"; };
+		FBB38AA815B20403007EEF8C /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bubble.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,6 @@
 		FBB38A7815B1F6B7007EEF8C = {
 			isa = PBXGroup;
 			children = (
-				FBB38AA715B20403007EEF8C /* Bubble.h */,
-				FBB38AA815B20403007EEF8C /* Bubble.m */,
 				FBB38A8D15B1F6B7007EEF8C /* Bubbles */,
 				FBB38A8615B1F6B7007EEF8C /* Frameworks */,
 				FBB38A8415B1F6B7007EEF8C /* Products */,
@@ -93,6 +91,8 @@
 				FBB38A8E15B1F6B7007EEF8C /* Supporting Files */,
 				FBB38AA415B1F6CC007EEF8C /* BubbleView.h */,
 				FBB38AA515B1F6CC007EEF8C /* BubbleView.m */,
+				FBB38AA715B20403007EEF8C /* Bubble.h */,
+				FBB38AA815B20403007EEF8C /* Bubble.m */,
 			);
 			path = Bubbles;
 			sourceTree = "<group>";

@@ -11,6 +11,13 @@
 static const CGFloat kMinimumRadius = 4;
 static const CGFloat kMaximumRadius = 30;
 
+static inline CGAffineTransform
+CGAffineTransformMakeScaleTranslate(CGFloat sx, CGFloat sy,
+                                    CGFloat dx, CGFloat dy)
+{
+  return CGAffineTransformMake(sx, 0.f, 0.f, sy, dx, dy);
+}
+
 
 @implementation Bubble
 @synthesize center=_center;
@@ -20,12 +27,13 @@ static const CGFloat kMaximumRadius = 30;
 {
   self = [super init];
   if (self) {
+    self.opaque = YES;
+    self.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(-0.5, -0.5, 1, 1)].CGPath;
+
     CGFloat centerX = [self randomIntegerBetween:0 and:CGRectGetWidth(bounds)];
     CGFloat centerY = [self randomIntegerBetween:0 and:CGRectGetHeight(bounds)];
-
     CGFloat radius = [self randomIntegerBetween:kMinimumRadius and:kMaximumRadius];
-    self.containerBounds = bounds;
-    
+
     self.center = CGPointMake(centerX, centerY);
     self.radius = radius;
     
@@ -54,13 +62,9 @@ static const CGFloat kMaximumRadius = 30;
   }
 }
 
-- (void)updatePath {
-  CGRect rect = CGRectMake(self.center.x - self.radius,
-                           self.center.y - self.radius,
-                           self.radius * 2,
-                           self.radius * 2);
-  self.path = [UIBezierPath bezierPathWithOvalInRect:rect].CGPath;
-  [self setNeedsDisplay];
+- (void)updateTransform
+{
+  self.affineTransform = CGAffineTransformMakeScaleTranslate(self.radius/4, self.radius/4, self.center.x, self.center.y);
 }
 
 - (CGPoint)center
@@ -70,7 +74,7 @@ static const CGFloat kMaximumRadius = 30;
 
 - (void)setCenter:(CGPoint)center {
   _center = center;
-  [self updatePath];
+  [self updateTransform];
 }
 
 - (CGFloat)radius
@@ -80,11 +84,12 @@ static const CGFloat kMaximumRadius = 30;
 
 - (void)setRadius:(CGFloat)radius {
   _radius = radius;
-  [self updatePath];
+  [self updateTransform];
 }
 
-
 - (void)drift {
+  [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+
   self.driftX = [self adjustDrift:self.driftX];
   self.driftY = [self adjustDrift:self.driftY];
   self.growing = [self adjustDrift:self.growing];

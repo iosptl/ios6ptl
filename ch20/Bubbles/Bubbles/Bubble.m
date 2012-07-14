@@ -13,7 +13,7 @@ static const CGFloat kMaximumRadius = 30;
 
 
 @implementation Bubble
-- (id)initInBounds:(CGRect)bounds
+- (id)initInContainerBounds:(CGRect)bounds
 {
   self = [super init];
   if (self) {
@@ -21,7 +21,7 @@ static const CGFloat kMaximumRadius = 30;
     CGFloat centerY = [self randomIntegerBetween:0 and:CGRectGetHeight(bounds)];
     
     CGFloat radius = [self randomIntegerBetween:kMinimumRadius and:kMaximumRadius];
-    self.bounds = bounds;
+    self.containerBounds = bounds;
     self.center = CGPointMake(centerX, centerY);
     self.radius = radius;
     

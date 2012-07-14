@@ -12,7 +12,7 @@
 @property CGPoint center;
 @property CGFloat radius;
 //@property UIColor *color;
-@property CGRect containerBounds;
+//@property CGRect containerBounds;
 @property NSInteger growing;
 @property NSInteger driftX;
 @property NSInteger driftY;

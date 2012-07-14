@@ -47,12 +47,12 @@
     if ([key isEqualToString:@"radius"]) {
       CABasicAnimation *anim = [CABasicAnimation
                                 animationWithKeyPath:@"radius"];
-      anim.fromValue = [[self presentationLayer] 
+      anim.fromValue = [[self presentationLayer]
                         valueForKey:@"radius"];
       return anim;
     }
   }
-  
+
   return [super actionForKey:key];
 }
 

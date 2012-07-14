@@ -388,6 +388,7 @@
 				INFOPLIST_FILE = "FastCalcTests/FastCalcTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WARNING_CFLAGS = "-Winline";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -405,6 +406,7 @@
 				INFOPLIST_FILE = "FastCalcTests/FastCalcTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WARNING_CFLAGS = "-Winline";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

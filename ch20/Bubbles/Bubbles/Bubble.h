@@ -12,11 +12,11 @@
 @property CGPoint center;
 @property CGFloat radius;
 @property UIColor *color;
-@property CGRect bounds;
+@property CGRect containerBounds;
 @property NSInteger growing;
 @property NSInteger driftX;
 @property NSInteger driftY;
-- (id)initInBounds:(CGRect)bounds;
+- (id)initInContainerBounds:(CGRect)bounds;
 - (void)drift;
 @end
 

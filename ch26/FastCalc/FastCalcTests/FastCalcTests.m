@@ -55,7 +55,10 @@ static const NSUInteger kNumberOfIterations = 1000;
   }
 }
 
-static __attribute__((always_inline))
+// Note that "inline" is a hint. Have to check the assembly
+// output to make sure it really happened. Even always_inline
+// is basically a hint (since it doesn't generate an error).
+static inline
 float Bezier(float t, float P0, float P1, float P2,
              float P3) {
   return
@@ -76,7 +79,7 @@ float Bezier(float t, float P0, float P1, float P2,
   }
 }
 
-static __attribute__((always_inline))
+static inline
 float BezierNoPow(float t, float P0,
                   float P1, float P2,
                   float P3) {

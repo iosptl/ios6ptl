@@ -8,8 +8,9 @@
 
 #import "BubbleView.h"
 #import "Bubble.h"
+#import <objc/runtime.h>
 
-static const NSUInteger kNumBubbles = 1000;
+static const NSUInteger kNumBubbles = 500;
 
 @interface BubbleView ()
 @property NSMutableArray *bubbles;
@@ -40,19 +41,11 @@ static const NSUInteger kNumBubbles = 1000;
 }
 
 - (void)drawRect:(CGRect)rect {
-  [[UIColor whiteColor] set];
-  UIRectFill(self.bounds);
+//  [[UIColor whiteColor] set];
+//  UIRectFill(self.bounds);
   
   for (NSUInteger i = 0; i <= kNumBubbles; i++) {
     Bubble *bubble = [self.bubbles objectAtIndex:i];
-//    CGRect rect = CGRectMake(bubble.center.x - bubble.radius,
-//                             bubble.center.y - bubble.radius,
-//                             bubble.radius * 2,
-//                             bubble.radius * 2);
-//    UIBezierPath *bubblePath = [UIBezierPath bezierPathWithOvalInRect:rect];
-//    [[bubble color] set];
-//    [bubblePath fill];
-    
     [bubble drift];
   }
   

@@ -24,7 +24,7 @@ static const NSUInteger kNumBubbles = 1000;
     if (self) {
       _bubbles = [NSMutableArray new];
       for (NSUInteger i = 0; i <= kNumBubbles; i++) {
-        [_bubbles addObject:[[Bubble alloc] initInBounds:self.bounds]];
+        [_bubbles addObject:[[Bubble alloc] initInContainerBounds:self.bounds]];
       }
       _fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
       _fpsLabel.opaque = NO;
