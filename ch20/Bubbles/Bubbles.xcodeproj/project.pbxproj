@@ -16,6 +16,7 @@
 		FBB38A9B15B1F6B7007EEF8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38A9A15B1F6B7007EEF8C /* ViewController.m */; };
 		FBB38A9E15B1F6B7007EEF8C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB38A9C15B1F6B7007EEF8C /* ViewController.xib */; };
 		FBB38AA615B1F6CC007EEF8C /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38AA515B1F6CC007EEF8C /* BubbleView.m */; };
+		FBB38AA915B20403007EEF8C /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38AA815B20403007EEF8C /* Bubble.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		FBB38A9D15B1F6B7007EEF8C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		FBB38AA415B1F6CC007EEF8C /* BubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleView.h; sourceTree = "<group>"; };
 		FBB38AA515B1F6CC007EEF8C /* BubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleView.m; sourceTree = "<group>"; };
+		FBB38AA715B20403007EEF8C /* Bubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bubble.h; path = Bubbles/Bubble.h; sourceTree = "<group>"; };
+		FBB38AA815B20403007EEF8C /* Bubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bubble.m; path = Bubbles/Bubble.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,8 @@
 		FBB38A7815B1F6B7007EEF8C = {
 			isa = PBXGroup;
 			children = (
+				FBB38AA715B20403007EEF8C /* Bubble.h */,
+				FBB38AA815B20403007EEF8C /* Bubble.m */,
 				FBB38A8D15B1F6B7007EEF8C /* Bubbles */,
 				FBB38A8615B1F6B7007EEF8C /* Frameworks */,
 				FBB38A8415B1F6B7007EEF8C /* Products */,
@@ -170,6 +175,7 @@
 				FBB38A9815B1F6B7007EEF8C /* AppDelegate.m in Sources */,
 				FBB38A9B15B1F6B7007EEF8C /* ViewController.m in Sources */,
 				FBB38AA615B1F6CC007EEF8C /* BubbleView.m in Sources */,
+				FBB38AA915B20403007EEF8C /* Bubble.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +221,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -234,7 +240,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
