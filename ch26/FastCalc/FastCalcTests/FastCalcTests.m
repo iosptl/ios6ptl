@@ -10,60 +10,6 @@
 #import <QuartzCore/QuartzCore.h>
 #import <SenTestingKit/SenTestObserver.h>
 
-@interface FastCalcTests ()
-@property CFTimeInterval startTime;
-@property CFTimeInterval stopTime;
-@end
-
-@interface RNTestPerformanceObserver : SenTestObserver
-@property NSMutableDictionary *timeResults;
-@end
-
-@implementation RNTestPerformanceObserver
-
-- (id)init
-{
-  self = [super init];
-  if (self) {
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc addObserver:self selector:@selector(testSuiteDidStart:) name:SenTestSuiteDidStartNotification object:nil];
-    [nc addObserver:self selector:@selector(testSuiteDidStop:) name:SenTestSuiteDidStopNotification object:nil];
-    [nc addObserver:self selector:@selector(testDidStart:) name:SenTestCaseDidStartNotification object:nil];
-    [nc addObserver:self selector:@selector(testDidStop:) name:SenTestCaseDidStopNotification object:nil];
-  }
-  return self;
-}
-
-- (void)dealloc
-{
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)testSuiteDidStart:(NSNotification *)notification {
-  if ([[[notification test] name] isEqual:[[SenTestSuite defaultTestSuite] name]]) {
-    self.timeResults = [NSMutableDictionary new];
-  }
-}
-
-- (void)testSuiteDidStop:(NSNotification *)notification {
-  if ([[[notification test] name] isEqual:[[SenTestSuite defaultTestSuite] name]]) {
-    [SenTestLog testLogWithFormat:@"Results: %@", self.timeResults];
-    self.timeResults = nil;
-  }
-}
-
-- (void)testDidStart:(NSNotification *)notification {
-}
-
-- (void)testDidStop:(NSNotification *)notification {
-  FastCalcTests *test = (FastCalcTests *)notification.run.test;
-  CFTimeInterval runTime = [test stopTime] - [test startTime];
-  [self.timeResults setObject:[NSNumber numberWithDouble:runTime] forKey:NSStringFromSelector([(SenTestCase *)notification.run.test selector])];
-}
-
-@end
-
-
 #define kDivisor 1000
 
 static CGPoint P0 = {50, 500};
@@ -74,45 +20,44 @@ static CGPoint P3 = {650, 500};
 static CGPoint *results;
 static CGPoint *testResults;
 
-static RNTestPerformanceObserver *observer;
+static const float kAccuracy = 0.001;
+static const NSUInteger kNumberOfIterations = 1000;
 
 @implementation FastCalcTests
-
-- (NSUInteger)numberOfTestIterationsForTestWithSelector:(SEL)testMethod {
-  return 1000;
-}
 
 + (void)initialize {
   if (self == [FastCalcTests class]) {
     results = calloc(kDivisor + 1, sizeof(struct CGPoint));
     testResults = calloc(kDivisor + 1,
                          sizeof(struct CGPoint));
-    observer = [RNTestPerformanceObserver new];
   }
 }
 
-- (void)setUp {
-  _startTime = CACurrentMediaTime();
+- (NSUInteger)numberOfTestIterationsForTestWithSelector:(SEL)testMethod {
+  return kNumberOfIterations;
 }
 
 - (void)tearDown {
-  _stopTime = CACurrentMediaTime();
+  // Record that we're done as quickly as possible
+  [super tearDown];
   
+  // Use the first run to test all the other values
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     memcpy(testResults, results,
            (kDivisor + 1) * sizeof(struct CGPoint));
   });
   
+  // Make sure we're accurate enough
   for (unsigned i = 0; i <= kDivisor; ++i) {
-    STAssertEqualsWithAccuracy(results[i].x, testResults[i].x, 0.001, @"Mismatch");
-    STAssertEqualsWithAccuracy(results[i].y, testResults[i].y, 0.001, @"Mismatch");
+    STAssertEqualsWithAccuracy(results[i].x, testResults[i].x, kAccuracy, @"Mismatch");
+    STAssertEqualsWithAccuracy(results[i].y, testResults[i].y, kAccuracy, @"Mismatch");
   }
 }
 
-static inline CGFloat Bezier(CGFloat t, CGFloat P0,
-                             CGFloat P1, CGFloat P2,
-                             CGFloat P3) {
+static __attribute__((always_inline))
+float Bezier(float t, float P0, float P1, float P2,
+             float P3) {
   return
   powf(1-t, 3) * P0
   + 3 * powf(1-t, 2) * t * P1
@@ -122,19 +67,19 @@ static inline CGFloat Bezier(CGFloat t, CGFloat P0,
 
 - (void)testSimple
 {
-//  printf("testSimple\n");
   for (unsigned step = 0; step <= kDivisor; ++step) {
-    CGFloat x = Bezier((CGFloat)step/(CGFloat)kDivisor,
-                       P0.x, P1.x, P2.x, P3.x);
-    CGFloat y = Bezier((CGFloat)step/(CGFloat)kDivisor,
-                       P0.y, P1.y, P2.y, P3.y);
+    float x = Bezier((float)step/(float)kDivisor,
+                     P0.x, P1.x, P2.x, P3.x);
+    float y = Bezier((float)step/(float)kDivisor,
+                     P0.y, P1.y, P2.y, P3.y);
     results[step] = CGPointMake(x, y);
   }
 }
 
-static inline CGFloat BezierNoPow(CGFloat t, CGFloat P0,
-                                  CGFloat P1, CGFloat P2,
-                                  CGFloat P3) {
+static __attribute__((always_inline))
+float BezierNoPow(float t, float P0,
+                  float P1, float P2,
+                  float P3) {
   return
   (1-t)*(1-t)*(1-t) * P0
   + 3 * (1-t)*(1-t) * t * P1
@@ -145,10 +90,10 @@ static inline CGFloat BezierNoPow(CGFloat t, CGFloat P0,
 - (void)testSimpleNoPow
 {
   for (unsigned step = 0; step <= kDivisor; ++step) {
-    CGFloat x = BezierNoPow((CGFloat)step/(CGFloat)kDivisor,
-                            P0.x, P1.x, P2.x, P3.x);
-    CGFloat y = BezierNoPow((CGFloat)step/(CGFloat)kDivisor,
-                            P0.y, P1.y, P2.y, P3.y);
+    float x = BezierNoPow((float)step/(float)kDivisor,
+                          P0.x, P1.x, P2.x, P3.x);
+    float y = BezierNoPow((float)step/(float)kDivisor,
+                          P0.y, P1.y, P2.y, P3.y);
     results[step] = CGPointMake(x, y);
   }
 }

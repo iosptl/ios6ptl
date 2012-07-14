@@ -19,6 +19,8 @@
 		FB2C3B0A15B106EF0023EEB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB2C3B0815B106EF0023EEB6 /* InfoPlist.strings */; };
 		FB2C3B0D15B106EF0023EEB6 /* FastCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2C3B0C15B106EF0023EEB6 /* FastCalcTests.m */; };
 		FB2C3B1815B10B9B0023EEB6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2C3B1615B10B760023EEB6 /* QuartzCore.framework */; };
+		FBB38A7015B1D7E2007EEF8C /* RNPerformanceTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38A6F15B1D7E2007EEF8C /* RNPerformanceTestCase.m */; };
+		FBB38A7315B1D8AF007EEF8C /* RNPerformanceTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38A7215B1D8AF007EEF8C /* RNPerformanceTestObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		FB2C3B0B15B106EF0023EEB6 /* FastCalcTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastCalcTests.h; sourceTree = "<group>"; };
 		FB2C3B0C15B106EF0023EEB6 /* FastCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastCalcTests.m; sourceTree = "<group>"; };
 		FB2C3B1615B10B760023EEB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FBB38A6E15B1D7E2007EEF8C /* RNPerformanceTestCase.h */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = RNPerformanceTestCase.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; wrapsLines = 1; };
+		FBB38A6F15B1D7E2007EEF8C /* RNPerformanceTestCase.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = RNPerformanceTestCase.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; wrapsLines = 1; };
+		FBB38A7115B1D8AF007EEF8C /* RNPerformanceTestObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNPerformanceTestObserver.h; path = FastCalcTests/RNPerformanceTestObserver.h; sourceTree = "<group>"; };
+		FBB38A7215B1D8AF007EEF8C /* RNPerformanceTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNPerformanceTestObserver.m; path = FastCalcTests/RNPerformanceTestObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 		FB2C3AD815B106EE0023EEB6 = {
 			isa = PBXGroup;
 			children = (
+				FBB38A7115B1D8AF007EEF8C /* RNPerformanceTestObserver.h */,
+				FBB38A7215B1D8AF007EEF8C /* RNPerformanceTestObserver.m */,
 				FB2C3B1615B10B760023EEB6 /* QuartzCore.framework */,
 				FB2C3AED15B106EE0023EEB6 /* FastCalc */,
 				FB2C3B0515B106EF0023EEB6 /* FastCalcTests */,
@@ -131,6 +139,8 @@
 		FB2C3B0515B106EF0023EEB6 /* FastCalcTests */ = {
 			isa = PBXGroup;
 			children = (
+				FBB38A6E15B1D7E2007EEF8C /* RNPerformanceTestCase.h */,
+				FBB38A6F15B1D7E2007EEF8C /* RNPerformanceTestCase.m */,
 				FB2C3B0B15B106EF0023EEB6 /* FastCalcTests.h */,
 				FB2C3B0C15B106EF0023EEB6 /* FastCalcTests.m */,
 				FB2C3B0615B106EF0023EEB6 /* Supporting Files */,
@@ -263,6 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB2C3B0D15B106EF0023EEB6 /* FastCalcTests.m in Sources */,
+				FBB38A7015B1D7E2007EEF8C /* RNPerformanceTestCase.m in Sources */,
+				FBB38A7315B1D8AF007EEF8C /* RNPerformanceTestObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

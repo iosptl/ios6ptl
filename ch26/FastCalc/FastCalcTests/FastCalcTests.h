@@ -8,6 +8,8 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface FastCalcTests : SenTestCase
+#import "RNPerformanceTestCase.h"
+
+@interface FastCalcTests : RNPerformanceTestCase
 
 @end
