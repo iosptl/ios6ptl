@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB17B6A415B25324007D08F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17B6A315B25324007D08F7 /* UIKit.framework */; };
+		FB17B6A615B25324007D08F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17B6A515B25324007D08F7 /* Foundation.framework */; };
+		FB17B6A815B25324007D08F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17B6A715B25324007D08F7 /* CoreGraphics.framework */; };
+		FB17B6AE15B25324007D08F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB17B6AC15B25324007D08F7 /* InfoPlist.strings */; };
+		FB17B6B015B25324007D08F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17B6AF15B25324007D08F7 /* main.m */; };
+		FB17B6B415B25324007D08F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17B6B315B25324007D08F7 /* AppDelegate.m */; };
+		FB17B6B715B25324007D08F7 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17B6B615B25324007D08F7 /* MasterViewController.m */; };
+		FB17B6BA15B25324007D08F7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17B6B915B25324007D08F7 /* DetailViewController.m */; };
+		FB17B6BD15B25324007D08F7 /* MasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB17B6BB15B25324007D08F7 /* MasterViewController_iPhone.xib */; };
+		FB17B6C015B25324007D08F7 /* MasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB17B6BE15B25324007D08F7 /* MasterViewController_iPad.xib */; };
+		FB17B6C315B25324007D08F7 /* DetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB17B6C115B25324007D08F7 /* DetailViewController_iPhone.xib */; };
+		FB17B6C615B25324007D08F7 /* DetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB17B6C415B25324007D08F7 /* DetailViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB17B69F15B25324007D08F7 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB17B6A315B25324007D08F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB17B6A515B25324007D08F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB17B6A715B25324007D08F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB17B6AB15B25324007D08F7 /* NASA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NASA-Info.plist"; sourceTree = "<group>"; };
+		FB17B6AD15B25324007D08F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB17B6AF15B25324007D08F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB17B6B115B25324007D08F7 /* NASA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NASA-Prefix.pch"; sourceTree = "<group>"; };
+		FB17B6B215B25324007D08F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB17B6B315B25324007D08F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB17B6B515B25324007D08F7 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		FB17B6B615B25324007D08F7 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		FB17B6B815B25324007D08F7 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FB17B6B915B25324007D08F7 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FB17B6BC15B25324007D08F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPhone.xib; sourceTree = "<group>"; };
+		FB17B6BF15B25324007D08F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPad.xib; sourceTree = "<group>"; };
+		FB17B6C215B25324007D08F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		FB17B6C515B25324007D08F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB17B69C15B25324007D08F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17B6A415B25324007D08F7 /* UIKit.framework in Frameworks */,
+				FB17B6A615B25324007D08F7 /* Foundation.framework in Frameworks */,
+				FB17B6A815B25324007D08F7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB17B69415B25324007D08F7 = {
+			isa = PBXGroup;
+			children = (
+				FB17B6A915B25324007D08F7 /* NASA */,
+				FB17B6A215B25324007D08F7 /* Frameworks */,
+				FB17B6A015B25324007D08F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB17B6A015B25324007D08F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB17B69F15B25324007D08F7 /* NASA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB17B6A215B25324007D08F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB17B6A315B25324007D08F7 /* UIKit.framework */,
+				FB17B6A515B25324007D08F7 /* Foundation.framework */,
+				FB17B6A715B25324007D08F7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB17B6A915B25324007D08F7 /* NASA */ = {
+			isa = PBXGroup;
+			children = (
+				FB17B6B215B25324007D08F7 /* AppDelegate.h */,
+				FB17B6B315B25324007D08F7 /* AppDelegate.m */,
+				FB17B6B515B25324007D08F7 /* MasterViewController.h */,
+				FB17B6B615B25324007D08F7 /* MasterViewController.m */,
+				FB17B6B815B25324007D08F7 /* DetailViewController.h */,
+				FB17B6B915B25324007D08F7 /* DetailViewController.m */,
+				FB17B6BB15B25324007D08F7 /* MasterViewController_iPhone.xib */,
+				FB17B6BE15B25324007D08F7 /* MasterViewController_iPad.xib */,
+				FB17B6C115B25324007D08F7 /* DetailViewController_iPhone.xib */,
+				FB17B6C415B25324007D08F7 /* DetailViewController_iPad.xib */,
+				FB17B6AA15B25324007D08F7 /* Supporting Files */,
+			);
+			path = NASA;
+			sourceTree = "<group>";
+		};
+		FB17B6AA15B25324007D08F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB17B6AB15B25324007D08F7 /* NASA-Info.plist */,
+				FB17B6AC15B25324007D08F7 /* InfoPlist.strings */,
+				FB17B6AF15B25324007D08F7 /* main.m */,
+				FB17B6B115B25324007D08F7 /* NASA-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB17B69E15B25324007D08F7 /* NASA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB17B6C915B25324007D08F7 /* Build configuration list for PBXNativeTarget "NASA" */;
+			buildPhases = (
+				FB17B69B15B25324007D08F7 /* Sources */,
+				FB17B69C15B25324007D08F7 /* Frameworks */,
+				FB17B69D15B25324007D08F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NASA;
+			productName = NASA;
+			productReference = FB17B69F15B25324007D08F7 /* NASA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB17B69615B25324007D08F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Rob Napier";
+			};
+			buildConfigurationList = FB17B69915B25324007D08F7 /* Build configuration list for PBXProject "NASA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB17B69415B25324007D08F7;
+			productRefGroup = FB17B6A015B25324007D08F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB17B69E15B25324007D08F7 /* NASA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB17B69D15B25324007D08F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17B6AE15B25324007D08F7 /* InfoPlist.strings in Resources */,
+				FB17B6BD15B25324007D08F7 /* MasterViewController_iPhone.xib in Resources */,
+				FB17B6C015B25324007D08F7 /* MasterViewController_iPad.xib in Resources */,
+				FB17B6C315B25324007D08F7 /* DetailViewController_iPhone.xib in Resources */,
+				FB17B6C615B25324007D08F7 /* DetailViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB17B69B15B25324007D08F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17B6B015B25324007D08F7 /* main.m in Sources */,
+				FB17B6B415B25324007D08F7 /* AppDelegate.m in Sources */,
+				FB17B6B715B25324007D08F7 /* MasterViewController.m in Sources */,
+				FB17B6BA15B25324007D08F7 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB17B6AC15B25324007D08F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17B6AD15B25324007D08F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB17B6BB15B25324007D08F7 /* MasterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17B6BC15B25324007D08F7 /* en */,
+			);
+			name = MasterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		FB17B6BE15B25324007D08F7 /* MasterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17B6BF15B25324007D08F7 /* en */,
+			);
+			name = MasterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		FB17B6C115B25324007D08F7 /* DetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17B6C215B25324007D08F7 /* en */,
+			);
+			name = DetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		FB17B6C415B25324007D08F7 /* DetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17B6C515B25324007D08F7 /* en */,
+			);
+			name = DetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB17B6C715B25324007D08F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB17B6C815B25324007D08F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB17B6CA15B25324007D08F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NASA/NASA-Prefix.pch";
+				INFOPLIST_FILE = "NASA/NASA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB17B6CB15B25324007D08F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NASA/NASA-Prefix.pch";
+				INFOPLIST_FILE = "NASA/NASA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB17B69915B25324007D08F7 /* Build configuration list for PBXProject "NASA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB17B6C715B25324007D08F7 /* Debug */,
+				FB17B6C815B25324007D08F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB17B6C915B25324007D08F7 /* Build configuration list for PBXNativeTarget "NASA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB17B6CA15B25324007D08F7 /* Debug */,
+				FB17B6CB15B25324007D08F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB17B69615B25324007D08F7 /* Project object */;
+}
