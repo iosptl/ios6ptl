@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB17B66F15B24CED007D08F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17B66E15B24CED007D08F7 /* UIKit.framework */; };
+		FB17B67115B24CED007D08F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17B67015B24CED007D08F7 /* Foundation.framework */; };
+		FB17B67315B24CED007D08F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17B67215B24CED007D08F7 /* CoreGraphics.framework */; };
+		FB17B67915B24CED007D08F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB17B67715B24CED007D08F7 /* InfoPlist.strings */; };
+		FB17B67B15B24CED007D08F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17B67A15B24CED007D08F7 /* main.m */; };
+		FB17B67F15B24CED007D08F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17B67E15B24CED007D08F7 /* AppDelegate.m */; };
+		FB17B68215B24CED007D08F7 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17B68115B24CED007D08F7 /* MasterViewController.m */; };
+		FB17B68515B24CED007D08F7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17B68415B24CED007D08F7 /* DetailViewController.m */; };
+		FB17B68815B24CED007D08F7 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB17B68615B24CED007D08F7 /* MasterViewController.xib */; };
+		FB17B68B15B24CED007D08F7 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB17B68915B24CED007D08F7 /* DetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB17B66A15B24CED007D08F7 /* NASAIOTD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAIOTD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB17B66E15B24CED007D08F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB17B67015B24CED007D08F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB17B67215B24CED007D08F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB17B67615B24CED007D08F7 /* NASAIOTD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NASAIOTD-Info.plist"; sourceTree = "<group>"; };
+		FB17B67815B24CED007D08F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB17B67A15B24CED007D08F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB17B67C15B24CED007D08F7 /* NASAIOTD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NASAIOTD-Prefix.pch"; sourceTree = "<group>"; };
+		FB17B67D15B24CED007D08F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB17B67E15B24CED007D08F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB17B68015B24CED007D08F7 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		FB17B68115B24CED007D08F7 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		FB17B68315B24CED007D08F7 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FB17B68415B24CED007D08F7 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FB17B68715B24CED007D08F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
+		FB17B68A15B24CED007D08F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB17B66715B24CED007D08F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17B66F15B24CED007D08F7 /* UIKit.framework in Frameworks */,
+				FB17B67115B24CED007D08F7 /* Foundation.framework in Frameworks */,
+				FB17B67315B24CED007D08F7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB17B65F15B24CED007D08F7 = {
+			isa = PBXGroup;
+			children = (
+				FB17B67415B24CED007D08F7 /* NASAIOTD */,
+				FB17B66D15B24CED007D08F7 /* Frameworks */,
+				FB17B66B15B24CED007D08F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB17B66B15B24CED007D08F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB17B66A15B24CED007D08F7 /* NASAIOTD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB17B66D15B24CED007D08F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB17B66E15B24CED007D08F7 /* UIKit.framework */,
+				FB17B67015B24CED007D08F7 /* Foundation.framework */,
+				FB17B67215B24CED007D08F7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB17B67415B24CED007D08F7 /* NASAIOTD */ = {
+			isa = PBXGroup;
+			children = (
+				FB17B67D15B24CED007D08F7 /* AppDelegate.h */,
+				FB17B67E15B24CED007D08F7 /* AppDelegate.m */,
+				FB17B68015B24CED007D08F7 /* MasterViewController.h */,
+				FB17B68115B24CED007D08F7 /* MasterViewController.m */,
+				FB17B68315B24CED007D08F7 /* DetailViewController.h */,
+				FB17B68415B24CED007D08F7 /* DetailViewController.m */,
+				FB17B68615B24CED007D08F7 /* MasterViewController.xib */,
+				FB17B68915B24CED007D08F7 /* DetailViewController.xib */,
+				FB17B67515B24CED007D08F7 /* Supporting Files */,
+			);
+			path = NASAIOTD;
+			sourceTree = "<group>";
+		};
+		FB17B67515B24CED007D08F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB17B67615B24CED007D08F7 /* NASAIOTD-Info.plist */,
+				FB17B67715B24CED007D08F7 /* InfoPlist.strings */,
+				FB17B67A15B24CED007D08F7 /* main.m */,
+				FB17B67C15B24CED007D08F7 /* NASAIOTD-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB17B66915B24CED007D08F7 /* NASAIOTD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB17B68E15B24CED007D08F7 /* Build configuration list for PBXNativeTarget "NASAIOTD" */;
+			buildPhases = (
+				FB17B66615B24CED007D08F7 /* Sources */,
+				FB17B66715B24CED007D08F7 /* Frameworks */,
+				FB17B66815B24CED007D08F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NASAIOTD;
+			productName = NASAIOTD;
+			productReference = FB17B66A15B24CED007D08F7 /* NASAIOTD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB17B66115B24CED007D08F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Rob Napier";
+			};
+			buildConfigurationList = FB17B66415B24CED007D08F7 /* Build configuration list for PBXProject "NASAIOTD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB17B65F15B24CED007D08F7;
+			productRefGroup = FB17B66B15B24CED007D08F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB17B66915B24CED007D08F7 /* NASAIOTD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB17B66815B24CED007D08F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17B67915B24CED007D08F7 /* InfoPlist.strings in Resources */,
+				FB17B68815B24CED007D08F7 /* MasterViewController.xib in Resources */,
+				FB17B68B15B24CED007D08F7 /* DetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB17B66615B24CED007D08F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB17B67B15B24CED007D08F7 /* main.m in Sources */,
+				FB17B67F15B24CED007D08F7 /* AppDelegate.m in Sources */,
+				FB17B68215B24CED007D08F7 /* MasterViewController.m in Sources */,
+				FB17B68515B24CED007D08F7 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FB17B67715B24CED007D08F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17B67815B24CED007D08F7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB17B68615B24CED007D08F7 /* MasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17B68715B24CED007D08F7 /* en */,
+			);
+			name = MasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		FB17B68915B24CED007D08F7 /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB17B68A15B24CED007D08F7 /* en */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB17B68C15B24CED007D08F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB17B68D15B24CED007D08F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB17B68F15B24CED007D08F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NASAIOTD/NASAIOTD-Prefix.pch";
+				INFOPLIST_FILE = "NASAIOTD/NASAIOTD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB17B69015B24CED007D08F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NASAIOTD/NASAIOTD-Prefix.pch";
+				INFOPLIST_FILE = "NASAIOTD/NASAIOTD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB17B66415B24CED007D08F7 /* Build configuration list for PBXProject "NASAIOTD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB17B68C15B24CED007D08F7 /* Debug */,
+				FB17B68D15B24CED007D08F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB17B68E15B24CED007D08F7 /* Build configuration list for PBXNativeTarget "NASAIOTD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB17B68F15B24CED007D08F7 /* Debug */,
+				FB17B69015B24CED007D08F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB17B66115B24CED007D08F7 /* Project object */;
+}

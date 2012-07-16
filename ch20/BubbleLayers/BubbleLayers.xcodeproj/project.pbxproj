@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FBB38AC315B2073C007EEF8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB38AC215B2073C007EEF8C /* UIKit.framework */; };
+		FBB38AC515B2073C007EEF8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB38AC415B2073C007EEF8C /* Foundation.framework */; };
+		FBB38AC715B2073C007EEF8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB38AC615B2073C007EEF8C /* CoreGraphics.framework */; };
+		FBB38ACD15B2073C007EEF8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBB38ACB15B2073C007EEF8C /* InfoPlist.strings */; };
+		FBB38ACF15B2073C007EEF8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38ACE15B2073C007EEF8C /* main.m */; };
+		FBB38AD315B2073C007EEF8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38AD215B2073C007EEF8C /* AppDelegate.m */; };
+		FBB38AD615B2073C007EEF8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38AD515B2073C007EEF8C /* ViewController.m */; };
+		FBB38AD915B2073C007EEF8C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB38AD715B2073C007EEF8C /* ViewController.xib */; };
+		FBB38AE615B20838007EEF8C /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38AE315B20765007EEF8C /* BubbleView.m */; };
+		FBB38AE715B2083D007EEF8C /* Bubble.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB38AE515B20766007EEF8C /* Bubble.m */; };
+		FBB38AE915B209CA007EEF8C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB38AE815B209CA007EEF8C /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FBB38ABE15B2073C007EEF8C /* BubbleLayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleLayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB38AC215B2073C007EEF8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FBB38AC415B2073C007EEF8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FBB38AC615B2073C007EEF8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FBB38ACA15B2073C007EEF8C /* BubbleLayers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BubbleLayers-Info.plist"; sourceTree = "<group>"; };
+		FBB38ACC15B2073C007EEF8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FBB38ACE15B2073C007EEF8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBB38AD015B2073C007EEF8C /* BubbleLayers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BubbleLayers-Prefix.pch"; sourceTree = "<group>"; };
+		FBB38AD115B2073C007EEF8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FBB38AD215B2073C007EEF8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FBB38AD415B2073C007EEF8C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FBB38AD515B2073C007EEF8C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FBB38AD815B2073C007EEF8C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		FBB38AE215B20765007EEF8C /* BubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleView.h; sourceTree = "<group>"; };
+		FBB38AE315B20765007EEF8C /* BubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleView.m; sourceTree = "<group>"; };
+		FBB38AE415B20765007EEF8C /* Bubble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bubble.h; sourceTree = "<group>"; };
+		FBB38AE515B20766007EEF8C /* Bubble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bubble.m; sourceTree = "<group>"; };
+		FBB38AE815B209CA007EEF8C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBB38ABB15B2073C007EEF8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBB38AE915B209CA007EEF8C /* QuartzCore.framework in Frameworks */,
+				FBB38AC315B2073C007EEF8C /* UIKit.framework in Frameworks */,
+				FBB38AC515B2073C007EEF8C /* Foundation.framework in Frameworks */,
+				FBB38AC715B2073C007EEF8C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBB38AB315B2073C007EEF8C = {
+			isa = PBXGroup;
+			children = (
+				FBB38AE815B209CA007EEF8C /* QuartzCore.framework */,
+				FBB38AC815B2073C007EEF8C /* BubbleLayers */,
+				FBB38AC115B2073C007EEF8C /* Frameworks */,
+				FBB38ABF15B2073C007EEF8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBB38ABF15B2073C007EEF8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBB38ABE15B2073C007EEF8C /* BubbleLayers.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBB38AC115B2073C007EEF8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBB38AC215B2073C007EEF8C /* UIKit.framework */,
+				FBB38AC415B2073C007EEF8C /* Foundation.framework */,
+				FBB38AC615B2073C007EEF8C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBB38AC815B2073C007EEF8C /* BubbleLayers */ = {
+			isa = PBXGroup;
+			children = (
+				FBB38AD115B2073C007EEF8C /* AppDelegate.h */,
+				FBB38AD215B2073C007EEF8C /* AppDelegate.m */,
+				FBB38AD415B2073C007EEF8C /* ViewController.h */,
+				FBB38AD515B2073C007EEF8C /* ViewController.m */,
+				FBB38AD715B2073C007EEF8C /* ViewController.xib */,
+				FBB38AE215B20765007EEF8C /* BubbleView.h */,
+				FBB38AE315B20765007EEF8C /* BubbleView.m */,
+				FBB38AE415B20765007EEF8C /* Bubble.h */,
+				FBB38AE515B20766007EEF8C /* Bubble.m */,
+				FBB38AC915B2073C007EEF8C /* Supporting Files */,
+			);
+			path = BubbleLayers;
+			sourceTree = "<group>";
+		};
+		FBB38AC915B2073C007EEF8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBB38ACA15B2073C007EEF8C /* BubbleLayers-Info.plist */,
+				FBB38ACB15B2073C007EEF8C /* InfoPlist.strings */,
+				FBB38ACE15B2073C007EEF8C /* main.m */,
+				FBB38AD015B2073C007EEF8C /* BubbleLayers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBB38ABD15B2073C007EEF8C /* BubbleLayers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBB38ADC15B2073C007EEF8C /* Build configuration list for PBXNativeTarget "BubbleLayers" */;
+			buildPhases = (
+				FBB38ABA15B2073C007EEF8C /* Sources */,
+				FBB38ABB15B2073C007EEF8C /* Frameworks */,
+				FBB38ABC15B2073C007EEF8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BubbleLayers;
+			productName = BubbleLayers;
+			productReference = FBB38ABE15B2073C007EEF8C /* BubbleLayers.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBB38AB515B2073C007EEF8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Rob Napier";
+			};
+			buildConfigurationList = FBB38AB815B2073C007EEF8C /* Build configuration list for PBXProject "BubbleLayers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FBB38AB315B2073C007EEF8C;
+			productRefGroup = FBB38ABF15B2073C007EEF8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBB38ABD15B2073C007EEF8C /* BubbleLayers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBB38ABC15B2073C007EEF8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBB38ACD15B2073C007EEF8C /* InfoPlist.strings in Resources */,
+				FBB38AD915B2073C007EEF8C /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBB38ABA15B2073C007EEF8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBB38ACF15B2073C007EEF8C /* main.m in Sources */,
+				FBB38AD315B2073C007EEF8C /* AppDelegate.m in Sources */,
+				FBB38AD615B2073C007EEF8C /* ViewController.m in Sources */,
+				FBB38AE615B20838007EEF8C /* BubbleView.m in Sources */,
+				FBB38AE715B2083D007EEF8C /* Bubble.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FBB38ACB15B2073C007EEF8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBB38ACC15B2073C007EEF8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FBB38AD715B2073C007EEF8C /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBB38AD815B2073C007EEF8C /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBB38ADA15B2073C007EEF8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		FBB38ADB15B2073C007EEF8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBB38ADD15B2073C007EEF8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BubbleLayers/BubbleLayers-Prefix.pch";
+				INFOPLIST_FILE = "BubbleLayers/BubbleLayers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FBB38ADE15B2073C007EEF8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BubbleLayers/BubbleLayers-Prefix.pch";
+				INFOPLIST_FILE = "BubbleLayers/BubbleLayers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBB38AB815B2073C007EEF8C /* Build configuration list for PBXProject "BubbleLayers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB38ADA15B2073C007EEF8C /* Debug */,
+				FBB38ADB15B2073C007EEF8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB38ADC15B2073C007EEF8C /* Build configuration list for PBXNativeTarget "BubbleLayers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB38ADD15B2073C007EEF8C /* Debug */,
+				FBB38ADE15B2073C007EEF8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBB38AB515B2073C007EEF8C /* Project object */;
+}
