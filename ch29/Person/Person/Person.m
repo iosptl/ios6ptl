@@ -15,11 +15,10 @@
 
 @implementation Person
 @dynamic givenName, surname;
-@synthesize properties = properties_;
 
 - (id)init {
   if ((self = [super init])) {
-    properties_ = [[NSMutableDictionary alloc] init];
+    _properties = [[NSMutableDictionary alloc] init];
   }
   return self;
 }
@@ -57,5 +56,4 @@ static void setPropertyIMP(id self, SEL _cmd, id aValue) {
   }
   return YES;
 }
-
 @end

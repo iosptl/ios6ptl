@@ -10,8 +10,6 @@
 #import <objc/runtime.h>
 
 @implementation CacheProxy
-@synthesize object = object_;
-@synthesize valueForProperty = valueForProperty_;
 
 // setFoo: => foo
 static NSString *propertyNameForSetter(SEL selector) {
@@ -67,8 +65,8 @@ static void setPropertyIMP(id self, SEL _cmd, id aValue) {
 
 - (id)initWithObject:(id)anObject
           properties:(NSArray *)properties {
-  object_ = anObject;
-  valueForProperty_ = [[NSMutableDictionary alloc] init];
+  _object = anObject;
+  _valueForProperty = [[NSMutableDictionary alloc] init];
   for (NSString *property in properties) {
     // Synthesize a getter
     class_addMethod([self class],

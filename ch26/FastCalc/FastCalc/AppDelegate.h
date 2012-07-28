@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  FastCalc
 //
-//  Created by Rob Napier on 7/13/12.
+//  Created by Rob Napier on 7/21/12.
 //  Copyright (c) 2012 Rob Napier. All rights reserved.
 //
 

@@ -25,7 +25,7 @@ void RunMyMsgSend() {
   myMsgSend(object, "init");
   
   // id description = [object description];
-  id description = (__bridge id)myMsgSend(object, "description");
+  id description = (id)myMsgSend(object, "description");
   
   // const char *cstr = [description UTF8String];
   const char *cstr = myMsgSend(description, "UTF8String");

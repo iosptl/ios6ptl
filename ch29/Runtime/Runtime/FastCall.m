@@ -10,6 +10,8 @@
 
 const NSUInteger kTotalCount = 100000000;
 
+typedef void (*voidIMP)(id, SEL, ...);
+
 void FastCall() {
   NSMutableString *string = [NSMutableString string];
   NSTimeInterval totalTime = 0;
@@ -28,7 +30,8 @@ void FastCall() {
   // Skip objc_msgSend.
   start = [NSDate date];
   SEL selector = @selector(setString:);
-  IMP setStringMethod =[string methodForSelector:selector];
+  voidIMP
+  setStringMethod = (voidIMP)[string methodForSelector:selector];
   
   for (count = 0; count < kTotalCount; ++count) {
     setStringMethod(string, selector, @"stuff");

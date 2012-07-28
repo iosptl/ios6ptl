@@ -7,32 +7,22 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "ZipTextView.h"
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-  } else {
-      return YES;
-  }
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  NSString *
+  path = [[NSBundle mainBundle] pathForResource:@"Lorem"
+                                         ofType:@"txt"];
+  
+  ZipTextView *ztView = [[ZipTextView alloc]
+                         initWithFrame:self.view.bounds
+                         text:[NSString stringWithContentsOfFile:path
+                                                        encoding:NSUTF8StringEncoding
+                                                           error:nil]];
+  [self.view addSubview:ztView];
 }
 
 @end
