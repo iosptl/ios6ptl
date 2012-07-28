@@ -124,7 +124,7 @@ static OSStatus RNSecTrustEvaluateAsX509(SecTrustRef trust,
         break;
         
       default:
-        NSAssert(NO, @"Unexpected result from trust evaluation:%d", 
+        NSAssert(NO, @"Unexpected result from trust evaluation:%ld", 
                  result);
         break;
     }
