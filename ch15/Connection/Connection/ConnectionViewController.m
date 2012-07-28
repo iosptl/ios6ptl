@@ -3,7 +3,6 @@
 //  Connection
 //
 //  Created by Rob Napier on 8/1/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "ConnectionViewController.h"
@@ -12,13 +11,6 @@ CFAbsoluteTime SecCertificateNotValidBefore(SecCertificateRef certificate);
 CFAbsoluteTime SecCertificateNotValidAfter(SecCertificateRef certificate);
 
 @implementation ConnectionViewController
-@synthesize connection=connection_;
-
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Release any cached data, images, etc that aren't in use.
-}
 
 #pragma mark - View lifecycle
 
@@ -89,7 +81,7 @@ static OSStatus RNSecTrustEvaluateAsX509(SecTrustRef trust,
     NSLog(@"End Date: %@", [NSDate dateWithTimeIntervalSinceReferenceDate:end]);          
     
     NSLog(@"Trying to access %@. Got %@.", protSpace.host, 
-          (__bridge id)subject);
+          subject);
     CFRange range = CFStringFind(subject, CFSTR(".google.com"), 
                                  kCFCompareAnchored|
                                  kCFCompareBackwards);
@@ -115,7 +107,7 @@ static OSStatus RNSecTrustEvaluateAsX509(SecTrustRef trust,
       case kSecTrustResultProceed:
       case kSecTrustResultConfirm:
       case kSecTrustResultUnspecified: {
-        NSLog(@"Successing with result: %lu", result);
+        NSLog(@"Success with result: %lu", result);
         NSURLCredential *cred;
         cred = [NSURLCredential credentialForTrust:trust];
         [challenge.sender useCredential:cred 
@@ -145,23 +137,5 @@ static OSStatus RNSecTrustEvaluateAsX509(SecTrustRef trust,
   NSLog(@"didFinishLoading");
   self.connection = nil;
 }
-
-//- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
-
-//- (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection;
-//
-//- (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)response;
-//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
-//
-//- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
-//
-//- (NSInputStream *)connection:(NSURLConnection *)connection needNewBodyStream:(NSURLRequest *)request;
-//- (void)connection:(NSURLConnection *)connection   didSendBodyData:(NSInteger)bytesWritten
-// totalBytesWritten:(NSInteger)totalBytesWritten
-//totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite;
-//
-//- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse;
-//
-//- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
 
 @end
