@@ -9,10 +9,6 @@
 
 
 @implementation CPEncyptViewController
-@synthesize imageView=imageView_;
-@synthesize password=password_;
-@synthesize modeSegmentedControl=modeSegmentedControl_;
-@synthesize encryptButton=encryptButton_;
 
 - (void)refreshEnabled {
   self.encryptButton.enabled = (self.imageView.image != nil && [self.password length] > 0);
@@ -35,12 +31,12 @@
   UIImagePickerController *picker = [[UIImagePickerController alloc] init];
   picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
   picker.delegate = self;
-  [self presentModalViewController:picker animated:YES];
+  [self presentViewController:picker animated:YES completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-  self.imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-  [self dismissModalViewControllerAnimated:YES];
+  self.imageView.image = info[UIImagePickerControllerOriginalImage];
+  [self dismissViewControllerAnimated:YES completion:nil];
   [self refreshEnabled];
 }
 
@@ -51,7 +47,8 @@
 
 - (IBAction)encrypt:(id)sender {
   NSError *error;
-  if (! [[CPCryptController sharedController] encryptData:UIImageJPEGRepresentation(self.imageView.image, 0.9) password:self.password error:&error] ) {
+  if (! [[CPCryptController sharedController]
+         encryptData:UIImageJPEGRepresentation(self.imageView.image, 0.9) password:self.password error:&error] ) {
     NSLog(@"Could not encrypt data: %@", error);
   };
 }

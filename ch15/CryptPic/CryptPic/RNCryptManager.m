@@ -48,7 +48,7 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
 }
 
 @end
-   
+
 @interface NSInputStream (Data)
 - (BOOL)_CMgetData:(NSData **)data
          maxLength:(NSUInteger)maxLength
@@ -60,7 +60,7 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
 - (BOOL)_CMgetData:(NSData **)data
          maxLength:(NSUInteger)maxLength
              error:(NSError **)error {
-
+  
   NSMutableData *buffer = [NSMutableData dataWithLength:maxLength];
   if ([self read:buffer.mutableBytes maxLength:maxLength] < 0) {
     if (error) {
@@ -80,7 +80,7 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
 + (NSData *)randomDataOfLength:(size_t)length {
   NSMutableData *data = [NSMutableData dataWithLength:length];
   
-  int result = SecRandomCopyBytes(kSecRandomDefault, 
+  int result = SecRandomCopyBytes(kSecRandomDefault,
                                   length,
                                   data.mutableBytes);
   NSAssert(result == 0, @"Unable to generate random bytes: %d",
@@ -89,12 +89,12 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
   return data;
 }
 
-+ (NSData *)AESKeyForPassword:(NSString *)password 
++ (NSData *)AESKeyForPassword:(NSString *)password
                          salt:(NSData *)salt {
   NSMutableData *
   derivedKey = [NSMutableData dataWithLength:kAlgorithmKeySize];
   
-  int 
+  int
   result = CCKeyDerivationPBKDF(kCCPBKDF2,            // algorithm
                                 password.UTF8String,  // password
                                 password.length,  // passwordLength
@@ -112,10 +112,10 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
   return derivedKey;
 }
 
-+ (BOOL)processResult:(CCCryptorStatus)result 
++ (BOOL)processResult:(CCCryptorStatus)result
                 bytes:(uint8_t*)bytes
                length:(size_t)length
-                 toStream:(NSOutputStream *)outStream
+             toStream:(NSOutputStream *)outStream
                 error:(NSError **)error {
   
   if (result != kCCSuccess) {
@@ -141,14 +141,14 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
 }
 
 + (BOOL)applyOperation:(CCOperation)operation
-            fromStream:(NSInputStream *)inStream 
-              toStream:(NSOutputStream *)outStream 
+            fromStream:(NSInputStream *)inStream
+              toStream:(NSOutputStream *)outStream
               password:(NSString *)password
                  error:(NSError **)error {
   
-  NSAssert([inStream streamStatus] != NSStreamStatusNotOpen, 
+  NSAssert([inStream streamStatus] != NSStreamStatusNotOpen,
            @"fromStream must be open");
-  NSAssert([outStream streamStatus] != NSStreamStatusNotOpen, 
+  NSAssert([outStream streamStatus] != NSStreamStatusNotOpen,
            @"toStream must be open");
   NSAssert([password length] > 0,
            @"Can't proceed with no password");
@@ -161,7 +161,7 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
       // Generate a random IV for this file.
       iv = [self randomDataOfLength:kAlgorithmIVSize];
       salt = [self randomDataOfLength:kPBKDFSaltSize];
-
+      
       if (! [outStream _CMwriteData:iv error:error] ||
           ! [outStream _CMwriteData:salt error:error]) {
         return NO;
@@ -175,8 +175,8 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
           ! [inStream _CMgetData:&salt
                        maxLength:kPBKDFSaltSize
                            error:error]) {
-        return NO;
-      }
+            return NO;
+          }
       break;
     default:
       NSAssert(NO, @"Unknown operation: %d", operation);
@@ -207,16 +207,16 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
   }
   
   // Calculate the buffer size and create the buffers.
-  // The MAX() check isn't really necessary, but is a safety in 
+  // The MAX() check isn't really necessary, but is a safety in
   // case RNCRYPTMANAGER_USE_SAME_BUFFER is enabled, since both
   // buffers will be the same. This just guarentees the the read
   // buffer will always be large enough, even during decryption.
-  size_t 
+  size_t
   dstBufferSize = MAX(CCCryptorGetOutputLength(cryptor, // cryptor
-                                      kMaxReadSize, // input length
+                                               kMaxReadSize, // input length
                                                true), // final
                       kMaxReadSize);
-
+  
   NSMutableData *
   dstData = [NSMutableData dataWithLength:dstBufferSize];
   
@@ -235,7 +235,7 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
   ssize_t srcLength;
   size_t dstLength = 0;
   
-  while ((srcLength = [inStream read:srcBytes 
+  while ((srcLength = [inStream read:srcBytes
                            maxLength:kMaxReadSize]) > 0 ) {
     result = CCCryptorUpdate(cryptor,       // cryptor
                              srcBytes,      // dataIn
@@ -244,10 +244,10 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
                              dstBufferSize, // dataOutAvailable
                              &dstLength);   // dataOutMoved
     
-    if (![self processResult:result 
+    if (![self processResult:result
                        bytes:dstBytes
                       length:dstLength
-                        toStream:outStream
+                    toStream:outStream
                        error:error]) {
       CCCryptorRelease(cryptor);
       return NO;
@@ -259,16 +259,16 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
       return NO;
     }
   }
-
+  
   // Write the final block
   result = CCCryptorFinal(cryptor,        // cryptor
                           dstBytes,       // dataOut
                           dstBufferSize,  // dataOutAvailable
                           &dstLength);    // dataOutMoved
-  if (![self processResult:result 
+  if (![self processResult:result
                      bytes:dstBytes
                     length:dstLength
-                      toStream:outStream
+                  toStream:outStream
                      error:error]) {
     CCCryptorRelease(cryptor);
     return NO;
@@ -278,13 +278,13 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
   return YES;
 }
 
-+ (BOOL)encryptFromStream:(NSInputStream *)fromStream 
++ (BOOL)encryptFromStream:(NSInputStream *)fromStream
                  toStream:(NSOutputStream *)toStream
                  password:(NSString *)password
                     error:(NSError **)error {
   return [self applyOperation:kCCEncrypt
-                   fromStream:fromStream 
-                     toStream:toStream 
+                   fromStream:fromStream
+                     toStream:toStream
                      password:password
                         error:error];
 }
@@ -294,8 +294,8 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
                  password:(NSString *)password
                     error:(NSError **)error {
   return [self applyOperation:kCCDecrypt
-                   fromStream:fromStream 
-                     toStream:toStream 
+                   fromStream:fromStream
+                     toStream:toStream
                      password:password
                         error:error];
 }
@@ -304,6 +304,8 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
                         password:(NSString *)password
                               iv:(NSData **)iv
                             salt:(NSData **)salt
+                        HMACSalt:(NSData **)HMACSalt
+                            HMAC:(NSData **)HMAC
                            error:(NSError **)error {
   NSAssert(iv, @"IV must not be NULL");
   NSAssert(salt, @"salt must not be NULL");
@@ -317,7 +319,7 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
   NSMutableData *
   cipherData = [NSMutableData dataWithLength:data.length +
                 kAlgorithmBlockSize];
-
+  
   CCCryptorStatus
   result = CCCrypt(kCCEncrypt, // operation
                    kAlgorithm, // Algorithm
@@ -330,7 +332,7 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
                    cipherData.mutableBytes, // dataOut
                    cipherData.length, // dataOutAvailable
                    &outLength); // dataOutMoved
-
+  
   if (result == kCCSuccess) {
     cipherData.length = outLength;
   }
@@ -343,6 +345,17 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
     return nil;
   }
   
+  if (HMAC) {
+    NSAssert(HMACSalt, @"HMAC salt must not be NULL if HMAC is passed.");
+    *HMACSalt = [self randomDataOfLength:kPBKDFSaltSize];
+    NSData *HMACKey = [self AESKeyForPassword:password salt:*HMACSalt];
+    NSMutableData *HMACOut = [NSMutableData dataWithLength:CC_SHA256_DIGEST_LENGTH];
+    CCHmac(kCCHmacAlgSHA256, [HMACKey bytes], [HMACKey length],
+           [cipherData bytes], [cipherData length],
+           [HMACOut mutableBytes]);
+    *HMAC = HMACOut;
+  }
+  
   return cipherData;
 }
 
@@ -350,8 +363,30 @@ const NSUInteger kPBKDFRounds = 10000;  // ~80ms on an iPhone 4
                         password:(NSString *)password
                               iv:(NSData *)iv
                             salt:(NSData *)salt
+                        HMACSalt:(NSData *)HMACSalt
+                            HMAC:(NSData *)HMAC
                            error:(NSError **)error {
-
+  
+  if (HMAC) {
+    NSData *HMACKey = [self AESKeyForPassword:password salt:HMACSalt];
+    NSMutableData *HMACOut = [NSMutableData dataWithLength:CC_SHA256_DIGEST_LENGTH];
+    CCHmac(kCCHmacAlgSHA256,
+           [HMACKey bytes],
+           [HMACKey length],
+           [data bytes],
+           [data length],
+           [HMACOut mutableBytes]);
+    if (! [HMAC isEqualToData:HMACOut]) {
+      if (error) {
+        *error = [NSError
+                  errorWithDomain:kRNCryptManagerErrorDomain
+                  code:kRNCryptManagerErrorBadHMAC
+                  userInfo:nil];
+      }
+      return nil;
+    }
+  }
+  
   NSData *key = [self AESKeyForPassword:password salt:salt];
   
   size_t outLength;

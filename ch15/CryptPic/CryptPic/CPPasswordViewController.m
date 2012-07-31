@@ -6,9 +6,6 @@
 #import "CPPasswordViewController.h"
 
 @implementation CPPasswordViewController
-@synthesize passwordTextField=passwordTextField_;
-@synthesize delegate=delegate_;
-@synthesize password=password_;
 
 - (void)viewDidAppear:(BOOL)animated {
   [self.passwordTextField becomeFirstResponder];
@@ -19,7 +16,7 @@
   if ([string isEqualToString:@"\n"]) {
     self.password = self.passwordTextField.text;
     [self.delegate passwordViewController:self didFinishWithPassword:self.password];
-    [self.presentingViewController dismissModalViewControllerAnimated:YES];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     return NO;
   }
   return YES;

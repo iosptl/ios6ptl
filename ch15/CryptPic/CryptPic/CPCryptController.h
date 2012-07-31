@@ -20,6 +20,8 @@ typedef enum {
 @property (strong, nonatomic) NSData *encryptedData;
 @property (strong, nonatomic) NSData *iv;
 @property (strong, nonatomic) NSData *salt;
+@property (strong, nonatomic) NSData *HMACSalt;
+@property (strong, nonatomic) NSData *HMAC;
 @property (assign, nonatomic) CPEncryptionMode encryptionMode;
 
 - (BOOL)encryptData:(NSData *)data password:(NSString *)password error:(NSError **)error;

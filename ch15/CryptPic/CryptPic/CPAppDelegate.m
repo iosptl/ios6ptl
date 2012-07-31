@@ -7,7 +7,4 @@
 
 @implementation CPAppDelegate
 
-@synthesize window = _window;
-
-
 @end

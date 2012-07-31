@@ -6,11 +6,9 @@
 #import "CPDecryptViewController.h"
 #import "CPCryptController.h"
 #import <CommonCrypto/CommonCryptor.h>
+#import "RNCryptManager.h"
 
 @implementation CPDecryptViewController
-@synthesize imageView=imageView_;
-@synthesize password=password_;
-@synthesize decryptButton=decryptButton_;
 
 - (void)refreshEnabled {
   self.decryptButton.enabled = ([self.password length] > 0);
@@ -43,7 +41,7 @@
   NSError *error;
   NSData *data = [[CPCryptController sharedController] decryptDataWithPassword:self.password error:&error];
   if (! data) {
-    if ([error code] == kCCDecodeError) {
+    if ([error code] == kRNCryptManagerErrorBadHMAC) {
       NSLog(@"Bad password");
       [self performSegueWithIdentifier:@"showPassword" sender:self];
     }

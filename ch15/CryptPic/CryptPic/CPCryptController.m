@@ -12,10 +12,6 @@
 static NSString * const kModeKey = @"mode";
 
 @implementation CPCryptController
-@synthesize encryptedData=encryptedData_;
-@synthesize iv=iv_;
-@synthesize salt=salt_;
-@synthesize encryptionMode=encryptionMode_;
 
 + (CPCryptController *)sharedController {
   static CPCryptController *sSharedController;
@@ -28,9 +24,19 @@ static NSString * const kModeKey = @"mode";
 - (BOOL)encryptDataInMemory:(NSData *)data password:(NSString *)password error:(NSError **)error {
   NSData *iv;
   NSData *salt;
-  self.encryptedData = [RNCryptManager encryptedDataForData:data password:password iv:&iv salt:&salt error:error];
+  NSData *HMACSalt;
+  NSData *HMAC;
+  self.encryptedData = [RNCryptManager encryptedDataForData:data
+                                                   password:password
+                                                         iv:&iv
+                                                       salt:&salt
+                                                   HMACSalt:&HMACSalt
+                                                       HMAC:&HMAC
+                                                      error:error];
   self.iv = iv;
   self.salt = salt;
+  self.HMACSalt = HMACSalt;
+  self.HMAC = HMAC;
   return self.encryptedData ? YES : NO;
 }
 
@@ -87,7 +93,13 @@ static NSString * const kModeKey = @"mode";
 }
 
 - (NSData *)decryptMemoryDataWithPassword:(NSString *)password error:(NSError **)error {
-  return [RNCryptManager decryptedDataForData:self.encryptedData password:password iv:self.iv salt:self.salt error:error];
+  return [RNCryptManager decryptedDataForData:self.encryptedData
+                                     password:password
+                                           iv:self.iv
+                                         salt:self.salt
+                                     HMACSalt:self.HMACSalt
+                                         HMAC:self.HMAC                                        
+                                        error:error];
 }
 
 - (NSData *)decryptDataWithPassword:(NSString *)password error:(NSError **)error {

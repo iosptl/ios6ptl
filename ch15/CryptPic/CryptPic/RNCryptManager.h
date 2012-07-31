@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonCryptor.h>
 #import <CommonCrypto/CommonKeyDerivation.h>
+#import <CommonCrypto/CommonHMAC.h>
 
 extern NSString * const kRNCryptManagerErrorDomain;
+
+typedef enum : NSInteger {
+  kRNCryptManagerErrorBadHMAC = 1
+} RNCryptManagerError;
 
 @interface RNCryptManager : NSObject
 + (BOOL)encryptFromStream:(NSInputStream *)fromStream
@@ -27,11 +32,15 @@ extern NSString * const kRNCryptManagerErrorDomain;
                         password:(NSString *)password
                               iv:(NSData **)iv
                             salt:(NSData **)salt
+                        HMACSalt:(NSData **)HMACSalt
+                            HMAC:(NSData **)HMAC
                            error:(NSError **)error;
 
 + (NSData *)decryptedDataForData:(NSData *)data
                         password:(NSString *)password 
                               iv:(NSData *)iv
                             salt:(NSData *)salt
+                        HMACSalt:(NSData *)HMACSalt
+                            HMAC:(NSData *)HMAC
                            error:(NSError **)error;
 @end
