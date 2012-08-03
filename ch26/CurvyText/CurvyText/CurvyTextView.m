@@ -3,7 +3,6 @@
 //  CurvyText
 //
 //  Created by Rob Napier on 8/28/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 static const CGFloat kControlPointSize = 13.;
@@ -20,18 +19,13 @@ static const CGFloat kControlPointSize = 13.;
 @end
 
 @implementation CurvyTextView
-@synthesize attributedString=attributedString_;
-@synthesize P0=P0_;
-@synthesize P1=P1_;
-@synthesize P2=P2_;
-@synthesize P3=P3_;
 
 - (void)updateControlPoints {
   NSArray *subviews = self.subviews;
-  self.P0 = [[subviews objectAtIndex:0] center];
-  self.P1 = [[subviews objectAtIndex:1] center];
-  self.P2 = [[subviews objectAtIndex:2] center];
-  self.P3 = [[subviews objectAtIndex:3] center];
+  self.P0 = [subviews[0] center];
+  self.P1 = [subviews[1] center];
+  self.P2 = [subviews[2] center];
+  self.P3 = [subviews[3] center];
   [self setNeedsDisplay];
 }
 
@@ -99,8 +93,8 @@ static double Bezier(double t, double P0, double P1, double P2,
 }
 
 - (CGPoint)pointForOffset:(double)t {
-  double x = Bezier(t, P0_.x, P1_.x, P2_.x, P3_.x);
-  double y = Bezier(t, P0_.y, P1_.y, P2_.y, P3_.y);
+  double x = Bezier(t, _P0.x, _P1.x, _P2.x, _P3.x);
+  double y = Bezier(t, _P0.y, _P1.y, _P2.y, _P3.y);
   return CGPointMake(x, y);
 }
 
@@ -114,8 +108,8 @@ static double BezierPrime(double t, double P0, double P1,
 }
 
 - (double)angleForOffset:(double)t {  
-  double dx = BezierPrime(t, P0_.x, P1_.x, P2_.x, P3_.x);
-  double dy = BezierPrime(t, P0_.y, P1_.y, P2_.y, P3_.y);  
+  double dx = BezierPrime(t, _P0.x, _P1.x, _P2.x, _P3.x);
+  double dy = BezierPrime(t, _P0.y, _P1.y, _P2.y, _P3.y);  
   return atan2(dy, dx);
 }
 
@@ -159,9 +153,9 @@ static double Distance(CGPoint a, CGPoint b) {
   CFRelease(cgFont);
   
   // Set color
-  CGColorRef color = (CGColorRef)CFDictionaryGetValue(attributes,
-                                  kCTForegroundColorAttributeName);
-  CGContextSetFillColorWithColor(context, color);
+  UIColor *color = CFDictionaryGetValue(attributes,
+                                  NSForegroundColorAttributeName);
+  CGContextSetFillColorWithColor(context, color.CGColor);
 }
 
 - (NSMutableData *)glyphDataForRun:(CTRunRef)run {
