@@ -16,8 +16,6 @@ static const CFIndex kColumnCount = 3;
 @end
 
 @implementation ColumnView
-@synthesize attributedString=attributedString_;
-@synthesize mode=mode_;
 
 - (CGRect *)copyColumnRects {
   CGRect bounds = CGRectInset([self bounds], 20.0, 20.0);
