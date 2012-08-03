@@ -86,10 +86,10 @@ static const CGFloat kControlPointSize = 13.;
 static double Bezier(double t, double P0, double P1, double P2,
                      double P3) {
   return 
-                   pow(1-t, 3) *     P0
-     + 3 *         pow(1-t, 2) * t * P1
-     + 3 * (1-t) * pow(t,   2) *     P2
-     +             pow(t,   3) *     P3;
+           (1-t)*(1-t)*(1-t)         * P0
+     + 3 *       (1-t)*(1-t) *     t * P1
+     + 3 *             (1-t) *   t*t * P2
+     +                         t*t*t * P3;
 }
 
 - (CGPoint)pointForOffset:(double)t {
@@ -101,10 +101,10 @@ static double Bezier(double t, double P0, double P1, double P2,
 static double BezierPrime(double t, double P0, double P1,
                           double P2, double P3) {
   return
-    -  3 * pow(1-t, 2) * P0 
-    + (3 * pow(1-t, 2) * P1) - (6 * t * (1-t) * P1)
-    - (3 * pow(t,   2) * P2) + (6 * t * (1-t) * P2)
-    +  3 * pow(t,   2) * P3;
+    -  3 * (1-t)*(1-t) * P0
+    + (3 * (1-t)*(1-t) * P1) - (6 * t * (1-t) * P1)
+    - (3 *         t*t * P2) + (6 * t * (1-t) * P2)
+    +  3 * t*t * P3;
 }
 
 - (double)angleForOffset:(double)t {  
