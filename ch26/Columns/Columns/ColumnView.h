@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColumnView : UIView
-@property (nonatomic, copy) NSAttributedString *attributedString;
+@interface ColumnView : UIView <UITextInput>
+@property (nonatomic, copy) NSAttributedString *attributedText;
 @end

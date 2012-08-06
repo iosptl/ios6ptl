@@ -1,52 +1,28 @@
 //
-//  ColumnView.m
-//  Columns
+//  CustomTextView.m
+//  CustomText
 //
-//  Created by Rob Napier on 8/26/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Rob Napier on 8/3/12.
+//  Copyright (c) 2012 Rob Napier. All rights reserved.
 //
 
-#import "ColumnView.h"
+#import "CustomTextView.h"
 #import <CoreText/CoreText.h>
 
 static const CFIndex kColumnCount = 3;
 
 @interface CustomTextPosition : UITextPosition
 @property (nonatomic, readwrite, assign) NSUInteger index;
-+ (CustomTextPosition *)textPositionForIndex:(NSUInteger)index;
-- (NSRange)rangeToPosition:(CustomTextPosition *)position;
 @end
 
 @implementation CustomTextPosition
-+ (CustomTextPosition *)textPositionForIndex:(NSUInteger)index {
-  CustomTextPosition *position = [CustomTextPosition new];
-  position.index = index;
-  return position;
-}
-
-- (NSRange)rangeToPosition:(CustomTextPosition *)position {
-  return NSMakeRange(self.index, position.index - position.index);
-}
 @end
 
-@interface CustomTextRange : UITextRange
-@property (nonatomic, readwrite, )
-- (NSRange)range;
-@end
-
-@implementation CustomTextRange
-- (NSRange)range {
-  return [(CustomTextPosition *)(self.start) rangeToPosition:(CustomTextPosition *)(self.end)];
-}
-@end
-
-
-@interface ColumnView ()
-@property (nonatomic, readwrite, strong) NSMutableAttributedString *storage;
+@interface CustomTextView ()
 @property (nonatomic, readwrite, assign) CFIndex mode;
 @end
 
-@implementation ColumnView
+@implementation CustomTextView
 
 - (CGRect *)copyColumnRects {
   CGRect bounds = CGRectInset([self bounds], 20.0, 20.0);
@@ -61,21 +37,21 @@ static const CFIndex kColumnCount = 3;
   CGFloat columnWidth = CGRectGetWidth(bounds) / kColumnCount;
   for (column = 0; column < kColumnCount - 1; column++) {
     CGRectDivide(columnRects[column], &columnRects[column],
-                 &columnRects[column + 1], columnWidth, 
+                 &columnRects[column + 1], columnWidth,
                  CGRectMinXEdge);
   }
   
   // Inset all columns by a few pixels of margin.
   for (column = 0; column < kColumnCount; column++) {
-    columnRects[column] = CGRectInset(columnRects[column], 
+    columnRects[column] = CGRectInset(columnRects[column],
                                       10.0, 10.0);
   }
   return columnRects;
 }
 
 - (CFArrayRef)copyPaths
-{   
-  CFMutableArrayRef 
+{
+  CFMutableArrayRef
   paths = CFArrayCreateMutable(kCFAllocatorDefault,
                                kColumnCount,
                                &kCFTypeArrayCallBacks);
@@ -86,7 +62,7 @@ static const CFIndex kColumnCount = 3;
       CGRect *columnRects = [self copyColumnRects];
       // Create an array of layout paths, one for each column.
       for (int column = 0; column < kColumnCount; column++) {
-        CGPathRef 
+        CGPathRef
         path = CGPathCreateWithRect(columnRects[column], NULL);
         CFArrayAppendValue(paths, path);
         CGPathRelease(path);
@@ -107,7 +83,7 @@ static const CFIndex kColumnCount = 3;
       free(columnRects);
       CFArrayAppendValue(paths, path);
       CGPathRelease(path);
-      break;    
+      break;
     }
       
     case 2: // two columns with box
@@ -140,20 +116,20 @@ static const CFIndex kColumnCount = 3;
       CGPathAddLineToPoint(path, NULL, 700, 944); // Top right
       CGPathCloseSubpath(path);
       CFArrayAppendValue(paths, path);
-      CGPathRelease(path);    
+      CGPathRelease(path);
       break;
     }
     case 3: // ellipse
-    {       
-      CGPathRef 
+    {
+      CGPathRef
       path = CGPathCreateWithEllipseInRect(CGRectInset([self bounds],
-                                                       30, 
+                                                       30,
                                                        30),
                                            NULL);
       CFArrayAppendValue(paths, path);
       CGPathRelease(path);
       break;
-    }           
+    }
   }
   return paths;
 }
@@ -161,42 +137,34 @@ static const CFIndex kColumnCount = 3;
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
-    // Flip the view's context. Core Text runs bottom to top, even 
+    // Flip the view's context. Core Text runs bottom to top, even
     // on iPad, and the view is much simpler if we do everything in
     // Mac coordinates.
-//    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
-//    CGAffineTransformTranslate(transform, 0, -self.bounds.size.height);
-//    self.transform = transform;
+    //    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
+    //    CGAffineTransformTranslate(transform, 0, -self.bounds.size.height);
+    //    self.transform = transform;
     self.backgroundColor = [UIColor whiteColor];
   }
   return self;
 }
 
-- (NSAttributedString *)attributedText {
-  return [self.storage copy];
-}
-
-- (void)setAttributedText:(NSAttributedString *)attributedText {
-  _storage = [attributedText mutableCopy];
-}
-
 - (void)drawRect:(CGRect)rect
 {
-  if (self.storage == nil)
+  if (self.attributedText == nil)
   {
     return;
   }
   
   CGContextRef context = UIGraphicsGetCurrentContext();
-
+  
   // Flip the context (and always initialize your text matrix)
   CGContextSetTextMatrix( context, CGAffineTransformIdentity );
   CGContextTranslateCTM( context, rect.origin.x, rect.origin.y );
   CGContextScaleCTM( context, 1.0f, -1.0f );
   CGContextTranslateCTM( context, rect.origin.x, - ( rect.origin.y + rect.size.height ) );
-
-  CFAttributedStringRef 
-  attrString = (__bridge CFTypeRef)self.storage;
+  
+  CFAttributedStringRef
+  attrString = (__bridge CFTypeRef)self.attributedText;
   
   CTFramesetterRef
   framesetter = CTFramesetterCreateWithAttributedString(attrString);
@@ -208,13 +176,13 @@ static const CFIndex kColumnCount = 3;
     CGPathRef path = CFArrayGetValueAtIndex(paths, pathIndex);
     
     CTFrameRef
-    frame = CTFramesetterCreateFrame(framesetter, 
+    frame = CTFramesetterCreateFrame(framesetter,
                                      CFRangeMake(charIndex, 0),
                                      path,
-                                     NULL); 
+                                     NULL);
     CTFrameDraw(frame, context);
     CFRange frameRange = CTFrameGetVisibleStringRange(frame);
-    charIndex += frameRange.length;      
+    charIndex += frameRange.length;
     CFRelease(frame);
   }
   
@@ -227,17 +195,19 @@ static const CFIndex kColumnCount = 3;
 //  [self setNeedsDisplay];
 //}
 
-#pragma mark UITextInput
-- (NSString *)textInRange:(UITextRange *)range
-{
-  return [self.storage.string substringWithRange:range.range];
-}
+@end
 
-- (void)replaceRange:(UITextRange *)range withText:(NSString *)text
-{
-  [self.storage replaceCharactersInRange:range.range withString:text];
-}
 
+//#pragma mark UITextInput
+//- (NSString *)textInRange:(UITextRange *)range
+//{
+//
+//}
+//- (void)replaceRange:(UITextRange *)range withText:(NSString *)text;
+//
+///* Text may have a selection, either zero-length (a caret) or ranged.  Editing operations are
+// * always performed on the text from this selection.  nil corresponds to no selection. */
+//
 //@property (readwrite, copy) UITextRange *selectedTextRange;
 //
 ///* If text can be selected, it can be marked. Marked text represents provisionally
@@ -250,20 +220,15 @@ static const CFIndex kColumnCount = 3;
 //
 //@property (nonatomic, readonly) UITextRange *markedTextRange;                       // Nil if no marked text.
 //@property (nonatomic, copy) NSDictionary *markedTextStyle;                          // Describes how the marked text should be drawn.
-
 //- (void)setMarkedText:(NSString *)markedText selectedRange:(NSRange)selectedRange;  // selectedRange is a range within the markedText
 //- (void)unmarkText;
 //
 ///* The end and beginning of the the text document. */
-- (UITextPosition *)beginningOfDocument {
-  return [CustomTextPosition textPositionForIndex:0];
-}
-
-- (UITextPosition *)endOfDocument {
-  return [CustomTextPosition textPositionForIndex:self.attributedText.length];
-}
-
-- (UITextRange *)textRangeFromPosition:(UITextPosition *)fromPosition toPosition:(UITextPosition *)toPosition {
+//@property (nonatomic, readonly) UITextPosition *beginningOfDocument;
+//@property (nonatomic, readonly) UITextPosition *endOfDocument;
+//
+///* Methods for creating ranges and positions. */
+//- (UITextRange *)textRangeFromPosition:(UITextPosition *)fromPosition toPosition:(UITextPosition *)toPosition;
 //- (UITextPosition *)positionFromPosition:(UITextPosition *)position offset:(NSInteger)offset;
 //- (UITextPosition *)positionFromPosition:(UITextPosition *)position inDirection:(UITextLayoutDirection)direction offset:(NSInteger)offset;
 //
@@ -297,6 +262,3 @@ static const CFIndex kColumnCount = 3;
 //
 //
 //@end
-
-
-@end
