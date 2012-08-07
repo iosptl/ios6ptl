@@ -94,8 +94,7 @@
 				FBA913E915D0914A00CB92B2 /* MainStoryboard.storyboard */,
 				FBA913DE15D0914A00CB92B2 /* Supporting Files */,
 			);
-			name = Julia;
-			path = Mandel;
+			path = Julia;
 			sourceTree = "<group>";
 		};
 		FBA913DE15D0914A00CB92B2 /* Supporting Files */ = {
@@ -255,8 +254,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mandel/JuliaOp-Prefix.pch";
-				INFOPLIST_FILE = "Mandel/JuliaOp-Info.plist";
+				GCC_PREFIX_HEADER = "Julia/JuliaOp-Prefix.pch";
+				INFOPLIST_FILE = "Julia/JuliaOp-Info.plist";
 				PRODUCT_NAME = JuliaOp;
 				WRAPPER_EXTENSION = app;
 			};
@@ -266,8 +265,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mandel/JuliaOp-Prefix.pch";
-				INFOPLIST_FILE = "Mandel/JuliaOp-Info.plist";
+				GCC_PREFIX_HEADER = "Julia/JuliaOp-Prefix.pch";
+				INFOPLIST_FILE = "Julia/JuliaOp-Info.plist";
 				PRODUCT_NAME = JuliaOp;
 				WRAPPER_EXTENSION = app;
 			};

@@ -18,9 +18,14 @@ complex long double f(complex long double z, complex long double c) {
   return z*z + c;
 }
 
+- (NSString *)description
+{
+  return [NSString stringWithFormat:@"(%.3f, %.3f)", creal(self.c), cimag(self.c)];
+}
+
 - (void)main
 {
-  NSLog(@"Starting: %.3f,%.3f", creal(self.c), cimag(self.c));
+  NSLog(@"Starting: %@", self);
   NSUInteger height = self.height;
   NSUInteger width = self.width;
   
@@ -34,7 +39,7 @@ complex long double f(complex long double z, complex long double c) {
   for (NSUInteger y = 0; y < height; ++y) {
     for (NSUInteger x = 0; x < width; ++x) {
       if (self.isCancelled) {
-        NSLog(@"Cancelling: %.3f,%.3f", creal(self.c), cimag(self.c));
+        NSLog(@"Cancelling: %@", self);
         return;
       }
       NSUInteger iteration = 0;
@@ -66,7 +71,7 @@ complex long double f(complex long double z, complex long double c) {
                                        scale:self.contentScaleFactor
                                  orientation:UIImageOrientationUp];
   free(bits);
-  NSLog(@"Finishing: %.3f,%.3f", creal(self.c), cimag(self.c));
+  NSLog(@"Finishing: %@", self);
 }
 
 @end

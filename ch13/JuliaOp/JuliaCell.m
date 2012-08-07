@@ -37,20 +37,21 @@
   op.c = (long double)random()/LONG_MAX + I*(long double)random()/LONG_MAX;
   self.label.text = [NSString stringWithFormat:@"(%.3f, %.3f)",
                      creal(op.c), cimag(op.c)];
- 
+  
   op.blowup = random();
   op.rScale = random() % 20;  // Biased, but repeatable and simple is more important
   op.gScale = random() % 20;
   op.bScale = random() % 20;
   
   __weak typeof(self) weakSelf = self;
+  __weak typeof(op) weakOp = op;
   op.completionBlock = ^{
-    NSLog(@"Drawing: %.3f,%.3f", creal(op.c), cimag(op.c));
-    if (! op.isCancelled) {
+    NSLog(@"Complete: %@", weakOp);
+    if (! weakOp.isCancelled) {
+      NSLog(@"Drawing: %@", weakOp);
       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        weakSelf.imageView.image = op.image;
+        weakSelf.imageView.image = weakOp.image;
       }];
-      weakSelf.operation = nil;
     }
   };
   
