@@ -35,8 +35,7 @@
   srandom(seed);
   
   op.c = (long double)random()/LONG_MAX + I*(long double)random()/LONG_MAX;
-  self.label.text = [NSString stringWithFormat:@"(%.3f, %.3f)",
-                     creal(op.c), cimag(op.c)];
+  self.label.text = op.description;
   
   op.blowup = random();
   op.rScale = random() % 20;  // Biased, but repeatable and simple is more important
