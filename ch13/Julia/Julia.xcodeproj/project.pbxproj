@@ -286,6 +286,7 @@
 				FBA913F315D0914A00CB92B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,8 +9,6 @@
 #import "JuliaCell.h"
 #import <complex.h>
 
-//const long double kBlowup = 3; //; 1e2466L; // ~ sqrt(LDBL_MAX)
-
 @interface JuliaCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -29,13 +27,9 @@ complex long double f(complex long double z, complex long double c) {
 
 - (void)calculateImage {
   CGRect bounds = self.bounds;
-  CGFloat minX = CGRectGetMinX(bounds);
-  CGFloat minY = CGRectGetMinY(bounds);
-  CGFloat maxX = CGRectGetMaxX(bounds);
-  CGFloat maxY = CGRectGetMaxY(bounds);
 
-  NSUInteger width = (unsigned)CGRectGetWidth(bounds);
-  NSUInteger height = (unsigned)CGRectGetHeight(bounds);
+  NSUInteger width = (unsigned)(CGRectGetWidth(bounds) * self.contentScaleFactor);
+  NSUInteger height = (unsigned)(CGRectGetHeight(bounds) * self.contentScaleFactor);
   
   NSUInteger components = 4;
   uint8_t *bits = calloc(width * height * components, sizeof(*bits));
@@ -43,12 +37,12 @@ complex long double f(complex long double z, complex long double c) {
   complex long double c = self.c;
   long double blowup = self.blowup;
   double scale = 1.5;
-
-  for (NSUInteger y = minY; y < maxY; ++y) {
-    for (NSUInteger x = minX; x < maxX; ++x) {
+  
+  for (NSUInteger y = 0; y < height; ++y) {
+    for (NSUInteger x = 0; x < width; ++x) {
       NSUInteger iteration = 0;
-      complex long double z = (2.0 * scale * (x-minX))/width - scale
-        + I*((2.0 * scale * (y - minY))/width - scale);
+      complex long double z = (2.0 * scale * x)/width - scale
+        + I*((2.0 * scale * y)/width - scale);
       while (cabsl(z) < blowup && iteration < 256) {
         z = f(z, c);
         ++iteration;
@@ -71,14 +65,16 @@ complex long double f(complex long double z, complex long double c) {
                                                kCGImageAlphaNoneSkipLast);
   CGColorSpaceRelease(colorspace);
   
-  UIImage *image = [UIImage imageWithCGImage:CGBitmapContextCreateImage(context)];
+  UIImage *image = [UIImage imageWithCGImage:CGBitmapContextCreateImage(context)
+                    scale:self.contentScaleFactor orientation:UIImageOrientationUp];
   self.imageView.image = image;
   free(bits);
 
 }
 
 - (void)configureWithSeed:(NSUInteger)seed
-{  
+{
+  self.contentScaleFactor = [[UIScreen mainScreen] scale];
   srandom(seed);
   
   self.c = (long double)random()/LONG_MAX + I*(long double)random()/LONG_MAX;
