@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'SimpleThread' target in the 'SimpleThread' project
+// Prefix header for all source files of the 'Mandel' target in the 'Mandel' project
 //
 
 #import <Availability.h>

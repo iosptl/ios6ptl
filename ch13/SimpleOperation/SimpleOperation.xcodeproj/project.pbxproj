@@ -27,8 +27,8 @@
 		FBE30D3613F9C700002686F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FBE30D3713F9C700002686F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FBE30D3A13F9C700002686F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FBE30D3C13F9C700002686F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FBE30D3D13F9C700002686F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FBE30D3C13F9C700002686F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = SimpleOperation/ViewController.h; sourceTree = "<group>"; };
+		FBE30D3D13F9C700002686F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = SimpleOperation/ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,8 @@
 		FBE30D1A13F9C700002686F2 = {
 			isa = PBXGroup;
 			children = (
+				FBE30D3C13F9C700002686F2 /* ViewController.h */,
+				FBE30D3D13F9C700002686F2 /* ViewController.m */,
 				FBE30D2D13F9C700002686F2 /* SimpleOperation */,
 				FBE30D2813F9C700002686F2 /* Frameworks */,
 				FBE30D2613F9C700002686F2 /* Products */,
@@ -76,8 +78,6 @@
 				FBE30D3613F9C700002686F2 /* AppDelegate.h */,
 				FBE30D3713F9C700002686F2 /* AppDelegate.m */,
 				FBE30D3913F9C700002686F2 /* MainStoryboard.storyboard */,
-				FBE30D3C13F9C700002686F2 /* ViewController.h */,
-				FBE30D3D13F9C700002686F2 /* ViewController.m */,
 				FBE30D2E13F9C700002686F2 /* Supporting Files */,
 			);
 			path = SimpleOperation;
@@ -204,7 +204,6 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -222,7 +221,6 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -270,6 +268,7 @@
 				FBE30D4313F9C700002686F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

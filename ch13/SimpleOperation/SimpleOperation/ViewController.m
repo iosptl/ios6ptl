@@ -3,23 +3,25 @@
 //  SimpleOperation
 //
 //  Created by Rob Napier on 8/15/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "ViewController.h"
 
+@interface ViewController ()
+@property (nonatomic, readwrite, weak) IBOutlet UILabel *label;
+@property (nonatomic, readwrite, assign) NSUInteger count;
+@property (nonatomic, readwrite, strong) NSOperationQueue *queue;
+@end
+
 @implementation ViewController
-@synthesize label=label_;
-@synthesize count=count_;
-@synthesize queue=queue_;
 
 - (void)addNextOperation {
-  __block typeof(self) myself = self;
+  __weak typeof(self) weakSelf = self;
   NSOperation *op = [NSBlockOperation blockOperationWithBlock:^{
     [NSThread sleepForTimeInterval:1];
-    myself.count = myself.count + 1;
+    weakSelf.count = weakSelf.count + 1;
   }];
-  op.completionBlock = ^{[myself addNextOperation];};
+  op.completionBlock = ^{[weakSelf addNextOperation];};
   
   [self.queue addOperation:op];
 }
@@ -33,22 +35,17 @@
 }
 
 - (void)setCount:(NSUInteger)count {
-  count_ = count;
-  __block typeof(self) myself = self;
+  _count = count;
+  __weak typeof(self) weakSelf = self;
   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-    myself.label.text = [NSString stringWithFormat:@"%d", count];
+    weakSelf.label.text = [NSString stringWithFormat:@"%d", count];
   }];
 }
 
-- (NSUInteger)count {
-  return count_;
-}
-
-- (void)viewDidUnload {
+- (void)viewWillDisappear:(BOOL)animated {
   self.queue.suspended = YES;
   self.queue = nil;
-  [self setLabel:nil];
-  [super viewDidUnload];
+  [super viewWillDisappear:animated];
 }
 
 

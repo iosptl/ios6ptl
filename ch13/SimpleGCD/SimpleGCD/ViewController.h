@@ -10,8 +10,4 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *label;
-@property (assign) NSUInteger count;
-@property (assign) dispatch_queue_t queue;
-@property (assign) BOOL shouldRun;
 @end
