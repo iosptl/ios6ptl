@@ -8,8 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <complex.h>
 
-//extern const char JuliaQueueActiveKey;
-
 @interface JuliaCalculation : NSObject
 @property (nonatomic, readwrite, assign) NSUInteger width;
 @property (nonatomic, readwrite, assign) NSUInteger height;

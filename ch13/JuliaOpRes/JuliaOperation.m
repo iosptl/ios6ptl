@@ -81,9 +81,4 @@ complex long double f(complex long double z, complex long double c) {
   CGContextRelease(context);
 }
 
-- (void)dealloc {
-  NSLog(@"operation dealloc");
-}
-
-
 @end

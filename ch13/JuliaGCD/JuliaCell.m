@@ -54,12 +54,8 @@
     if ([calc run]) {
       dispatch_async(dispatch_get_main_queue(), ^{
         if (!calc.isCancelled) {
-//                         NSLog(@"Drawing: %@", calc);
           weakSelf.imageView.image = calc.image;
           weakSelf.label.text = calc.description;
-        }
-        else {
-//                         NSLog(@"Cancelled early:%@", calc);
         }
       });
     }
@@ -72,9 +68,9 @@
   self.contentScaleFactor = maxScale;
   
   NSUInteger kIterations = 6;
-  JuliaCalculation *prevCalc = nil;
+  dispatch_group_t prevGroup = NULL;
   
-  for (CGFloat scale = maxScale/pow(2, kIterations); scale <= maxScale; scale *= 2) {
+    for (CGFloat scale = maxScale/pow(2, kIterations); scale <= maxScale; scale *= 2) {
     dispatch_queue_priority_t priority = DISPATCH_QUEUE_PRIORITY_LOW;
     if (scale < 0.5) {
       priority = DISPATCH_QUEUE_PRIORITY_HIGH;
@@ -82,18 +78,18 @@
     else if (scale < 1) {
       priority = DISPATCH_QUEUE_PRIORITY_DEFAULT;
     }
-        
-    dispatch_queue_t queue = self.queue;
-    dispatch_async(self.queue, ^{
-      dispatch_set_target_queue(queue, dispatch_get_global_queue(priority, 0));
-    });
-    
-    dispatch_async(self.queue, [self blockForScale:scale seed:seed]);
+  
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_get_global_queue(priority, 0);
+    dispatch_block_t block = [self blockForScale:scale seed:seed];
+    if (prevGroup) {
+      dispatch_group_notify(prevGroup, queue, block);
+    }
+    else {
+      dispatch_group_async(group, queue, block);
+    }
+    prevGroup = group;
   }
 }
-
-//- (void)dealloc {
-//  NSLog(@"Cell dealloc");
-//}
 
 @end

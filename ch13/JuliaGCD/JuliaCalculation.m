@@ -30,7 +30,11 @@ complex long double f(complex long double z, complex long double c) {
 
 - (BOOL)run
 {
-  NSLog(@"Running: %@", self);
+  if (self.isCancelled) {
+    return NO;
+  }
+  
+//  NSLog(@"Running: %@", self);
   NSUInteger height = self.height;
   NSUInteger width = self.width;
   
