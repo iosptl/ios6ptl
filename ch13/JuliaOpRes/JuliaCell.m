@@ -45,14 +45,16 @@
   op.gScale = random() % 20;
   op.bScale = random() % 20;
     
-  __weak typeof(self) weakSelf = self;
   __weak typeof(op) weakOp = op;
   op.completionBlock = ^{
     if (! weakOp.isCancelled) {
       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        weakSelf.imageView.image = weakOp.image;
-        weakSelf.label.text = weakOp.description;
-        [weakSelf.operations removeObject:weakOp];
+        typeof(op) strongOp = weakOp;
+        if (strongOp && [self.operations containsObject:strongOp]) {
+          self.imageView.image = strongOp.image;
+          self.label.text = strongOp.description;
+          [self.operations removeObject:strongOp];
+        }
       }];
     }
   };
@@ -60,7 +62,7 @@
   if (scale < 0.5) {
     op.queuePriority = NSOperationQueuePriorityVeryHigh;
   }
-  else if (scale < 1) {
+  else if (scale <= 1) {
     op.queuePriority = NSOperationQueuePriorityHigh;
   }
   else {
