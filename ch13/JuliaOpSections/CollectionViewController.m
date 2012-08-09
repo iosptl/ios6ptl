@@ -7,18 +7,21 @@
 
 #import "CollectionViewController.h"
 #import "JuliaCell.h"
+#import "JuliaManager.h"
 
 @interface CollectionViewController ()
-@property (nonatomic, readwrite, strong) NSOperationQueue *queue;
+@property (nonatomic, readwrite, strong) JuliaManager *juliaManager;
 @end
 
 @implementation CollectionViewController
 
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-  self.queue = [[NSOperationQueue alloc] init];
-  self.queue.maxConcurrentOperationCount = 2; // NOTE ME
+- (void)awakeFromNib {
+  UICollectionViewFlowLayout *layout = (id)self.collectionView.collectionViewLayout;
+  self.juliaManager = [[JuliaManager alloc] initWithSize:layout.itemSize];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [self.juliaManager updateImagesForSeeds:[self.collectionView.visibleCells valueForKey:@"seed"]];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -32,7 +35,7 @@
   cell = [self.collectionView
           dequeueReusableCellWithReuseIdentifier:@"Julia"
           forIndexPath:indexPath];
-  [cell configureWithSeed:indexPath.row queue:self.queue];
+  cell.julia = [self.juliaManager juliaWithSeed:indexPath.row];
   return cell;
 }
 
