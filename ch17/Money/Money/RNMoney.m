@@ -1,10 +1,6 @@
 #import "RNMoney.h"
 
 @implementation RNMoney
-
-@synthesize amount=amount_;
-@synthesize currencyCode=currencyCode_;
-
 static NSString * const kRNMoneyAmountKey = @"amount";
 static NSString * const kRNMoneyCurrencyCodeKey =
                                            @"currencyCode";
@@ -12,13 +8,13 @@ static NSString * const kRNMoneyCurrencyCodeKey =
 - (RNMoney *)initWithAmount:(NSDecimalNumber *)anAmount 
                currencyCode:(NSString *)aCode {
   if ((self = [super init])) {
-    amount_ = anAmount;
+    _amount = anAmount;
     if (aCode == nil) {
       NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-      currencyCode_ = [formatter currencyCode];
+      _currencyCode = [formatter currencyCode];
     }
     else {
-      currencyCode_ = aCode;
+      _currencyCode = aCode;
     }
   }
   return self;
@@ -58,8 +54,8 @@ static NSString * const kRNMoneyCurrencyCodeKey =
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-  [aCoder encodeObject:amount_ forKey:kRNMoneyAmountKey];
-  [aCoder encodeObject:currencyCode_
+  [aCoder encodeObject:_amount forKey:kRNMoneyAmountKey];
+  [aCoder encodeObject:_currencyCode
                 forKey:kRNMoneyCurrencyCodeKey];
 }
 
