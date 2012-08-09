@@ -22,14 +22,14 @@
 /* Begin PBXFileReference section */
 		FB18AE3D15D158BA00465301 /* JuliaOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JuliaOperation.h; sourceTree = "<group>"; };
 		FB18AE3E15D158BA00465301 /* JuliaOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JuliaOperation.m; sourceTree = "<group>"; };
-		FBA913D315D0914A00CB92B2 /* JuliaOpRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuliaOpRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBA913D315D0914A00CB92B2 /* JuliaOp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuliaOp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA913D715D0914A00CB92B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBA913D915D0914A00CB92B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FBA913DB15D0914A00CB92B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FBA913DF15D0914A00CB92B2 /* JuliaOpRes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JuliaOpRes-Info.plist"; sourceTree = "<group>"; };
+		FBA913DF15D0914A00CB92B2 /* JuliaOp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JuliaOp-Info.plist"; sourceTree = "<group>"; };
 		FBA913E115D0914A00CB92B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FBA913E315D0914A00CB92B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FBA913E515D0914A00CB92B2 /* JuliaOpRes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuliaOpRes-Prefix.pch"; sourceTree = "<group>"; };
+		FBA913E515D0914A00CB92B2 /* JuliaOp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuliaOp-Prefix.pch"; sourceTree = "<group>"; };
 		FBA913E615D0914A00CB92B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FBA913E715D0914A00CB92B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FBA913EA15D0914A00CB92B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		FBA913D415D0914A00CB92B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FBA913D315D0914A00CB92B2 /* JuliaOpRes.app */,
+				FBA913D315D0914A00CB92B2 /* JuliaOp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,10 +100,10 @@
 		FBA913DE15D0914A00CB92B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FBA913DF15D0914A00CB92B2 /* JuliaOpRes-Info.plist */,
+				FBA913DF15D0914A00CB92B2 /* JuliaOp-Info.plist */,
 				FBA913E015D0914A00CB92B2 /* InfoPlist.strings */,
 				FBA913E315D0914A00CB92B2 /* main.m */,
-				FBA913E515D0914A00CB92B2 /* JuliaOpRes-Prefix.pch */,
+				FBA913E515D0914A00CB92B2 /* JuliaOp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -111,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FBA913D215D0914A00CB92B2 /* JuliaOpRes */ = {
+		FBA913D215D0914A00CB92B2 /* JuliaOp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FBA913F115D0914A00CB92B2 /* Build configuration list for PBXNativeTarget "JuliaOpRes" */;
+			buildConfigurationList = FBA913F115D0914A00CB92B2 /* Build configuration list for PBXNativeTarget "JuliaOp" */;
 			buildPhases = (
 				FBA913CF15D0914A00CB92B2 /* Sources */,
 				FBA913D015D0914A00CB92B2 /* Frameworks */,
@@ -123,9 +123,9 @@
 			);
 			dependencies = (
 			);
-			name = JuliaOpRes;
+			name = JuliaOp;
 			productName = Mandel;
-			productReference = FBA913D315D0914A00CB92B2 /* JuliaOpRes.app */;
+			productReference = FBA913D315D0914A00CB92B2 /* JuliaOp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +137,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Rob Napier";
 			};
-			buildConfigurationList = FBA913CD15D0914A00CB92B2 /* Build configuration list for PBXProject "JuliaOpRes" */;
+			buildConfigurationList = FBA913CD15D0914A00CB92B2 /* Build configuration list for PBXProject "JuliaOp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -149,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FBA913D215D0914A00CB92B2 /* JuliaOpRes */,
+				FBA913D215D0914A00CB92B2 /* JuliaOp */,
 			);
 		};
 /* End PBXProject section */
@@ -254,9 +254,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Julia/JuliaOpRes-Prefix.pch";
-				INFOPLIST_FILE = "Julia/JuliaOpRes-Info.plist";
-				PRODUCT_NAME = JuliaOpRes;
+				GCC_PREFIX_HEADER = "Julia/JuliaOp-Prefix.pch";
+				INFOPLIST_FILE = "Julia/JuliaOp-Info.plist";
+				PRODUCT_NAME = JuliaOp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -265,9 +265,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Julia/JuliaOpRes-Prefix.pch";
-				INFOPLIST_FILE = "Julia/JuliaOpRes-Info.plist";
-				PRODUCT_NAME = JuliaOpRes;
+				GCC_PREFIX_HEADER = "Julia/JuliaOp-Prefix.pch";
+				INFOPLIST_FILE = "Julia/JuliaOp-Info.plist";
+				PRODUCT_NAME = JuliaOp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -275,7 +275,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FBA913CD15D0914A00CB92B2 /* Build configuration list for PBXProject "JuliaOpRes" */ = {
+		FBA913CD15D0914A00CB92B2 /* Build configuration list for PBXProject "JuliaOp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FBA913EF15D0914A00CB92B2 /* Debug */,
@@ -284,7 +284,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FBA913F115D0914A00CB92B2 /* Build configuration list for PBXNativeTarget "JuliaOpRes" */ = {
+		FBA913F115D0914A00CB92B2 /* Build configuration list for PBXNativeTarget "JuliaOp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FBA913F215D0914A00CB92B2 /* Debug */,
