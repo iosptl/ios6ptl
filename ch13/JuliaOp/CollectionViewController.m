@@ -7,6 +7,7 @@
 
 #import "CollectionViewController.h"
 #import "JuliaCell.h"
+#include <sys/sysctl.h>
 
 @interface CollectionViewController ()
 @property (nonatomic, readwrite, strong) NSOperationQueue *queue;
@@ -14,11 +15,18 @@
 
 @implementation CollectionViewController
 
-- (void)viewDidLoad
-{
+unsigned int countOfCores() {
+  unsigned int ncpu;
+  size_t len = sizeof(ncpu);
+  sysctlbyname("hw.ncpu", &ncpu, &len, NULL, 0);
+  
+  return ncpu;
+}
+
+- (void)viewDidLoad {
   [super viewDidLoad];
   self.queue = [[NSOperationQueue alloc] init];
-  self.queue.maxConcurrentOperationCount = 2; // NOTE ME
+  self.queue.maxConcurrentOperationCount = countOfCores();
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

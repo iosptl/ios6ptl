@@ -27,7 +27,6 @@
 
 - (NSOperation *)operationForScale:(CGFloat)scale
                                  seeds:(NSArray *)seeds {
-
   NSBlockOperation *op = [[NSBlockOperation alloc] init];
 
   for (NSNumber *seed in seeds) {
@@ -38,7 +37,9 @@
       }];
     }
   }
-//  
+  return op;
+}
+//
 //  JuliaOperation *op = [[JuliaOperation alloc] init];
 //  op.contentScaleFactor = scale;
 //
@@ -79,7 +80,7 @@
 //  }
 //
 //  return op;
-}
+
 
 - (Julia *)juliaWithSeed:(NSUInteger)seed {
   Julia *julia = [self.cache objectForKey:@(seed)];
