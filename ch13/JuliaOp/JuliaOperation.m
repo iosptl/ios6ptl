@@ -25,7 +25,6 @@ complex long double f(const complex long double z,
 }
 
 - (void)main {
-  printf("Starting:%s\n", self.description.UTF8String);
   NSUInteger height = self.height;
   NSUInteger width = self.width;
   
@@ -42,7 +41,6 @@ complex long double f(const complex long double z,
   for (NSUInteger y = 0; y < height; ++y) {
     for (NSUInteger x = 0; x < width; ++x) {
       if (self.isCancelled) {
-        printf("Cancelling:%s\n", self.description.UTF8String);
         return;
       }
       NSUInteger iteration = 0;
@@ -76,8 +74,6 @@ complex long double f(const complex long double z,
                              orientation:UIImageOrientationUp];
   CGImageRelease(cgImage);
   CGContextRelease(context);
-  printf("Finishing:%s\n", self.description.UTF8String);
-
 }
 
 @end
