@@ -13,7 +13,7 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *modeSegmentedControl;
 @property (strong, nonatomic) IBOutlet UIButton *encryptButton;
 
-- (IBAction)selectPircture:(id)sender;
+- (IBAction)selectPicture:(id)sender;
 - (IBAction)encrypt:(id)sender;
 - (IBAction)changeMode:(id)sender;
 
