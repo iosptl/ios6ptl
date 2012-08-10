@@ -10,17 +10,17 @@
 #import "JuliaCell.h"
 
 @interface CollectionViewController ()
-@property (nonatomic, readwrite, strong) NSOperationQueue *queue;
+//@property (nonatomic, readwrite, strong) NSOperationQueue *queue;
 @end
 
 @implementation CollectionViewController
 
-- (void)viewDidLoad
-{
-  [super viewDidLoad];
-  self.queue = [[NSOperationQueue alloc] init];
-  self.queue.maxConcurrentOperationCount = 2; // NOTE ME
-}
+//- (void)viewDidLoad
+//{
+//  [super viewDidLoad];
+//  self.queue = [[NSOperationQueue alloc] init];
+//  self.queue.maxConcurrentOperationCount = 2; // NOTE ME
+//}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -32,7 +32,7 @@
 {
   NSString *identifier = @"Julia";
   JuliaCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-  [cell configureWithSeed:indexPath.row queue:self.queue];
+  [cell configureWithSeed:indexPath.row]; // queue:self.queue];
   return cell;
 }
 

@@ -12,49 +12,83 @@
 @interface JuliaCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
-@property (nonatomic, readwrite, strong) JuliaOperation *operation;
+@property (nonatomic, readwrite, strong) NSMutableArray *operations;
 @end
 
 @implementation JuliaCell
 
-- (void)configureWithSeed:(NSUInteger)seed queue:(NSOperationQueue *)queue
-{
-  [self.operation cancel];
+- (void)prepareForReuse {
+  [self.operations makeObjectsPerformSelector:@selector(cancel)];
+  [self.operations removeAllObjects];
   self.imageView.image = nil;
-  
-  self.contentScaleFactor = [[UIScreen mainScreen] scale];
-  
+  self.label.text = @"";
+}
+
+- (void)awakeFromNib {
+  self.operations = [NSMutableArray new];
+}
+
+- (JuliaOperation *)operationForScale:(CGFloat)scale seed:(NSUInteger)seed
+{
   JuliaOperation *op = [[JuliaOperation alloc] init];
-  self.operation = op;
-  op.contentScaleFactor = self.contentScaleFactor;
+  op.contentScaleFactor = scale;
   
   CGRect bounds = self.bounds;
-  op.width = (unsigned)(CGRectGetWidth(bounds) * self.contentScaleFactor);
-  op.height = (unsigned)(CGRectGetHeight(bounds) * self.contentScaleFactor);
+  op.width = (unsigned)(CGRectGetWidth(bounds) * scale);
+  op.height = (unsigned)(CGRectGetHeight(bounds) * scale);
   
   srandom(seed);
   
-  op.c = (long double)random()/LONG_MAX + I*(long double)random()/LONG_MAX;
-  self.label.text = op.description;
-  
+  op.c = (long double)random()/LONG_MAX + I*(long double)random()/LONG_MAX;  
   op.blowup = random();
   op.rScale = random() % 20;  // Biased, but repeatable and simple is more important
   op.gScale = random() % 20;
   op.bScale = random() % 20;
-  
-  __weak typeof(self) weakSelf = self;
+    
   __weak typeof(op) weakOp = op;
   op.completionBlock = ^{
-    NSLog(@"Complete: %@", weakOp);
     if (! weakOp.isCancelled) {
-      NSLog(@"Drawing: %@", weakOp);
       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        weakSelf.imageView.image = weakOp.image;
+        typeof(op) strongOp = weakOp;
+        if (strongOp && [self.operations containsObject:strongOp]) {
+          self.imageView.image = strongOp.image;
+          self.label.text = strongOp.description;
+          [self.operations removeObject:strongOp];
+        }
       }];
     }
   };
   
-  [queue addOperation:op];
+  if (scale < 0.5) {
+    op.queuePriority = NSOperationQueuePriorityVeryHigh;
+  }
+  else if (scale <= 1) {
+    op.queuePriority = NSOperationQueuePriorityHigh;
+  }
+  else {
+    op.queuePriority = NSOperationQueuePriorityNormal;
+  }
+  
+  return op;
 }
+
+- (void)configureWithSeed:(NSUInteger)seed queue:(NSOperationQueue *)queue
+{
+  CGFloat maxScale = [[UIScreen mainScreen] scale];
+  self.contentScaleFactor = maxScale;
+
+  NSUInteger kIterations = 6;
+  JuliaOperation *prevOp = nil;
+  for (CGFloat scale = maxScale/pow(2, kIterations); scale <= maxScale; scale *= 2) {
+    JuliaOperation *op = [self operationForScale:scale seed:seed];
+    if (prevOp) {
+      [op addDependency:prevOp];
+    }
+    [self.operations addObject:op];
+    [queue addOperation:op];
+    prevOp = op;
+  }
+}
+
 
 @end

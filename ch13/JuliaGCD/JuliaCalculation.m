@@ -5,13 +5,13 @@
 //  Created by Rob Napier on 8/7/12.
 //
 
-#import "JuliaOperation.h"
+#import "JuliaCalculation.h"
 
-@interface JuliaOperation ()
+@interface JuliaCalculation ()
 @property (nonatomic, readwrite, strong) UIImage *image;
 @end
 
-@implementation JuliaOperation
+@implementation JuliaCalculation
 
 complex long double f(complex long double z, complex long double c) {
   return z*z + c;
@@ -25,11 +25,16 @@ complex long double f(complex long double z, complex long double c) {
 
 - (void)cancel {
   self.image = nil;
-  [super cancel];
+  self.cancelled = YES;
 }
 
-- (void)main
+- (BOOL)run
 {
+  if (self.isCancelled) {
+    return NO;
+  }
+  
+//  NSLog(@"Running: %@", self);
   NSUInteger height = self.height;
   NSUInteger width = self.width;
   
@@ -46,7 +51,8 @@ complex long double f(complex long double z, complex long double c) {
   for (NSUInteger y = 0; y < height; ++y) {
     for (NSUInteger x = 0; x < width; ++x) {
       if (self.isCancelled) {
-        return;
+//        NSLog(@"Cancelled: %@", self);
+        return NO;
       }
       NSUInteger iteration = 0;
       complex long double z = (2.0 * kScale * x)/width - kScale
@@ -79,6 +85,8 @@ complex long double f(complex long double z, complex long double c) {
                                  orientation:UIImageOrientationUp];
   CGImageRelease(cgImage);
   CGContextRelease(context);
+//  NSLog(@"Finished: %@", self);
+  return YES;
 }
 
 @end
