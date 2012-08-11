@@ -8,6 +8,8 @@
 #import <UIKit/UIKit.h>
 
 @interface JuliaCell : UICollectionViewCell
-- (void)configureWithSeed:(NSUInteger)seed queue:(NSOperationQueue *)queue;
+- (void)configureWithSeed:(NSUInteger)seed
+                    queue:(NSOperationQueue *)queue
+                   scales:(NSArray *)scales;
 
 @end

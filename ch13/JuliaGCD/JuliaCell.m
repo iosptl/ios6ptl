@@ -68,9 +68,10 @@
   self.contentScaleFactor = maxScale;
   
   NSUInteger kIterations = 6;
-  dispatch_group_t prevGroup = NULL;
+  CGFloat minScale = maxScale/pow(2, kIterations);
   
-    for (CGFloat scale = maxScale/pow(2, kIterations); scale <= maxScale; scale *= 2) {
+  dispatch_group_t prevGroup = NULL;
+  for (CGFloat scale = minScale; scale <= maxScale; scale *= 2) {
     dispatch_queue_priority_t priority = DISPATCH_QUEUE_PRIORITY_LOW;
     if (scale < 0.5) {
       priority = DISPATCH_QUEUE_PRIORITY_HIGH;
@@ -78,7 +79,7 @@
     else if (scale < 1) {
       priority = DISPATCH_QUEUE_PRIORITY_DEFAULT;
     }
-  
+    
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(priority, 0);
     dispatch_block_t block = [self blockForScale:scale seed:seed];
@@ -90,6 +91,11 @@
     }
     prevGroup = group;
   }
+  
+  static const char kSubqueueKey;
+  dispatch_queue_t subqueue;
+  void* subqueuePtr = (void*)CFBridgingRetain(subqueue);
+  dispatch_queue_set_specific(self.queue, &kSubqueueKey, subqueuePtr, (dispatch_function_t)CFBridgingRelease);
 }
 
 @end

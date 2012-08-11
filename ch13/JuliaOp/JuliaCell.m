@@ -72,7 +72,8 @@
 }
 
 - (void)configureWithSeed:(NSUInteger)seed
-                    queue:(NSOperationQueue *)queue {
+                    queue:(NSOperationQueue *)queue
+                   scales:(NSArray *)scales {
   CGFloat maxScale = [[UIScreen mainScreen] scale];
   self.contentScaleFactor = maxScale;
 
