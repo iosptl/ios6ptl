@@ -6,10 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Julia.h"
 
 @interface JuliaCell : UICollectionViewCell
-- (void)configureWithSeed:(NSUInteger)seed
-                    queue:(NSOperationQueue *)queue
-                   scales:(NSArray *)scales;
-
+@property (nonatomic, readwrite, strong) Julia *julia;
 @end

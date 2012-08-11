@@ -18,13 +18,13 @@ complex long double f(const complex long double z,
   return z*z + c;
 }
 
-- (NSString *)description {
+- (NSString *)description
+{
   return [NSString stringWithFormat:@"(%.3f, %.3f)@%.2f",
           creal(self.c), cimag(self.c), self.contentScaleFactor];
 }
 
 - (void)main {
-//  printf("Start:%s\n", [NSThread currentThread].description.UTF8String);
   NSUInteger height = self.height;
   NSUInteger width = self.width;
   

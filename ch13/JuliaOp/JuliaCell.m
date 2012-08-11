@@ -3,7 +3,6 @@
 //  Julia
 //
 //  Created by Rob Napier on 8/6/12.
-//  Copyright (c) 2012 Rob Napier. All rights reserved.
 //
 
 #import "JuliaCell.h"
@@ -28,8 +27,8 @@
   self.operations = [NSMutableArray new];
 }
 
-- (JuliaOperation *)operationForScale:(CGFloat)scale seed:(NSUInteger)seed
-{
+- (JuliaOperation *)operationForScale:(CGFloat)scale
+                                 seed:(NSUInteger)seed {
   JuliaOperation *op = [[JuliaOperation alloc] init];
   op.contentScaleFactor = scale;
   
@@ -41,15 +40,15 @@
   
   op.c = (long double)random()/LONG_MAX + I*(long double)random()/LONG_MAX;  
   op.blowup = random();
-  op.rScale = random() % 20;  // Biased, but repeatable and simple is more important
+  op.rScale = random() % 20;  // Biased, but simple is more important
   op.gScale = random() % 20;
   op.bScale = random() % 20;
     
-  __weak typeof(op) weakOp = op;
+  __weak JuliaOperation *weakOp = op;
   op.completionBlock = ^{
     if (! weakOp.isCancelled) {
       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        typeof(op) strongOp = weakOp;
+        JuliaOperation *strongOp = weakOp;
         if (strongOp && [self.operations containsObject:strongOp]) {
           self.imageView.image = strongOp.image;
           self.label.text = strongOp.description;
@@ -72,14 +71,17 @@
   return op;
 }
 
-- (void)configureWithSeed:(NSUInteger)seed queue:(NSOperationQueue *)queue
-{
+- (void)configureWithSeed:(NSUInteger)seed
+                    queue:(NSOperationQueue *)queue
+                   scales:(NSArray *)scales {
   CGFloat maxScale = [[UIScreen mainScreen] scale];
   self.contentScaleFactor = maxScale;
 
   NSUInteger kIterations = 6;
+  CGFloat minScale = maxScale/pow(2, kIterations);
+
   JuliaOperation *prevOp = nil;
-  for (CGFloat scale = maxScale/pow(2, kIterations); scale <= maxScale; scale *= 2) {
+  for (CGFloat scale = minScale; scale <= maxScale; scale *= 2) {
     JuliaOperation *op = [self operationForScale:scale seed:seed];
     if (prevOp) {
       [op addDependency:prevOp];
@@ -89,6 +91,5 @@
     prevOp = op;
   }
 }
-
 
 @end
