@@ -35,12 +35,11 @@
   for (Spot *spot in [self.fetchedResultsController fetchedObjects]) {
     [self addAnnotationForSpot:spot];
   }
+  
+  MKUserTrackingBarButtonItem *buttonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+  self.navigationItem.rightBarButtonItem = buttonItem;
 }
 
-- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
-  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(aUserLocation.coordinate, 10000, 10000);
-  [aMapView setRegion:region animated:YES];
-}
 - (void)addAnnotationForSpot:(Spot *)spot
 {
   MapViewAnnotation *ann = [[MapViewAnnotation alloc] initWithSpot:spot];
