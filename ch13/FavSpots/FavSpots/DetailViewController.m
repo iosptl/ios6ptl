@@ -9,14 +9,43 @@
 #import "DetailViewController.h"
 #import "ModelController.h"
 #import "MapViewAnnotation.h"
+#import "ModelController.h"
+#import "NSCoder+RNMapKit.h"
 
-@interface DetailViewController ()
-- (void)configureView;
-@end
+static NSString * const kSpotURIKey = @"kSpotURIKey";
+static NSString * const kRegionKey = @"kRegionKey";
 
 @implementation DetailViewController
 
-#pragma mark - Managing the detail item
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+  [super encodeRestorableStateWithCoder:coder];
+
+  NSManagedObjectID *spotID = self.spot.objectID;
+  NSAssert(! [spotID isTemporaryID], @"Spot must not be temporary during state saving. %@", self.spot);
+  
+  [coder encodeObject:[spotID URIRepresentation] forKey:kSpotURIKey];
+  [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+  [super decodeRestorableStateWithCoder:coder];
+  
+  NSURL *spotURI = [coder decodeObjectForKey:kSpotURIKey];
+
+  NSManagedObjectContext *
+  context = [[ModelController sharedController]
+             managedObjectContext];
+  NSManagedObjectID *
+  spotID = [[context persistentStoreCoordinator]
+            managedObjectIDForURIRepresentation:spotURI];
+  if (spotID) {
+    self.spot = (Spot *)[context objectWithID:spotID];
+  }
+  
+  if ([coder containsValueForKey:kRegionKey]) {
+    self.mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
+  }
+}
 
 - (void)viewDidLoad
 {
@@ -28,6 +57,7 @@
   
   UIGestureRecognizer *g = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleNoteTap:)];
   [self.noteTextView addGestureRecognizer:g];
+  [self configureView];
 }
 
 - (void)handleNoteTap:(UIGestureRecognizer *)g {
@@ -63,13 +93,6 @@
   
   MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(center, 1000, 1000);
   [self.mapView setRegion:region animated:YES];
-
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-  [super viewWillAppear:animated];
-  [self configureView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

@@ -25,6 +25,7 @@
 		FB6DC6F615D69710000FDEC1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6DC6F515D69710000FDEC1 /* DetailViewController.m */; };
 		FB87884515D69BB70016C09E /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87884415D69BB70016C09E /* ModelController.m */; };
 		FB87884915D6A5150016C09E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87884815D6A5150016C09E /* MapViewController.m */; };
+		FBFBCB8C15D7042A00E687E2 /* NSCoder+RNMapKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFBCB8B15D7042A00E687E2 /* NSCoder+RNMapKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		FB87884415D69BB70016C09E /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		FB87884715D6A5150016C09E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		FB87884815D6A5150016C09E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		FBFBCB8A15D7042A00E687E2 /* NSCoder+RNMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+RNMapKit.h"; sourceTree = "<group>"; };
+		FBFBCB8B15D7042A00E687E2 /* NSCoder+RNMapKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+RNMapKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				FB6DC6E015D69710000FDEC1 /* Supporting Files */,
 				FB4DCE7215D6A77900C7D7ED /* MapViewAnnotation.h */,
 				FB4DCE7315D6A77900C7D7ED /* MapViewAnnotation.m */,
+				FBFBCB8A15D7042A00E687E2 /* NSCoder+RNMapKit.h */,
+				FBFBCB8B15D7042A00E687E2 /* NSCoder+RNMapKit.m */,
 			);
 			path = FavSpots;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				FB4DCE7415D6A77900C7D7ED /* MapViewAnnotation.m in Sources */,
 				FB4DCE7815D6A81300C7D7ED /* Spot.m in Sources */,
 				FB4DCE7D15D6D84D00C7D7ED /* TextEditViewController.m in Sources */,
+				FBFBCB8C15D7042A00E687E2 /* NSCoder+RNMapKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

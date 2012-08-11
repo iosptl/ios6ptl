@@ -12,8 +12,10 @@
 #import "Spot.h"
 #import "DetailViewController.h"
 #import "ModelController.h"
+#import "NSCoder+RNMapKit.h"
 
 static NSString * const kRegionKey = @"kRegionKey";
+static NSString * const kUserTrackingKey = @"kUserTrackingKey";
 
 @interface MapViewController () <MKMapViewDelegate, NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -21,45 +23,13 @@ static NSString * const kRegionKey = @"kRegionKey";
 @property (nonatomic, readwrite, strong) NSFetchedResultsController *fetchedResultsController;
 @end
 
-@interface NSCoder (RNMapKit)
-- (void)RN_encodeMKCoordinateRegion:(MKCoordinateRegion)region
-                             forKey:(NSString *)key;
-- (MKCoordinateRegion)RN_decodeMKCoordinateRegionForKey:(NSString *)key;
-@end
-
-@implementation NSCoder (RNMapKit)
-
-- (void)RN_encodeMKCoordinateRegion:(MKCoordinateRegion)region
-                             forKey:(NSString *)key {
-  [self encodeObject:@[ @(region.center.latitude),
-                        @(region.center.longitude),
-                        @(region.span.latitudeDelta),
-                        @(region.span.longitudeDelta)]
-              forKey:key];
-}
-
-- (MKCoordinateRegion)RN_decodeMKCoordinateRegionForKey:(NSString *)key {
-  NSArray *array = [self decodeObjectForKey:key];
-  MKCoordinateRegion region;
-  region.center.latitude = [array[0] doubleValue];
-  region.center.longitude = [array[1] doubleValue];
-  region.span.latitudeDelta = [array[2] doubleValue];
-  region.span.longitudeDelta = [array[3] doubleValue];
-  return region;
-}
-
-@end
-
 @implementation MapViewController
-
-- (id)encodeCLLocationCoordinate2D:(CLLocationCoordinate2D)location {
-  return @[@(location.latitude), @(location.longitude)];
-}
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
   [super encodeRestorableStateWithCoder:coder];
   
   [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
+  [coder encodeInteger:self.mapView.userTrackingMode forKey:kUserTrackingKey];
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
@@ -68,6 +38,8 @@ static NSString * const kRegionKey = @"kRegionKey";
   if ([coder containsValueForKey:kRegionKey]) {
     self.mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
   }
+  
+  self.mapView.userTrackingMode = [coder decodeIntegerForKey:kUserTrackingKey];
 }
 
 - (void)awakeFromNib {
