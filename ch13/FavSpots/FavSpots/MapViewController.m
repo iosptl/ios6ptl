@@ -37,6 +37,10 @@
   }
 }
 
+- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
+  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(aUserLocation.coordinate, 10000, 10000);
+  [aMapView setRegion:region animated:YES];
+}
 - (void)addAnnotationForSpot:(Spot *)spot
 {
   MapViewAnnotation *ann = [[MapViewAnnotation alloc] initWithSpot:spot];
@@ -135,9 +139,11 @@
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
-  MapViewAnnotation *ann = view.annotation;
-  [self performSegueWithIdentifier:@"newSpot" sender:ann.spot];
-  [self.mapView deselectAnnotation:view.annotation animated:NO];
+  if ([view.annotation isKindOfClass:[MapViewAnnotation class]]) {
+    MapViewAnnotation *ann = view.annotation;
+    [self performSegueWithIdentifier:@"newSpot" sender:ann.spot];
+    [self.mapView deselectAnnotation:view.annotation animated:NO];
+  }
 }
 
 

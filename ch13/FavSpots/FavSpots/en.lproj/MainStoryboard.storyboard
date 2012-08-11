@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-733" y="-38"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map View Controller - Map-->
         <scene sceneID="rPe-sS-cGA">
             <objects>
                 <viewController id="hEn-iV-aWo" customClass="MapViewController" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="FVb-Ah-MlE">
+                            <mapView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="FVb-Ah-MlE">
                                 <connections>
                                     <outlet property="delegate" destination="hEn-iV-aWo" id="zBw-OB-fFc"/>
                                 </connections>
@@ -45,7 +45,7 @@
                             <constraint firstItem="FVb-Ah-MlE" firstAttribute="bottom" secondItem="Ovm-w1-IQv" secondAttribute="bottom" type="default" id="v7W-bN-ZSn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GCc-Ig-gg4"/>
+                    <navigationItem key="navigationItem" title="Map" id="GCc-Ig-gg4"/>
                     <connections>
                         <outlet property="mapView" destination="FVb-Ah-MlE" id="4Ob-g6-RUZ"/>
                         <segue destination="21" kind="push" identifier="newSpot" id="aSE-Ma-1kZ"/>
@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gto-2t-cZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="525" y="-526"/>
+            <point key="canvasLocation" x="333" y="-526"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="11">
@@ -69,7 +69,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="64"/>
+            <point key="canvasLocation" x="-181" y="122"/>
         </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="18">
@@ -113,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="333" y="122"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="-282"/>
+            <point key="canvasLocation" x="910" y="-122"/>
         </scene>
         <!--Text Edit View Controller-->
         <scene sceneID="DvE-Ki-X9e">
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bB0-S5-efX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="-287"/>
+            <point key="canvasLocation" x="1362" y="-122"/>
         </scene>
         <!--Navigation Controller - Map-->
         <scene sceneID="7Nl-Wa-zet">
@@ -235,7 +235,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVc-U0-MRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="-526"/>
+            <point key="canvasLocation" x="-181" y="-526"/>
         </scene>
     </scenes>
     <classes>

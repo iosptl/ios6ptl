@@ -56,9 +56,14 @@
   self.locationLabel.text = [NSString stringWithFormat:@"(%.3f, %.3f)",
                              spot.latitude, spot.longitude];
   self.noteTextView.text = spot.notes;
-  self.mapView.centerCoordinate = CLLocationCoordinate2DMake(spot.latitude, spot.longitude);
+  CLLocationCoordinate2D center = CLLocationCoordinate2DMake(spot.latitude, spot.longitude);
+  self.mapView.centerCoordinate = center;
   [self.mapView removeAnnotations:self.mapView.annotations];
   [self.mapView addAnnotation:[[MapViewAnnotation alloc] initWithSpot:spot]];
+  
+  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(center, 1000, 1000);
+  [self.mapView setRegion:region animated:YES];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
