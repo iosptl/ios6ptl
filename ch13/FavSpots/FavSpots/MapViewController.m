@@ -84,11 +84,9 @@ static NSString * const kRegionKey = @"kRegionKey";
   for (Spot *spot in [self.fetchedResultsController fetchedObjects]) {
     [self addAnnotationForSpot:spot];
   }
-}
-
-- (void)mapView:(MKMapView *)aMapView didUpdateUserLocation:(MKUserLocation *)aUserLocation {
-  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(aUserLocation.coordinate, 10000, 10000);
-  [aMapView setRegion:region animated:YES];
+  
+  MKUserTrackingBarButtonItem *buttonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+  self.navigationItem.rightBarButtonItem = buttonItem;
 }
 
 - (void)addAnnotationForSpot:(Spot *)spot
