@@ -14,6 +14,7 @@
 
 static NSString * const kSpotURIKey = @"kSpotURIKey";
 static NSString * const kRegionKey = @"kRegionKey";
+static NSString * const kNameKey = @"kNameKey";
 
 @implementation DetailViewController
 
@@ -25,6 +26,7 @@ static NSString * const kRegionKey = @"kRegionKey";
   
   [coder encodeObject:[spotID URIRepresentation] forKey:kSpotURIKey];
   [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
+  [coder encodeObject:self.nameTextField.text forKey:kNameKey];
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
@@ -44,6 +46,10 @@ static NSString * const kRegionKey = @"kRegionKey";
   
   if ([coder containsValueForKey:kRegionKey]) {
     self.mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
+  }
+  
+  if ([coder containsValueForKey:kNameKey]) {
+    self.nameTextField.text = [coder decodeObjectForKey:kNameKey];
   }
 }
 

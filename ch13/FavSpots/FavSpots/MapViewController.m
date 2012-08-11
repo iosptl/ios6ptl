@@ -34,7 +34,7 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
   [super decodeRestorableStateWithCoder:coder];
-
+  
   if ([coder containsValueForKey:kRegionKey]) {
     self.mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
   }
@@ -98,7 +98,7 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
   NSEntityDescription *entity = [NSEntityDescription entityForName:@"Spot" inManagedObjectContext:moc];
   [fetchRequest setEntity:entity];
-
+  
   NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
   NSArray *sortDescriptors = @[sortDescriptor];
   
@@ -123,12 +123,12 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
 
 - (void)removeObjectForSpot:(Spot *)spot
 {
-    for (MapViewAnnotation *ann in self.mapView.annotations) {
-        if ([ann.spot isEqual:spot]) {
-            [self.mapView removeAnnotation:ann];
-            break;
-        }
+  for (MapViewAnnotation *ann in self.mapView.annotations) {
+    if ([ann.spot isEqual:spot]) {
+      [self.mapView removeAnnotation:ann];
+      break;
     }
+  }
 }
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
@@ -148,7 +148,6 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
       break;
       
     case NSFetchedResultsChangeMove:
-      abort();
       break;
   }
 }
