@@ -87,9 +87,6 @@ static NSString * const kNameKey = @"kNameKey";
   [self.mapView setRegion:region animated:YES];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  NSLog(@"viewWillAppear");
-}
 - (void)viewWillDisappear:(BOOL)animated
 {
   self.spot.name = self.nameTextField.text;
