@@ -13,13 +13,62 @@
 #import "DetailViewController.h"
 #import "ModelController.h"
 
+static NSString * const kRegionKey = @"kRegionKey";
+
 @interface MapViewController () <MKMapViewDelegate, NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, readwrite, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, readwrite, strong) NSFetchedResultsController *fetchedResultsController;
 @end
 
+@interface NSCoder (RNMapKit)
+- (void)RN_encodeMKCoordinateRegion:(MKCoordinateRegion)region
+                             forKey:(NSString *)key;
+- (MKCoordinateRegion)RN_decodeMKCoordinateRegionForKey:(NSString *)key;
+@end
+
+@implementation NSCoder (RNMapKit)
+
+- (void)RN_encodeMKCoordinateRegion:(MKCoordinateRegion)region
+                             forKey:(NSString *)key {
+  [self encodeObject:@[ @(region.center.latitude),
+                        @(region.center.longitude),
+                        @(region.span.latitudeDelta),
+                        @(region.span.longitudeDelta)]
+              forKey:key];
+}
+
+- (MKCoordinateRegion)RN_decodeMKCoordinateRegionForKey:(NSString *)key {
+  NSArray *array = [self decodeObjectForKey:key];
+  MKCoordinateRegion region;
+  region.center.latitude = [array[0] doubleValue];
+  region.center.longitude = [array[1] doubleValue];
+  region.span.latitudeDelta = [array[2] doubleValue];
+  region.span.longitudeDelta = [array[3] doubleValue];
+  return region;
+}
+
+@end
+
 @implementation MapViewController
+
+- (id)encodeCLLocationCoordinate2D:(CLLocationCoordinate2D)location {
+  return @[@(location.latitude), @(location.longitude)];
+}
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+  [super encodeRestorableStateWithCoder:coder];
+  
+  [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+  [super decodeRestorableStateWithCoder:coder];
+
+  if ([coder containsValueForKey:kRegionKey]) {
+    self.mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
+  }
+}
 
 - (void)awakeFromNib {
   self.managedObjectContext = [[ModelController sharedController] managedObjectContext];
@@ -41,6 +90,7 @@
   MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(aUserLocation.coordinate, 10000, 10000);
   [aMapView setRegion:region animated:YES];
 }
+
 - (void)addAnnotationForSpot:(Spot *)spot
 {
   MapViewAnnotation *ann = [[MapViewAnnotation alloc] initWithSpot:spot];
@@ -101,10 +151,6 @@
   return _fetchedResultsController;
 }
 
-//- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
-//{
-//}
-
 - (void)removeObjectForSpot:(Spot *)spot
 {
     for (MapViewAnnotation *ann in self.mapView.annotations) {
@@ -145,10 +191,5 @@
     [self.mapView deselectAnnotation:view.annotation animated:NO];
   }
 }
-
-
-//- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-//{
-//}
 
 @end

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1914"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Root Tab Bar Controller-->
         <scene sceneID="vrJ-gy-x2c">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="R3R-sD-IBZ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Root Tab Bar Controller" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R3R-sD-IBZ" userLabel="Root Tab Bar Controller" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9HS-Lc-tnO">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -26,12 +26,12 @@
         <!--Map View Controller - Map-->
         <scene sceneID="rPe-sS-cGA">
             <objects>
-                <viewController id="hEn-iV-aWo" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Map View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hEn-iV-aWo" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ovm-w1-IQv">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="FVb-Ah-MlE">
+                            <mapView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="Map View" mapType="standard" showsUserLocation="YES" id="FVb-Ah-MlE">
                                 <connections>
                                     <outlet property="delegate" destination="hEn-iV-aWo" id="zBw-OB-fFc"/>
                                 </connections>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="333" y="-526"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorites Navigation Controller-->
         <scene sceneID="11">
             <objects>
-                <navigationController id="3" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Favorites View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3" userLabel="Favorites Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="wT7-qF-twu"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
@@ -74,7 +74,7 @@
         <!--Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
-                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Master View Controller" title="Master" useStoryboardIdentifierAsRestorationIdentifier="YES" id="12" customClass="MasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
             <objects>
-                <viewController storyboardIdentifier="" title="Detail" id="21" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail View Controller" title="Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="21" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="22">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -189,7 +189,7 @@
         <!--Text Edit View Controller-->
         <scene sceneID="DvE-Ki-X9e">
             <objects>
-                <viewController id="7xz-Zw-mdm" customClass="TextEditViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Text Edit View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7xz-Zw-mdm" customClass="TextEditViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xV6-1e-8zc">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -218,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="1362" y="-122"/>
         </scene>
-        <!--Navigation Controller - Map-->
+        <!--Map Navigation Controller-->
         <scene sceneID="7Nl-Wa-zet">
             <objects>
-                <navigationController id="txX-sA-GWH" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Map Navigation Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="txX-sA-GWH" userLabel="Map Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="CFH-Gj-Lf5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dzp-vB-aC2">
