@@ -11,6 +11,7 @@
 		FB23EDCF15D69AE200DFA486 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB23EDCE15D69AE200DFA486 /* CoreLocation.framework */; };
 		FB4DCE7415D6A77900C7D7ED /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7315D6A77900C7D7ED /* MapViewAnnotation.m */; };
 		FB4DCE7815D6A81300C7D7ED /* Spot.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7715D6A81300C7D7ED /* Spot.m */; };
+		FB4DCE7D15D6D84D00C7D7ED /* TextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7C15D6D84D00C7D7ED /* TextEditViewController.m */; };
 		FB6DC6D815D69710000FDEC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6DC6D715D69710000FDEC1 /* UIKit.framework */; };
 		FB6DC6DA15D69710000FDEC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6DC6D915D69710000FDEC1 /* Foundation.framework */; };
 		FB6DC6DC15D69710000FDEC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6DC6DB15D69710000FDEC1 /* CoreGraphics.framework */; };
@@ -33,6 +34,8 @@
 		FB4DCE7315D6A77900C7D7ED /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
 		FB4DCE7615D6A81300C7D7ED /* Spot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spot.h; sourceTree = "<group>"; };
 		FB4DCE7715D6A81300C7D7ED /* Spot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spot.m; sourceTree = "<group>"; };
+		FB4DCE7B15D6D84D00C7D7ED /* TextEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditViewController.h; sourceTree = "<group>"; };
+		FB4DCE7C15D6D84D00C7D7ED /* TextEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditViewController.m; sourceTree = "<group>"; };
 		FB6DC6D315D69710000FDEC1 /* FavSpots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavSpots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6DC6D715D69710000FDEC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB6DC6D915D69710000FDEC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,12 +90,14 @@
 		FB4DCE7A15D6B34D00C7D7ED /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB87884715D6A5150016C09E /* MapViewController.h */,
+				FB87884815D6A5150016C09E /* MapViewController.m */,
 				FB6DC6F115D69710000FDEC1 /* MasterViewController.h */,
 				FB6DC6F215D69710000FDEC1 /* MasterViewController.m */,
 				FB6DC6F415D69710000FDEC1 /* DetailViewController.h */,
 				FB6DC6F515D69710000FDEC1 /* DetailViewController.m */,
-				FB87884715D6A5150016C09E /* MapViewController.h */,
-				FB87884815D6A5150016C09E /* MapViewController.m */,
+				FB4DCE7B15D6D84D00C7D7ED /* TextEditViewController.h */,
+				FB4DCE7C15D6D84D00C7D7ED /* TextEditViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				FB87884915D6A5150016C09E /* MapViewController.m in Sources */,
 				FB4DCE7415D6A77900C7D7ED /* MapViewAnnotation.m in Sources */,
 				FB4DCE7815D6A81300C7D7ED /* Spot.m in Sources */,
+				FB4DCE7D15D6D84D00C7D7ED /* TextEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "ModelController.h"
+#import "MapViewAnnotation.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -16,6 +17,27 @@
 @implementation DetailViewController
 
 #pragma mark - Managing the detail item
+
+- (void)viewDidLoad
+{
+  UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                 initWithTarget:self
+                                 action:@selector(dismissKeyboard)];
+  
+  [self.view addGestureRecognizer:tap];
+  
+  UIGestureRecognizer *g = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleNoteTap:)];
+  [self.noteTextView addGestureRecognizer:g];
+}
+
+- (void)handleNoteTap:(UIGestureRecognizer *)g {
+  [self performSegueWithIdentifier:@"editNote" sender:self];
+}
+
+- (void)dismissKeyboard
+{
+  [self.nameTextField resignFirstResponder];
+}
 
 - (void)setSpot:(Spot *)newSpot
 {
@@ -29,32 +51,31 @@
 
 - (void)configureView
 {
-  if (self.spot) {
-    Spot *spot = self.spot;
-    self.nameTextField.text = spot.name;
-    self.locationLabel.text = [NSString stringWithFormat:@"(%.3f, %.3f)",
-                               spot.latitude, spot.longitude];
-    self.noteTextView.text = spot.notes;
-    self.mapView.centerCoordinate = CLLocationCoordinate2DMake(spot.latitude, spot.longitude);
-  }
+  Spot *spot = self.spot;
+  self.nameTextField.text = spot.name;
+  self.locationLabel.text = [NSString stringWithFormat:@"(%.3f, %.3f)",
+                             spot.latitude, spot.longitude];
+  self.noteTextView.text = spot.notes;
+  self.mapView.centerCoordinate = CLLocationCoordinate2DMake(spot.latitude, spot.longitude);
+  [self.mapView removeAnnotations:self.mapView.annotations];
+  [self.mapView addAnnotation:[[MapViewAnnotation alloc] initWithSpot:spot]];
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-  [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  [super viewWillAppear:animated];
   [self configureView];
-}
-
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+  self.spot.name = self.nameTextField.text;
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([[segue identifier] isEqualToString:@"editNote"]) {
+    [[segue destinationViewController] setSpot:self.spot];
+  }
 }
 
 @end

@@ -15,7 +15,6 @@
 
 @interface MapViewController () <MKMapViewDelegate, NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) Spot *spotToAdd;
 @property (nonatomic, readwrite, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, readwrite, strong) NSFetchedResultsController *fetchedResultsController;
 @end
@@ -31,7 +30,7 @@
   [super viewDidLoad];
   UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
                                         initWithTarget:self action:@selector(handleLongPress:)];
-  lpgr.minimumPressDuration = 2.0;
+  lpgr.minimumPressDuration = 1.5;
   [self.mapView addGestureRecognizer:lpgr];
   for (Spot *spot in [self.fetchedResultsController fetchedObjects]) {
     [self addAnnotationForSpot:spot];
@@ -53,15 +52,15 @@
   CLLocationCoordinate2D touchMapCoordinate =
   [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
   
-  self.spotToAdd = [Spot insertNewSpotWithCoordinate:touchMapCoordinate inManagedObjectContext:self.managedObjectContext];
-  [self performSegueWithIdentifier:@"newSpot" sender:self];
+  Spot *spot = [Spot insertNewSpotWithCoordinate:touchMapCoordinate inManagedObjectContext:self.managedObjectContext];
+  [self performSegueWithIdentifier:@"newSpot" sender:spot];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   if ([[segue identifier] isEqualToString:@"newSpot"]) {
     DetailViewController *detailVC = [segue destinationViewController];
-    detailVC.spot = self.spotToAdd;
+    detailVC.spot = sender;
   }
 }
 
@@ -98,9 +97,9 @@
   return _fetchedResultsController;
 }
 
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
-{
-}
+//- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+//{
+//}
 
 - (void)removeObjectForSpot:(Spot *)spot
 {
@@ -126,7 +125,6 @@
       break;
       
     case NSFetchedResultsChangeUpdate:
-      abort();
       break;
       
     case NSFetchedResultsChangeMove:
@@ -135,8 +133,16 @@
   }
 }
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
+  MapViewAnnotation *ann = view.annotation;
+  [self performSegueWithIdentifier:@"newSpot" sender:ann.spot];
+  [self.mapView deselectAnnotation:view.annotation animated:NO];
 }
+
+
+//- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+//{
+//}
 
 @end

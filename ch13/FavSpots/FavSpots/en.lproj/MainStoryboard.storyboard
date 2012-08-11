@@ -31,7 +31,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="FVb-Ah-MlE"/>
+                            <mapView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="FVb-Ah-MlE">
+                                <connections>
+                                    <outlet property="delegate" destination="hEn-iV-aWo" id="zBw-OB-fFc"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -119,7 +123,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" text="" textAlignment="center" id="R3r-ip-yOm">
+                            <textField translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" text="" textAlignment="center" id="R3r-ip-yOm">
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -132,7 +136,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             </label>
-                            <textView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="" id="7UN-XB-f6f">
+                            <textView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="" id="7UN-XB-f6f">
                                 <color key="backgroundColor" white="0.94759352189781032" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="LFe-rY-Wcr"/>
@@ -175,11 +179,44 @@
                         <outlet property="mapView" destination="Syt-Gf-Zv4" id="BD0-11-Hjx"/>
                         <outlet property="nameTextField" destination="R3r-ip-yOm" id="BiH-0u-146"/>
                         <outlet property="noteTextView" destination="7UN-XB-f6f" id="zdH-qA-u9W"/>
+                        <segue destination="7xz-Zw-mdm" kind="push" identifier="editNote" id="o0T-E4-3pb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="-287"/>
+            <point key="canvasLocation" x="1080" y="-282"/>
+        </scene>
+        <!--Text Edit View Controller-->
+        <scene sceneID="DvE-Ki-X9e">
+            <objects>
+                <viewController id="7xz-Zw-mdm" customClass="TextEditViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xV6-1e-8zc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView translatesAutoresizingMaskIntoConstraints="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3Lo-1O-xuj">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Lo-1O-xuj" firstAttribute="trailing" secondItem="xV6-1e-8zc" secondAttribute="trailing" type="default" id="3zr-TO-0oC"/>
+                            <constraint firstItem="3Lo-1O-xuj" firstAttribute="bottom" secondItem="xV6-1e-8zc" secondAttribute="bottom" type="default" id="AzQ-de-4MV"/>
+                            <constraint firstItem="3Lo-1O-xuj" firstAttribute="top" secondItem="xV6-1e-8zc" secondAttribute="top" type="default" id="HmB-58-atj"/>
+                            <constraint firstItem="3Lo-1O-xuj" firstAttribute="leading" secondItem="xV6-1e-8zc" secondAttribute="leading" type="default" id="ezQ-TH-uws"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="047-53-kss"/>
+                    <connections>
+                        <outlet property="textView" destination="3Lo-1O-xuj" id="KYV-7X-YlV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bB0-S5-efX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="-287"/>
         </scene>
         <!--Navigation Controller - Map-->
         <scene sceneID="7Nl-Wa-zet">
@@ -223,6 +260,12 @@
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
+        <class className="TextEditViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TextEditViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -230,6 +273,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jZb-fq-zAk"/>
+        <segue reference="aSE-Ma-1kZ"/>
     </inferredMetricsTieBreakers>
 </document>
