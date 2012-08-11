@@ -10,9 +10,9 @@
 #import "ModelController.h"
 #import "MapViewAnnotation.h"
 #import "ModelController.h"
-#import "NSCoder+RNMapKit.h"
+#import "NSCoder+FavSpots.h"
 
-static NSString * const kSpotURIKey = @"kSpotURIKey";
+static NSString * const kSpotKey = @"kSpotKey";
 static NSString * const kRegionKey = @"kRegionKey";
 static NSString * const kNameKey = @"kNameKey";
 
@@ -21,10 +21,7 @@ static NSString * const kNameKey = @"kNameKey";
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
   [super encodeRestorableStateWithCoder:coder];
 
-  NSManagedObjectID *spotID = self.spot.objectID;
-  NSAssert(! [spotID isTemporaryID], @"Spot must not be temporary during state saving. %@", self.spot);
-  
-  [coder encodeObject:[spotID URIRepresentation] forKey:kSpotURIKey];
+  [coder RN_encodeSpot:self.spot forKey:kSpotKey];
   [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
   [coder encodeObject:self.nameTextField.text forKey:kNameKey];
 }
@@ -32,18 +29,7 @@ static NSString * const kNameKey = @"kNameKey";
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
   [super decodeRestorableStateWithCoder:coder];
   
-  NSURL *spotURI = [coder decodeObjectForKey:kSpotURIKey];
-
-  NSManagedObjectContext *
-  context = [[ModelController sharedController]
-             managedObjectContext];
-  NSManagedObjectID *
-  spotID = [[context persistentStoreCoordinator]
-            managedObjectIDForURIRepresentation:spotURI];
-  if (spotID) {
-    self.spot = (Spot *)[context objectWithID:spotID];
-  }
-  
+  self.spot = [coder RN_decodeSpotForKey:kSpotKey];
   if ([coder containsValueForKey:kRegionKey]) {
     self.mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
   }
@@ -101,6 +87,9 @@ static NSString * const kNameKey = @"kNameKey";
   [self.mapView setRegion:region animated:YES];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  NSLog(@"viewWillAppear");
+}
 - (void)viewWillDisappear:(BOOL)animated
 {
   self.spot.name = self.nameTextField.text;

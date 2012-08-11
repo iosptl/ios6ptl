@@ -8,21 +8,48 @@
 
 #import "TextEditViewController.h"
 #import "Spot.h"
+#import "NSCoder+FavSpots.h"
+
+static NSString * const kSpotKey = @"kSpotKey";
 
 @interface TextEditViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
 @end
 
 @implementation TextEditViewController
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+  [super encodeRestorableStateWithCoder:coder];
+  
+  [coder RN_encodeSpot:self.spot forKey:kSpotKey];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+  [super decodeRestorableStateWithCoder:coder];
+  
+  _spot = [coder RN_decodeSpotForKey:kSpotKey];
+}
+
+- (void)setSpot:(Spot *)spot {
+  _spot = spot;
+  [self configureView];
+}
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  [self configureView];
+}
+
+- (void)configureView {
   self.textView.text = self.spot.notes;
-  [self.textView becomeFirstResponder];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
   [[NSNotificationCenter defaultCenter]
    addObserver:self
    selector:@selector(keyboardWasShown:)
    name:UIKeyboardDidShowNotification object:nil];
+  [self.textView becomeFirstResponder];  
 }
 
 - (void)keyboardWasShown:(NSNotification*)aNotification

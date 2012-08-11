@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FB23EDCC15D6995000DFA486 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB23EDCB15D6995000DFA486 /* MapKit.framework */; };
 		FB23EDCF15D69AE200DFA486 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB23EDCE15D69AE200DFA486 /* CoreLocation.framework */; };
+		FB3D5E9C15D7133800E05249 /* NSCoder+FavSpots.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3D5E9B15D7133800E05249 /* NSCoder+FavSpots.m */; };
 		FB4DCE7415D6A77900C7D7ED /* MapViewAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7315D6A77900C7D7ED /* MapViewAnnotation.m */; };
 		FB4DCE7815D6A81300C7D7ED /* Spot.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7715D6A81300C7D7ED /* Spot.m */; };
 		FB4DCE7D15D6D84D00C7D7ED /* TextEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4DCE7C15D6D84D00C7D7ED /* TextEditViewController.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		FB23EDCB15D6995000DFA486 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FB23EDCE15D69AE200DFA486 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FB3D5E9A15D7133800E05249 /* NSCoder+FavSpots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCoder+FavSpots.h"; sourceTree = "<group>"; };
+		FB3D5E9B15D7133800E05249 /* NSCoder+FavSpots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+FavSpots.m"; sourceTree = "<group>"; };
 		FB4DCE7215D6A77900C7D7ED /* MapViewAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewAnnotation.h; sourceTree = "<group>"; };
 		FB4DCE7315D6A77900C7D7ED /* MapViewAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewAnnotation.m; sourceTree = "<group>"; };
 		FB4DCE7615D6A81300C7D7ED /* Spot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spot.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				FB4DCE7315D6A77900C7D7ED /* MapViewAnnotation.m */,
 				FBFBCB8A15D7042A00E687E2 /* NSCoder+RNMapKit.h */,
 				FBFBCB8B15D7042A00E687E2 /* NSCoder+RNMapKit.m */,
+				FB3D5E9A15D7133800E05249 /* NSCoder+FavSpots.h */,
+				FB3D5E9B15D7133800E05249 /* NSCoder+FavSpots.m */,
 			);
 			path = FavSpots;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				FB4DCE7815D6A81300C7D7ED /* Spot.m in Sources */,
 				FB4DCE7D15D6D84D00C7D7ED /* TextEditViewController.m in Sources */,
 				FBFBCB8C15D7042A00E687E2 /* NSCoder+RNMapKit.m in Sources */,
+				FB3D5E9C15D7133800E05249 /* NSCoder+FavSpots.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
