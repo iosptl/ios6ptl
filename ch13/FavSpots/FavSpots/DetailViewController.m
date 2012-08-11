@@ -28,6 +28,7 @@
   
   UIGestureRecognizer *g = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleNoteTap:)];
   [self.noteTextView addGestureRecognizer:g];
+  [self configureView];
 }
 
 - (void)handleNoteTap:(UIGestureRecognizer *)g {
@@ -64,12 +65,6 @@
   MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(center, 1000, 1000);
   [self.mapView setRegion:region animated:YES];
 
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-  [super viewWillAppear:animated];
-  [self configureView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
