@@ -16,6 +16,11 @@ static NSString * const kSpotKey = @"kSpotKey";
 static NSString * const kRegionKey = @"kRegionKey";
 static NSString * const kNameKey = @"kNameKey";
 
+@interface DetailViewController ()
+@property (nonatomic, readwrite, strong) NSString *restoreNameTextField;
+@property (nonatomic, readwrite, assign) MKCoordinateRegion restoreRegion;
+@end
+
 @implementation DetailViewController
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
@@ -29,14 +34,10 @@ static NSString * const kNameKey = @"kNameKey";
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
   [super decodeRestorableStateWithCoder:coder];
   
-  self.spot = [coder RN_decodeSpotForKey:kSpotKey];
-  if ([coder containsValueForKey:kRegionKey]) {
-    self.mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
-  }
+  _spot = [coder RN_decodeSpotForKey:kSpotKey];
   
-  if ([coder containsValueForKey:kNameKey]) {
-    self.nameTextField.text = [coder decodeObjectForKey:kNameKey];
-  }
+  self.restoreRegion = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
+  self.restoreNameTextField = [coder decodeObjectForKey:kNameKey];
 }
 
 - (void)viewDidLoad
@@ -73,11 +74,28 @@ static NSString * const kNameKey = @"kNameKey";
 - (void)configureView
 {
   Spot *spot = self.spot;
-  self.nameTextField.text = spot.name;
+  if (self.restoreNameTextField) {
+    self.nameTextField.text = self.restoreNameTextField;
+    self.restoreNameTextField = nil;
+  }
+  else {
+    self.nameTextField.text = spot.name;
+  }
+
+  if (self.restoreRegion.span.latitudeDelta != 0) {
+    self.mapView.region = self.restoreRegion;
+    self.restoreRegion = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(0, 0), 0, 0);
+  }
+  else {
+    self.mapView.centerCoordinate = CLLocationCoordinate2DMake(spot.latitude, spot.longitude);
+  }
+  
   self.locationLabel.text = [NSString stringWithFormat:@"(%.3f, %.3f)",
                              spot.latitude, spot.longitude];
   self.noteTextView.text = spot.notes;
-  self.mapView.centerCoordinate = CLLocationCoordinate2DMake(spot.latitude, spot.longitude);
+
+  
+  
   [self.mapView removeAnnotations:self.mapView.annotations];
   [self.mapView addAnnotation:[[MapViewAnnotation alloc] initWithSpot:spot]];
 }
