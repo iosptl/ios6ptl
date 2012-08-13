@@ -170,4 +170,27 @@
   cell.textLabel.text = spot.name;
 }
 
+- (NSString *)modelIdentifierForElementAtIndexPath:(NSIndexPath *)idx inView:(UIView *)view {
+  if (idx && view) {
+    return [[[[self.fetchedResultsController objectAtIndexPath:idx] objectID] URIRepresentation] absoluteString];
+  }
+  else {
+    return nil;
+  }
+}
+
+- (NSIndexPath *)indexPathForElementWithModelIdentifier:(NSString *)identifier inView:(UIView *)view {
+  if (identifier && view) {
+    NSUInteger numberOfRows = [self tableView:self.tableView numberOfRowsInSection:0];
+    for (NSUInteger index = 0; index < numberOfRows; ++index) {
+      NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
+      Spot *spot = [self.fetchedResultsController objectAtIndexPath:indexPath];
+      if ([spot.objectID.URIRepresentation.absoluteString isEqualToString:identifier]) {
+        return indexPath;
+      }
+    }
+  }
+  return nil;
+}
+
 @end

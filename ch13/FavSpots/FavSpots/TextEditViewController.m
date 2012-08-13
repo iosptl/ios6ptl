@@ -18,6 +18,10 @@ static NSString * const kSpotKey = @"kSpotKey";
 
 @implementation TextEditViewController
 
+- (void)saveChanges {
+  self.spot.notes = self.textView.text;
+}
+
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
   [super encodeRestorableStateWithCoder:coder];
   
@@ -26,7 +30,6 @@ static NSString * const kSpotKey = @"kSpotKey";
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
   [super decodeRestorableStateWithCoder:coder];
-  
   _spot = [coder RN_decodeSpotForKey:kSpotKey];
 }
 
@@ -35,24 +38,29 @@ static NSString * const kSpotKey = @"kSpotKey";
   [self configureView];
 }
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  [self configureView];
-}
-
 - (void)configureView {
   self.textView.text = self.spot.notes;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-  [[NSNotificationCenter defaultCenter]
-   addObserver:self
-   selector:@selector(keyboardWasShown:)
-   name:UIKeyboardDidShowNotification object:nil];
-  [self.textView becomeFirstResponder];  
+- (void)viewWillAppear:(BOOL)animated {
+  [self configureView];
+  [self.textView becomeFirstResponder];
 }
 
-- (void)keyboardWasShown:(NSNotification*)aNotification
+- (void)viewDidAppear:(BOOL)animated {
+  NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+  [nc addObserver:self selector:@selector(keyboardWasShown:)
+             name:UIKeyboardDidShowNotification object:nil];
+  [nc addObserver:self selector:@selector(willResignActive:)
+             name:UIApplicationWillResignActiveNotification
+           object:nil];
+}
+
+- (void)willResignActive:(NSNotification *)aNotification {
+  [self saveChanges];
+}
+
+- (void)keyboardWasShown:(NSNotification *)aNotification
 {
   NSDictionary* info = [aNotification userInfo];
   CGSize kbSize = [info[UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
@@ -64,7 +72,7 @@ static NSString * const kSpotKey = @"kSpotKey";
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-  self.spot.notes = self.textView.text;
+  [self saveChanges];
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
