@@ -14,7 +14,9 @@
 
 - (void)RN_encodeSpot:(Spot *)spot forKey:(NSString *)key {
   NSManagedObjectID *spotID = spot.objectID;
-  NSAssert(! [spotID isTemporaryID], @"Spot must not be temporary during state saving. %@", spot);
+  NSAssert(! [spotID isTemporaryID],
+           @"Spot must not be temporary during state saving. %@",
+           spot);
   
   [self encodeObject:[spotID URIRepresentation] forKey:key];
 }

@@ -28,18 +28,22 @@ static NSString * const kUserTrackingKey = @"kUserTrackingKey";
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
   [super encodeRestorableStateWithCoder:coder];
   
-  [coder RN_encodeMKCoordinateRegion:self.mapView.region forKey:kRegionKey];
-  [coder encodeInteger:self.mapView.userTrackingMode forKey:kUserTrackingKey];
+  [coder RN_encodeMKCoordinateRegion:self.mapView.region
+                              forKey:kRegionKey];
+  [coder encodeInteger:self.mapView.userTrackingMode
+                forKey:kUserTrackingKey];
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
   [super decodeRestorableStateWithCoder:coder];
   
   if ([coder containsValueForKey:kRegionKey]) {
-    self.mapView.region = [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
+    self.mapView.region =
+    [coder RN_decodeMKCoordinateRegionForKey:kRegionKey];
   }
   
-  self.mapView.userTrackingMode = [coder decodeIntegerForKey:kUserTrackingKey];
+  self.mapView.userTrackingMode =
+  [coder decodeIntegerForKey:kUserTrackingKey];
 }
 
 - (void)awakeFromNib {

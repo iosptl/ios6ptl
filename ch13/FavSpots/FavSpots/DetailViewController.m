@@ -40,7 +40,6 @@ static NSString * const kNameKey = @"kNameKey";
   }
 
   _nameTextField.text = [coder decodeObjectForKey:kNameKey];
-
   _restoring = YES;
 }
 
@@ -73,25 +72,30 @@ static NSString * const kNameKey = @"kNameKey";
   }
 }
 
-- (void)configureView
-{
+- (void)configureView {
   Spot *spot = self.spot;
 
   if (! self.isRestoring || self.nameTextField.text.length == 0) {
     self.nameTextField.text = spot.name;
   }
 
-  if (! self.isRestoring || self.mapView.region.span.latitudeDelta == 0 || self.mapView.region.span.longitudeDelta == 0) {
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(spot.latitude, spot.longitude);
-    self.mapView.region = MKCoordinateRegionMakeWithDistance(center, 500, 500);
+  if (! self.isRestoring ||
+      self.mapView.region.span.latitudeDelta == 0 ||
+      self.mapView.region.span.longitudeDelta == 0) {
+    CLLocationCoordinate2D center =
+    CLLocationCoordinate2DMake(spot.latitude, spot.longitude);
+    self.mapView.region =
+    MKCoordinateRegionMakeWithDistance(center, 500, 500);
   }
   
-  self.locationLabel.text = [NSString stringWithFormat:@"(%.3f, %.3f)",
-                             spot.latitude, spot.longitude];
+  self.locationLabel.text =
+  [NSString stringWithFormat:@"(%.3f, %.3f)",
+   spot.latitude, spot.longitude];
   self.noteTextView.text = spot.notes;
   
   [self.mapView removeAnnotations:self.mapView.annotations];
-  [self.mapView addAnnotation:[[MapViewAnnotation alloc] initWithSpot:spot]];
+  [self.mapView addAnnotation:
+   [[MapViewAnnotation alloc] initWithSpot:spot]];
   
   self.restoring = NO;
 }
