@@ -25,7 +25,6 @@
 #import "RNMainThreadTrampoline.h"
 
 @implementation RNMainThreadTrampoline
-@synthesize target = _target;
 
 - (id)initWithTarget:(id)aTarget {
 	if ((self = [super init])) {
@@ -46,5 +45,4 @@
                                withObject:nil
                             waitUntilDone:NO];
 }
-
 @end
