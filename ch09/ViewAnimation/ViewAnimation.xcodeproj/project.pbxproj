@@ -30,8 +30,8 @@
 		FBA0555913CE43E100565C60 /* ViewAnimationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewAnimationAppDelegate.h; sourceTree = "<group>"; };
 		FBA0555A13CE43E100565C60 /* ViewAnimationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewAnimationAppDelegate.m; sourceTree = "<group>"; };
 		FBA0555D13CE43E100565C60 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FBA0555F13CE43E100565C60 /* ViewAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewAnimationViewController.h; sourceTree = "<group>"; };
-		FBA0556013CE43E100565C60 /* ViewAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewAnimationViewController.m; sourceTree = "<group>"; };
+		FBA0555F13CE43E100565C60 /* ViewAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewAnimationViewController.h; path = ViewAnimation/ViewAnimationViewController.h; sourceTree = "<group>"; };
+		FBA0556013CE43E100565C60 /* ViewAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewAnimationViewController.m; path = ViewAnimation/ViewAnimationViewController.m; sourceTree = "<group>"; };
 		FBA0556713CE456400565C60 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		FBA0556813CE456400565C60 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +53,8 @@
 		FBA0553B13CE43E100565C60 = {
 			isa = PBXGroup;
 			children = (
+				FBA0555F13CE43E100565C60 /* ViewAnimationViewController.h */,
+				FBA0556013CE43E100565C60 /* ViewAnimationViewController.m */,
 				FBA0555013CE43E100565C60 /* ViewAnimation */,
 				FBA0554913CE43E100565C60 /* Frameworks */,
 				FBA0554713CE43E100565C60 /* Products */,
@@ -83,8 +85,6 @@
 				FBA0555913CE43E100565C60 /* ViewAnimationAppDelegate.h */,
 				FBA0555A13CE43E100565C60 /* ViewAnimationAppDelegate.m */,
 				FBA0555C13CE43E100565C60 /* MainStoryboard.storyboard */,
-				FBA0555F13CE43E100565C60 /* ViewAnimationViewController.h */,
-				FBA0556013CE43E100565C60 /* ViewAnimationViewController.m */,
 				FBA0555113CE43E100565C60 /* Supporting Files */,
 				FBA0556713CE456400565C60 /* CircleView.h */,
 				FBA0556813CE456400565C60 /* CircleView.m */,
@@ -214,7 +214,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -232,7 +232,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

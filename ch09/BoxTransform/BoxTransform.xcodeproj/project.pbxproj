@@ -30,8 +30,8 @@
 		FB8FCA0913D68E7F0051C3FA /* BoxTransformAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxTransformAppDelegate.h; sourceTree = "<group>"; };
 		FB8FCA0A13D68E7F0051C3FA /* BoxTransformAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxTransformAppDelegate.m; sourceTree = "<group>"; };
 		FB8FCA0D13D68E7F0051C3FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FB8FCA0F13D68E7F0051C3FA /* BoxTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxTransformViewController.h; sourceTree = "<group>"; };
-		FB8FCA1013D68E7F0051C3FA /* BoxTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxTransformViewController.m; sourceTree = "<group>"; };
+		FB8FCA0F13D68E7F0051C3FA /* BoxTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BoxTransformViewController.h; path = BoxTransform/BoxTransformViewController.h; sourceTree = "<group>"; };
+		FB8FCA1013D68E7F0051C3FA /* BoxTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BoxTransformViewController.m; path = BoxTransform/BoxTransformViewController.m; sourceTree = "<group>"; };
 		FB8FCA1713D68EB10051C3FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -53,7 +53,8 @@
 		FB8FC9EB13D68E7F0051C3FA = {
 			isa = PBXGroup;
 			children = (
-				FB8FCA1713D68EB10051C3FA /* QuartzCore.framework */,
+				FB8FCA0F13D68E7F0051C3FA /* BoxTransformViewController.h */,
+				FB8FCA1013D68E7F0051C3FA /* BoxTransformViewController.m */,
 				FB8FCA0013D68E7F0051C3FA /* BoxTransform */,
 				FB8FC9F913D68E7F0051C3FA /* Frameworks */,
 				FB8FC9F713D68E7F0051C3FA /* Products */,
@@ -71,6 +72,7 @@
 		FB8FC9F913D68E7F0051C3FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB8FCA1713D68EB10051C3FA /* QuartzCore.framework */,
 				FB8FC9FA13D68E7F0051C3FA /* UIKit.framework */,
 				FB8FC9FC13D68E7F0051C3FA /* Foundation.framework */,
 				FB8FC9FE13D68E7F0051C3FA /* CoreGraphics.framework */,
@@ -84,8 +86,6 @@
 				FB8FCA0913D68E7F0051C3FA /* BoxTransformAppDelegate.h */,
 				FB8FCA0A13D68E7F0051C3FA /* BoxTransformAppDelegate.m */,
 				FB8FCA0C13D68E7F0051C3FA /* MainStoryboard.storyboard */,
-				FB8FCA0F13D68E7F0051C3FA /* BoxTransformViewController.h */,
-				FB8FCA1013D68E7F0051C3FA /* BoxTransformViewController.m */,
 				FB8FCA0113D68E7F0051C3FA /* Supporting Files */,
 			);
 			path = BoxTransform;
@@ -212,7 +212,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -230,7 +230,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

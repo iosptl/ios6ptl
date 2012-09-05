@@ -30,8 +30,8 @@
 		FB15EBC913D622FD00977202 /* BoxAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxAppDelegate.h; sourceTree = "<group>"; };
 		FB15EBCA13D622FD00977202 /* BoxAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxAppDelegate.m; sourceTree = "<group>"; };
 		FB15EBCD13D622FD00977202 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FB15EBCF13D622FD00977202 /* BoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxViewController.h; sourceTree = "<group>"; };
-		FB15EBD013D622FD00977202 /* BoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxViewController.m; sourceTree = "<group>"; };
+		FB15EBCF13D622FD00977202 /* BoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BoxViewController.h; path = Box/BoxViewController.h; sourceTree = "<group>"; };
+		FB15EBD013D622FD00977202 /* BoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BoxViewController.m; path = Box/BoxViewController.m; sourceTree = "<group>"; };
 		FB15EBD713D6233D00977202 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -53,7 +53,8 @@
 		FB15EBAB13D622FD00977202 = {
 			isa = PBXGroup;
 			children = (
-				FB15EBD713D6233D00977202 /* QuartzCore.framework */,
+				FB15EBCF13D622FD00977202 /* BoxViewController.h */,
+				FB15EBD013D622FD00977202 /* BoxViewController.m */,
 				FB15EBC013D622FD00977202 /* Box */,
 				FB15EBB913D622FD00977202 /* Frameworks */,
 				FB15EBB713D622FD00977202 /* Products */,
@@ -71,6 +72,7 @@
 		FB15EBB913D622FD00977202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB15EBD713D6233D00977202 /* QuartzCore.framework */,
 				FB15EBBA13D622FD00977202 /* UIKit.framework */,
 				FB15EBBC13D622FD00977202 /* Foundation.framework */,
 				FB15EBBE13D622FD00977202 /* CoreGraphics.framework */,
@@ -84,8 +86,6 @@
 				FB15EBC913D622FD00977202 /* BoxAppDelegate.h */,
 				FB15EBCA13D622FD00977202 /* BoxAppDelegate.m */,
 				FB15EBCC13D622FD00977202 /* MainStoryboard.storyboard */,
-				FB15EBCF13D622FD00977202 /* BoxViewController.h */,
-				FB15EBD013D622FD00977202 /* BoxViewController.m */,
 				FB15EBC113D622FD00977202 /* Supporting Files */,
 			);
 			path = Box;
@@ -212,7 +212,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -230,7 +230,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

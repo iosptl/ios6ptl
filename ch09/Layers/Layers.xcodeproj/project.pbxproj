@@ -32,11 +32,11 @@
 		FB49335213D277D10047529C /* LayersAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayersAppDelegate.h; sourceTree = "<group>"; };
 		FB49335313D277D10047529C /* LayersAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayersAppDelegate.m; sourceTree = "<group>"; };
 		FB49335613D277D10047529C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FB49335813D277D10047529C /* LayersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayersViewController.h; sourceTree = "<group>"; };
-		FB49335913D277D10047529C /* LayersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayersViewController.m; sourceTree = "<group>"; };
+		FB49335813D277D10047529C /* LayersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LayersViewController.h; path = Layers/LayersViewController.h; sourceTree = "<group>"; };
+		FB49335913D277D10047529C /* LayersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LayersViewController.m; path = Layers/LayersViewController.m; sourceTree = "<group>"; };
 		FB49336613D283BC0047529C /* pushing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushing.png; sourceTree = "<group>"; };
-		FB49336813D28A6A0047529C /* DelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateView.h; sourceTree = "<group>"; };
-		FB49336913D28A6A0047529C /* DelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateView.m; sourceTree = "<group>"; };
+		FB49336813D28A6A0047529C /* DelegateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DelegateView.h; path = Layers/DelegateView.h; sourceTree = "<group>"; };
+		FB49336913D28A6A0047529C /* DelegateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DelegateView.m; path = Layers/DelegateView.m; sourceTree = "<group>"; };
 		FBAA2C6813D295020038FCA0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,10 @@
 		FB49333413D277D10047529C = {
 			isa = PBXGroup;
 			children = (
-				FBAA2C6813D295020038FCA0 /* QuartzCore.framework */,
+				FB49335813D277D10047529C /* LayersViewController.h */,
+				FB49335913D277D10047529C /* LayersViewController.m */,
+				FB49336813D28A6A0047529C /* DelegateView.h */,
+				FB49336913D28A6A0047529C /* DelegateView.m */,
 				FB49334913D277D10047529C /* Layers */,
 				FB49334213D277D10047529C /* Frameworks */,
 				FB49334013D277D10047529C /* Products */,
@@ -76,6 +79,7 @@
 		FB49334213D277D10047529C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FBAA2C6813D295020038FCA0 /* QuartzCore.framework */,
 				FB49334313D277D10047529C /* UIKit.framework */,
 				FB49334513D277D10047529C /* Foundation.framework */,
 				FB49334713D277D10047529C /* CoreGraphics.framework */,
@@ -89,10 +93,6 @@
 				FB49335213D277D10047529C /* LayersAppDelegate.h */,
 				FB49335313D277D10047529C /* LayersAppDelegate.m */,
 				FB49335513D277D10047529C /* MainStoryboard.storyboard */,
-				FB49335813D277D10047529C /* LayersViewController.h */,
-				FB49335913D277D10047529C /* LayersViewController.m */,
-				FB49336813D28A6A0047529C /* DelegateView.h */,
-				FB49336913D28A6A0047529C /* DelegateView.m */,
 				FB49334A13D277D10047529C /* Supporting Files */,
 			);
 			path = Layers;
@@ -222,7 +222,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -240,7 +240,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

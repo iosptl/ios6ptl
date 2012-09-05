@@ -30,8 +30,8 @@
 		FB8FCA3713D7222A0051C3FA /* DecorationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecorationAppDelegate.h; sourceTree = "<group>"; };
 		FB8FCA3813D7222A0051C3FA /* DecorationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecorationAppDelegate.m; sourceTree = "<group>"; };
 		FB8FCA3B13D7222A0051C3FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FB8FCA3D13D7222A0051C3FA /* DecorationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DecorationViewController.h; sourceTree = "<group>"; };
-		FB8FCA3E13D7222A0051C3FA /* DecorationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DecorationViewController.m; sourceTree = "<group>"; };
+		FB8FCA3D13D7222A0051C3FA /* DecorationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DecorationViewController.h; path = Decoration/DecorationViewController.h; sourceTree = "<group>"; };
+		FB8FCA3E13D7222A0051C3FA /* DecorationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DecorationViewController.m; path = Decoration/DecorationViewController.m; sourceTree = "<group>"; };
 		FB8FCA4513D722680051C3FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -53,6 +53,8 @@
 		FB8FCA1913D7222A0051C3FA = {
 			isa = PBXGroup;
 			children = (
+				FB8FCA3D13D7222A0051C3FA /* DecorationViewController.h */,
+				FB8FCA3E13D7222A0051C3FA /* DecorationViewController.m */,
 				FB8FCA4513D722680051C3FA /* QuartzCore.framework */,
 				FB8FCA2E13D7222A0051C3FA /* Decoration */,
 				FB8FCA2713D7222A0051C3FA /* Frameworks */,
@@ -84,8 +86,6 @@
 				FB8FCA3713D7222A0051C3FA /* DecorationAppDelegate.h */,
 				FB8FCA3813D7222A0051C3FA /* DecorationAppDelegate.m */,
 				FB8FCA3A13D7222A0051C3FA /* MainStoryboard.storyboard */,
-				FB8FCA3D13D7222A0051C3FA /* DecorationViewController.h */,
-				FB8FCA3E13D7222A0051C3FA /* DecorationViewController.m */,
 				FB8FCA2F13D7222A0051C3FA /* Supporting Files */,
 			);
 			path = Decoration;
@@ -212,7 +212,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -230,7 +230,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

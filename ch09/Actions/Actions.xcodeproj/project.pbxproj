@@ -33,8 +33,8 @@
 		FB1BD12713D3B82D00836033 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB1BD12913D3B82D00836033 /* ActionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionsViewController.h; sourceTree = "<group>"; };
 		FB1BD12A13D3B82D00836033 /* ActionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionsViewController.m; sourceTree = "<group>"; };
-		FB1BD13113D3B87200836033 /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayer.h; sourceTree = "<group>"; };
-		FB1BD13213D3B87200836033 /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayer.m; sourceTree = "<group>"; };
+		FB1BD13113D3B87200836033 /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleLayer.h; path = Actions/CircleLayer.h; sourceTree = "<group>"; };
+		FB1BD13213D3B87200836033 /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleLayer.m; path = Actions/CircleLayer.m; sourceTree = "<group>"; };
 		FB1BD13413D3B8CD00836033 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -56,6 +56,8 @@
 		FB1BD10513D3B82D00836033 = {
 			isa = PBXGroup;
 			children = (
+				FB1BD13113D3B87200836033 /* CircleLayer.h */,
+				FB1BD13213D3B87200836033 /* CircleLayer.m */,
 				FB1BD13413D3B8CD00836033 /* QuartzCore.framework */,
 				FB1BD11A13D3B82D00836033 /* Actions */,
 				FB1BD11313D3B82D00836033 /* Frameworks */,
@@ -89,8 +91,6 @@
 				FB1BD12613D3B82D00836033 /* MainStoryboard.storyboard */,
 				FB1BD12913D3B82D00836033 /* ActionsViewController.h */,
 				FB1BD12A13D3B82D00836033 /* ActionsViewController.m */,
-				FB1BD13113D3B87200836033 /* CircleLayer.h */,
-				FB1BD13213D3B87200836033 /* CircleLayer.m */,
 				FB1BD11B13D3B82D00836033 /* Supporting Files */,
 			);
 			path = Actions;
@@ -218,7 +218,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -236,7 +236,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

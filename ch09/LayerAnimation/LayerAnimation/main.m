@@ -6,8 +6,6 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "LayerAnimationAppDelegate.h"
 
 int main(int argc, char *argv[])
