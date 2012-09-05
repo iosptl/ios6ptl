@@ -29,7 +29,6 @@
 @implementation GraphView {
   dispatch_source_t _timer;
 }
-@synthesize values= _values;
 
 const CGFloat kXScale = 5.0;
 const CGFloat kYScale = 100.0;
@@ -78,7 +77,6 @@ CGAffineTransformMakeScaleTranslate(CGFloat sx, CGFloat sy,
 
 - (void)dealloc {
   dispatch_source_cancel(_timer);
-  dispatch_release(_timer);
 }
 
 - (void)drawRect:(CGRect)rect {

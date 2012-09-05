@@ -28,8 +28,8 @@
 		FB72132E1425125C00ED8BCD /* TimeConsuming-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeConsuming-Prefix.pch"; sourceTree = "<group>"; };
 		FB7213331425125C00ED8BCD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB7213351425125C00ED8BCD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB7213361425125C00ED8BCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FB7213401425132300ED8BCD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB7213361425125C00ED8BCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = TimeConsuming/ViewController.m; sourceTree = "<group>"; };
+		FB7213401425132300ED8BCD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB7213411425132300ED8BCD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +50,7 @@
 		FB7213111425125C00ED8BCD = {
 			isa = PBXGroup;
 			children = (
+				FB7213361425125C00ED8BCD /* ViewController.m */,
 				FB7213261425125C00ED8BCD /* TimeConsuming */,
 				FB72131F1425125C00ED8BCD /* Frameworks */,
 				FB72131D1425125C00ED8BCD /* Products */,
@@ -79,7 +80,6 @@
 			children = (
 				FB7213321425125C00ED8BCD /* MainStoryboard.storyboard */,
 				FB7213351425125C00ED8BCD /* ViewController.h */,
-				FB7213361425125C00ED8BCD /* ViewController.m */,
 				FB7213271425125C00ED8BCD /* Supporting Files */,
 			);
 			path = TimeConsuming;
@@ -124,7 +124,7 @@
 		FB7213131425125C00ED8BCD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = FB7213161425125C00ED8BCD /* Build configuration list for PBXProject "TimeConsuming" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -208,7 +208,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -226,7 +226,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -274,6 +274,7 @@
 				FB72133C1425125C00ED8BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

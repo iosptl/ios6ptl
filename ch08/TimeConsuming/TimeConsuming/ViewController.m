@@ -27,9 +27,12 @@
 
 #import "ViewController.h"
 
-@implementation ViewController
+@interface ViewController ()
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activity;
+- (IBAction)doSomething:(id)sender;
+@end
 
-@synthesize activity=activity_;
+@implementation ViewController
 
 - (void)somethingTimeConsuming {
   [NSThread sleepForTimeInterval:5];

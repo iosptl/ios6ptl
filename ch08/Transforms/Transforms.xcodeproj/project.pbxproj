@@ -33,8 +33,8 @@
 		FB6BB90913BBD1080023B4AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB6BB90B13BBD1080023B4AD /* TransformsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformsViewController.h; sourceTree = "<group>"; };
 		FB6BB90D13BBD1080023B4AD /* TransformsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformsViewController.m; sourceTree = "<group>"; };
-		FB6BB91413BBD1150023B4AD /* FlowerTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerTransformView.h; sourceTree = "<group>"; };
-		FB6BB91513BBD1150023B4AD /* FlowerTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerTransformView.m; sourceTree = "<group>"; };
+		FB6BB91413BBD1150023B4AD /* FlowerTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerTransformView.h; path = Transforms/FlowerTransformView.h; sourceTree = "<group>"; };
+		FB6BB91513BBD1150023B4AD /* FlowerTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerTransformView.m; path = Transforms/FlowerTransformView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +54,8 @@
 		FB6BB8E713BBD1080023B4AD = {
 			isa = PBXGroup;
 			children = (
+				FB6BB91413BBD1150023B4AD /* FlowerTransformView.h */,
+				FB6BB91513BBD1150023B4AD /* FlowerTransformView.m */,
 				FB6BB8FC13BBD1080023B4AD /* Transforms */,
 				FB6BB8F513BBD1080023B4AD /* Frameworks */,
 				FB6BB8F313BBD1080023B4AD /* Products */,
@@ -87,8 +89,6 @@
 				FB6BB90B13BBD1080023B4AD /* TransformsViewController.h */,
 				FB6BB90D13BBD1080023B4AD /* TransformsViewController.m */,
 				FB6BB8FD13BBD1080023B4AD /* Supporting Files */,
-				FB6BB91413BBD1150023B4AD /* FlowerTransformView.h */,
-				FB6BB91513BBD1150023B4AD /* FlowerTransformView.m */,
 			);
 			path = Transforms;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -234,7 +234,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

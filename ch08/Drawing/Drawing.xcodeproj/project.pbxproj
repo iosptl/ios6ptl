@@ -35,8 +35,8 @@
 		FB35E2EB13BA633B0040212F /* DrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
 		FB35E2ED13BA633B0040212F /* DrawingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
 		FB35E2F713BA7E470040212F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		FB35E2F913BA9F020040212F /* MYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYView.h; sourceTree = "<group>"; };
-		FB35E2FA13BA9F020040212F /* MYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYView.m; sourceTree = "<group>"; };
+		FB35E2F913BA9F020040212F /* MYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MYView.h; path = Drawing/MYView.h; sourceTree = "<group>"; };
+		FB35E2FA13BA9F020040212F /* MYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MYView.m; path = Drawing/MYView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +57,8 @@
 		FB35E2C713BA633B0040212F = {
 			isa = PBXGroup;
 			children = (
+				FB35E2F913BA9F020040212F /* MYView.h */,
+				FB35E2FA13BA9F020040212F /* MYView.m */,
 				FB35E2F713BA7E470040212F /* CoreImage.framework */,
 				FB35E2DC13BA633B0040212F /* Drawing */,
 				FB35E2D513BA633B0040212F /* Frameworks */,
@@ -91,8 +93,6 @@
 				FB35E2EB13BA633B0040212F /* DrawingViewController.h */,
 				FB35E2ED13BA633B0040212F /* DrawingViewController.m */,
 				FB35E2DD13BA633B0040212F /* Supporting Files */,
-				FB35E2F913BA9F020040212F /* MYView.h */,
-				FB35E2FA13BA9F020040212F /* MYView.m */,
 			);
 			path = Drawing;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -238,7 +238,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
