@@ -30,7 +30,7 @@
 		FB2406C114212AA30092C720 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB2406C414212AA30092C720 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB2406C614212AA30092C720 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB2406C714212AA30092C720 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB2406C714212AA30092C720 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = AssocRef/ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +50,7 @@
 		FB2406A214212AA20092C720 = {
 			isa = PBXGroup;
 			children = (
+				FB2406C714212AA30092C720 /* ViewController.m */,
 				FB2406B714212AA30092C720 /* AssocRef */,
 				FB2406B014212AA30092C720 /* Frameworks */,
 				FB2406AE14212AA30092C720 /* Products */,
@@ -81,7 +82,6 @@
 				FB2406C114212AA30092C720 /* AppDelegate.m */,
 				FB2406C314212AA30092C720 /* MainStoryboard.storyboard */,
 				FB2406C614212AA30092C720 /* ViewController.h */,
-				FB2406C714212AA30092C720 /* ViewController.m */,
 				FB2406B814212AA30092C720 /* Supporting Files */,
 			);
 			path = AssocRef;
@@ -274,6 +274,7 @@
 				FB2406CD14212AA30092C720 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

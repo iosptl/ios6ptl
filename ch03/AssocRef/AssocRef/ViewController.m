@@ -28,7 +28,6 @@
 #import <objc/runtime.h>
 
 @implementation ViewController
-@synthesize buttonLabel=_buttonLabel;
 
 static const char kRepresentedObject;
 
@@ -50,10 +49,5 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
   UIButton *sender = objc_getAssociatedObject(alertView, 
                                               &kRepresentedObject);
   self.buttonLabel.text = [[sender titleLabel] text];
-}
-
-- (void)viewDidUnload {
-  [self setButtonLabel:nil];
-  [super viewDidUnload];
 }
 @end
