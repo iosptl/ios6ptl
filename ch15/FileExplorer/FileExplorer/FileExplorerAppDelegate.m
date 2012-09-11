@@ -10,8 +10,6 @@
 
 @implementation FileExplorerAppDelegate
 
-@synthesize window = _window;
-
 - (void)applicationWillResignActive:(UIApplication *)application
 {
   /*
