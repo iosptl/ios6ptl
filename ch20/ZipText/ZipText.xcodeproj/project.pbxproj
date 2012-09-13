@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0E74BD160282F700586BD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0E74BC160282F700586BD3 /* Default-568h@2x.png */; };
 		FB4738BA15B478250052A492 /* ZipTextView1.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4738B915B478250052A492 /* ZipTextView1.m */; };
 		FB7303E415B2F75D00D3E9EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7303E315B2F75D00D3E9EA /* UIKit.framework */; };
 		FB7303E615B2F75D00D3E9EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7303E515B2F75D00D3E9EA /* Foundation.framework */; };
@@ -26,8 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB4738B815B478250052A492 /* ZipTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipTextView.h; sourceTree = "<group>"; };
-		FB4738B915B478250052A492 /* ZipTextView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipTextView1.m; sourceTree = "<group>"; };
+		FB0E74BC160282F700586BD3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB4738B815B478250052A492 /* ZipTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZipTextView.h; path = ZipText/ZipTextView.h; sourceTree = "<group>"; };
+		FB4738B915B478250052A492 /* ZipTextView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView1.m; path = ZipText/ZipTextView1.m; sourceTree = "<group>"; };
 		FB7303DF15B2F75D00D3E9EA /* ZipText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7303E315B2F75D00D3E9EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB7303E515B2F75D00D3E9EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,10 +47,10 @@
 		FB73040315B2F79100D3E9EA /* Lorem.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lorem.txt; sourceTree = "<group>"; };
 		FB73040515B2FA5700D3E9EA /* RNTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNTimer.h; path = ../../../ch21/KVO/RNTimer.h; sourceTree = "<group>"; };
 		FB73040615B2FA5700D3E9EA /* RNTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNTimer.m; path = ../../../ch21/KVO/RNTimer.m; sourceTree = "<group>"; };
-		FBCE21D415B8B3F500DD1D1E /* ZipTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipTextView2.m; sourceTree = "<group>"; };
-		FBCE21D615B8B4A400DD1D1E /* ZipTextView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipTextView3.m; sourceTree = "<group>"; };
-		FBCE21D815B8B4EE00DD1D1E /* ZipTextView4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipTextView4.m; sourceTree = "<group>"; };
-		FBCE21DA15B8BC2300DD1D1E /* ZipTextView5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipTextView5.m; sourceTree = "<group>"; };
+		FBCE21D415B8B3F500DD1D1E /* ZipTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView2.m; path = ZipText/ZipTextView2.m; sourceTree = "<group>"; };
+		FBCE21D615B8B4A400DD1D1E /* ZipTextView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView3.m; path = ZipText/ZipTextView3.m; sourceTree = "<group>"; };
+		FBCE21D815B8B4EE00DD1D1E /* ZipTextView4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView4.m; path = ZipText/ZipTextView4.m; sourceTree = "<group>"; };
+		FBCE21DA15B8BC2300DD1D1E /* ZipTextView5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZipTextView5.m; path = ZipText/ZipTextView5.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,12 @@
 		FB7303D415B2F75C00D3E9EA = {
 			isa = PBXGroup;
 			children = (
+				FB4738B815B478250052A492 /* ZipTextView.h */,
+				FB4738B915B478250052A492 /* ZipTextView1.m */,
+				FBCE21D415B8B3F500DD1D1E /* ZipTextView2.m */,
+				FBCE21D615B8B4A400DD1D1E /* ZipTextView3.m */,
+				FBCE21D815B8B4EE00DD1D1E /* ZipTextView4.m */,
+				FBCE21DA15B8BC2300DD1D1E /* ZipTextView5.m */,
 				FB7303E915B2F75D00D3E9EA /* ZipText */,
 				FB7303E215B2F75D00D3E9EA /* Frameworks */,
 				FB7303E015B2F75D00D3E9EA /* Products */,
@@ -95,6 +103,7 @@
 		FB7303E915B2F75D00D3E9EA /* ZipText */ = {
 			isa = PBXGroup;
 			children = (
+				FB0E74BC160282F700586BD3 /* Default-568h@2x.png */,
 				FB73040515B2FA5700D3E9EA /* RNTimer.h */,
 				FB73040615B2FA5700D3E9EA /* RNTimer.m */,
 				FB7303F215B2F75D00D3E9EA /* AppDelegate.h */,
@@ -105,12 +114,6 @@
 				FB7303F815B2F75D00D3E9EA /* ViewController_iPhone.xib */,
 				FB7303FB15B2F75D00D3E9EA /* ViewController_iPad.xib */,
 				FB7303EA15B2F75D00D3E9EA /* Supporting Files */,
-				FB4738B815B478250052A492 /* ZipTextView.h */,
-				FB4738B915B478250052A492 /* ZipTextView1.m */,
-				FBCE21D415B8B3F500DD1D1E /* ZipTextView2.m */,
-				FBCE21D615B8B4A400DD1D1E /* ZipTextView3.m */,
-				FBCE21D815B8B4EE00DD1D1E /* ZipTextView4.m */,
-				FBCE21DA15B8BC2300DD1D1E /* ZipTextView5.m */,
 			);
 			path = ZipText;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				FB7303FA15B2F75D00D3E9EA /* ViewController_iPhone.xib in Resources */,
 				FB7303FD15B2F75D00D3E9EA /* ViewController_iPad.xib in Resources */,
 				FB73040415B2F79100D3E9EA /* Lorem.txt in Resources */,
+				FB0E74BD160282F700586BD3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

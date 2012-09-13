@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+// Modify from 1 to 5 to test each revision
 #define REVISION 1
 
 @interface ZipTextView : UIView

@@ -29,7 +29,7 @@
 
 @interface RNTimer ()
 @property (nonatomic, readwrite, copy) void (^block)();
-@property (nonatomic, readwrite, assign) dispatch_source_t source;
+@property (nonatomic, readwrite, strong) dispatch_source_t source;
 @end
 
 @implementation RNTimer
