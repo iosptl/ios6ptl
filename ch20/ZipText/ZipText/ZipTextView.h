@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define REVISION 5
+#define REVISION 1
 
 @interface ZipTextView : UIView
 - (id)initWithFrame:(CGRect)frame text:(NSString *)text;
