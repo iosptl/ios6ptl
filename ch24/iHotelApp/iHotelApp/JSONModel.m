@@ -1,6 +1,9 @@
 //
 //  ModelBase.m
-//  iHotelApp
+//  Steinlogic
+//
+//  Created by Mugunth Kumar on 26-Jul-10.
+//  Copyright 2011 Steinlogic All rights reserved.
 //
 
 #import "JSONModel.h"

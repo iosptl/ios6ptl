@@ -2,15 +2,15 @@
 //  RESTError.m
 //  iHotelApp
 //
+//  Created by Mugunth Kumar on 1-Jan-11.
+//  Copyright 2010 Steinlogic. All rights reserved.
+//
 
 #import "RESTError.h"
 
 static NSDictionary *errorCodes;
 
 @implementation RESTError
-
-@synthesize message = _message;
-@synthesize errorCode = _errorCode;
 
 + (void) initialize
 {

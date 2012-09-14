@@ -2,6 +2,9 @@
 //  MenuItem.h
 //  iHotelApp
 //
+//  Created by Mugunth on 25/05/11.
+//  Copyright 2011 Steinlogic. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
@@ -17,7 +20,7 @@
  "reviewCount" : 4
  */
 
-@interface MenuItem : JSONModel 
+@interface MenuItem : JSONModel
 
 @property (nonatomic, strong) NSString *itemId;
 @property (nonatomic, strong) NSString *image;
