@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0E75331602C83600586BD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0E75321602C83600586BD3 /* Default-568h@2x.png */; };
 		FB778FB0141E757A00652CF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB778FAF141E757A00652CF8 /* UIKit.framework */; };
 		FB778FB2141E757A00652CF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB778FB1141E757A00652CF8 /* Foundation.framework */; };
 		FB778FB4141E757A00652CF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB778FB3141E757A00652CF8 /* CoreGraphics.framework */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0E75321602C83600586BD3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB778FAB141E757A00652CF8 /* KVC-Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KVC-Collection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB778FAF141E757A00652CF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB778FB1141E757A00652CF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,12 +58,12 @@
 		FB778FA0141E757A00652CF8 = {
 			isa = PBXGroup;
 			children = (
-				FB778FCC141E758400652CF8 /* DataModel.h */,
-				FB778FCD141E758400652CF8 /* DataModel.m */,
 				FB778FCE141E758400652CF8 /* RootViewController.h */,
 				FB778FCF141E758400652CF8 /* RootViewController.m */,
 				FB778FD0141E758400652CF8 /* KVCTableViewController.h */,
 				FB778FD1141E758400652CF8 /* KVCTableViewController.m */,
+				FB778FCC141E758400652CF8 /* DataModel.h */,
+				FB778FCD141E758400652CF8 /* DataModel.m */,
 				FB778FB5141E757A00652CF8 /* KVC-Collection */,
 				FB778FAE141E757A00652CF8 /* Frameworks */,
 				FB778FAC141E757A00652CF8 /* Products */,
@@ -100,6 +102,7 @@
 		FB778FB6141E757A00652CF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB0E75321602C83600586BD3 /* Default-568h@2x.png */,
 				FB778FB7141E757A00652CF8 /* KVC-Collection-Info.plist */,
 				FB778FB8141E757A00652CF8 /* InfoPlist.strings */,
 				FB778FBB141E757A00652CF8 /* main.m */,
@@ -160,6 +163,7 @@
 			files = (
 				FB778FBA141E757A00652CF8 /* InfoPlist.strings in Resources */,
 				FB778FC3141E757B00652CF8 /* MainStoryboard.storyboard in Resources */,
+				FB0E75331602C83600586BD3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +224,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -238,7 +242,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -286,6 +290,7 @@
 				FB778FCB141E757B00652CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0E75281602C56D00586BD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0E75271602C56D00586BD3 /* Default-568h@2x.png */; };
 		FB486F14141E740B0088D73F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB486F13141E740B0088D73F /* UIKit.framework */; };
 		FB486F16141E740B0088D73F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB486F15141E740B0088D73F /* Foundation.framework */; };
 		FB486F18141E740B0088D73F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB486F17141E740B0088D73F /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0E75271602C56D00586BD3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB486F0F141E740B0088D73F /* KVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB486F13141E740B0088D73F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB486F15141E740B0088D73F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -30,10 +32,10 @@
 		FB486F22141E740B0088D73F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB486F23141E740B0088D73F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FB486F26141E740B0088D73F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FB486F30141E742B0088D73F /* KVCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCTableViewCell.h; sourceTree = "<group>"; };
-		FB486F31141E742B0088D73F /* KVCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCTableViewCell.m; sourceTree = "<group>"; };
-		FB486F32141E742B0088D73F /* KVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCTableViewController.h; sourceTree = "<group>"; };
-		FB486F33141E742B0088D73F /* KVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCTableViewController.m; sourceTree = "<group>"; };
+		FB486F30141E742B0088D73F /* KVCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVCTableViewCell.h; path = KVC/KVCTableViewCell.h; sourceTree = "<group>"; };
+		FB486F31141E742B0088D73F /* KVCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVCTableViewCell.m; path = KVC/KVCTableViewCell.m; sourceTree = "<group>"; };
+		FB486F32141E742B0088D73F /* KVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVCTableViewController.h; path = KVC/KVCTableViewController.h; sourceTree = "<group>"; };
+		FB486F33141E742B0088D73F /* KVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVCTableViewController.m; path = KVC/KVCTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,10 @@
 		FB486F04141E740B0088D73F = {
 			isa = PBXGroup;
 			children = (
+				FB486F30141E742B0088D73F /* KVCTableViewCell.h */,
+				FB486F31141E742B0088D73F /* KVCTableViewCell.m */,
+				FB486F32141E742B0088D73F /* KVCTableViewController.h */,
+				FB486F33141E742B0088D73F /* KVCTableViewController.m */,
 				FB486F19141E740B0088D73F /* KVC */,
 				FB486F12141E740B0088D73F /* Frameworks */,
 				FB486F10141E740B0088D73F /* Products */,
@@ -80,10 +86,6 @@
 		FB486F19141E740B0088D73F /* KVC */ = {
 			isa = PBXGroup;
 			children = (
-				FB486F30141E742B0088D73F /* KVCTableViewCell.h */,
-				FB486F31141E742B0088D73F /* KVCTableViewCell.m */,
-				FB486F32141E742B0088D73F /* KVCTableViewController.h */,
-				FB486F33141E742B0088D73F /* KVCTableViewController.m */,
 				FB486F22141E740B0088D73F /* AppDelegate.h */,
 				FB486F23141E740B0088D73F /* AppDelegate.m */,
 				FB486F25141E740B0088D73F /* MainStoryboard.storyboard */,
@@ -95,6 +97,7 @@
 		FB486F1A141E740B0088D73F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB0E75271602C56D00586BD3 /* Default-568h@2x.png */,
 				FB486F1B141E740B0088D73F /* KVC-Info.plist */,
 				FB486F1C141E740B0088D73F /* InfoPlist.strings */,
 				FB486F1F141E740B0088D73F /* main.m */,
@@ -155,6 +158,7 @@
 			files = (
 				FB486F1E141E740B0088D73F /* InfoPlist.strings in Resources */,
 				FB486F27141E740B0088D73F /* MainStoryboard.storyboard in Resources */,
+				FB0E75281602C56D00586BD3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +218,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -232,7 +236,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -280,6 +284,7 @@
 				FB486F2F141E740B0088D73F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

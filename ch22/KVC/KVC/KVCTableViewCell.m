@@ -5,12 +5,10 @@
 #import "KVCTableViewCell.h"
 
 @implementation KVCTableViewCell
-@synthesize target=target_;
-@synthesize property=property_;
 
 - (BOOL)isReady {
   // Only display something if configured
-  return (self.target && [self.property length] > 0);
+  return (self.object && [self.property length] > 0);
 }
 
 - (void)update {
@@ -19,7 +17,7 @@
     // Ask the target for the value of its property that has the
     // name given in self.property. Then convert that into a human
     // readable string
-    id value = [self.target valueForKeyPath:self.property];
+    id value = [self.object valueForKeyPath:self.property];
     text = [value description];
   }
   else {
@@ -33,13 +31,13 @@
              reuseIdentifier:identifier];
 }
 
-- (void)setTarget:(id)aTarget {
-  target_ = aTarget;
+- (void)setObject:(id)anObject {
+  _object = anObject;
   [self update];
 }
 
 - (void)setProperty:(NSString *)aProperty {
-  property_ = aProperty;
+  _property = aProperty;
   [self update];
 }
 @end

@@ -1,21 +1,39 @@
 //
 //  KVCTableViewCell.m
-//  Chapter13
+//  Copyright (c) 2012 Rob Napier
+//
+//  This code is licensed under the MIT License:
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a
+//  copy of this software and associated documentation files (the "Software"),
+//  to deal in the Software without restriction, including without limitation
+//  the rights to use, copy, modify, merge, publish, distribute, sublicense,
+//  and/or sell copies of the Software, and to permit persons to whom the
+//  Software is furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+//  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+//  DEALINGS IN THE SOFTWARE.
 //
 
 #import "KVCTableViewCell.h"
 
 @implementation KVCTableViewCell
-@synthesize target=target_;
-@synthesize property=property_;
 
 - (BOOL)isReady {
-  return (self.target && [self.property length] > 0);
+  return (self.object && [self.property length] > 0);
 }
 
 - (void)update {
   self.textLabel.text = self.isReady ?
-  [[self.target valueForKeyPath:self.property] description]
+  [[self.object valueForKeyPath:self.property] description]
   : @"";
 }
 
@@ -26,14 +44,14 @@
 
 - (void)removeObservation {
   if (self.isReady) {
-    [self.target removeObserver:self 
+    [self.object removeObserver:self
                      forKeyPath:self.property];
   }
 }
 
 - (void)addObservation {
   if (self.isReady) {
-    [self.target addObserver:self forKeyPath:self.property 
+    [self.object addObserver:self forKeyPath:self.property
                      options:0 
                      context:(__bridge void*)self];
   }
@@ -54,21 +72,21 @@
 }
 
 - (void)dealloc {
-  if (target_ && [property_ length] > 0) {
-    [target_ removeObserver:self forKeyPath:property_];
+  if (_object && [_property length] > 0) {
+    [_object removeObserver:self forKeyPath:_property];
   }
 }
 
-- (void)setTarget:(id)aTarget {
+- (void)setObject:(id)anObject {
   [self removeObservation];
-  target_ = aTarget;
+  _object = anObject;
   [self addObservation];
   [self update];
 }
 
 - (void)setProperty:(NSString *)aProperty {
   [self removeObservation];
-  property_ = aProperty;
+  _property = aProperty;
   [self addObservation];
   [self update];
 }

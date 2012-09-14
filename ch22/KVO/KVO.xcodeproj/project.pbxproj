@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0E75391602CA4300586BD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0E75381602CA4300586BD3 /* Default-568h@2x.png */; };
 		FBC741EE141E75EB003A090A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC741ED141E75EB003A090A /* UIKit.framework */; };
 		FBC741F0141E75EB003A090A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC741EF141E75EB003A090A /* Foundation.framework */; };
 		FBC741F2141E75EB003A090A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC741F1141E75EB003A090A /* CoreGraphics.framework */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0E75381602CA4300586BD3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBC741E9141E75EB003A090A /* KVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC741ED141E75EB003A090A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBC741EF141E75EB003A090A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,12 +58,12 @@
 		FBC741DE141E75EA003A090A = {
 			isa = PBXGroup;
 			children = (
-				FBC7420F141E75F7003A090D /* RNTimer.h */,
-				FBC7420F141E75F7003A090B /* RNTimer.m */,
 				FBC7420A141E75F7003A090A /* KVCTableViewCell.h */,
 				FBC7420B141E75F7003A090A /* KVCTableViewCell.m */,
 				FBC7420C141E75F7003A090A /* KVCTableViewController.h */,
 				FBC7420D141E75F7003A090A /* KVCTableViewController.m */,
+				FBC7420F141E75F7003A090D /* RNTimer.h */,
+				FBC7420F141E75F7003A090B /* RNTimer.m */,
 				FBC741F3141E75EB003A090A /* KVO */,
 				FBC741EC141E75EB003A090A /* Frameworks */,
 				FBC741EA141E75EB003A090A /* Products */,
@@ -100,6 +102,7 @@
 		FBC741F4141E75EB003A090A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB0E75381602CA4300586BD3 /* Default-568h@2x.png */,
 				FBC741F5141E75EB003A090A /* KVO-Info.plist */,
 				FBC741F6141E75EB003A090A /* InfoPlist.strings */,
 				FBC741F9141E75EB003A090A /* main.m */,
@@ -160,6 +163,7 @@
 			files = (
 				FBC741F8141E75EB003A090A /* InfoPlist.strings in Resources */,
 				FBC74201141E75EB003A090A /* MainStoryboard.storyboard in Resources */,
+				FB0E75391602CA4300586BD3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
