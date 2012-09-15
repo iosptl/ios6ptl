@@ -35,8 +35,8 @@
 		FB9469FD140834CF00F7A625 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB946A041408350C00F7A625 /* Lipsum.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lipsum.txt; sourceTree = "<group>"; };
 		FB946A06140835D900F7A625 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		FB946A081408381400F7A625 /* ColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColumnView.h; sourceTree = "<group>"; };
-		FB946A091408381400F7A625 /* ColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColumnView.m; sourceTree = "<group>"; };
+		FB946A081408381400F7A625 /* ColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColumnView.h; path = Columns/ColumnView.h; sourceTree = "<group>"; };
+		FB946A091408381400F7A625 /* ColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColumnView.m; path = Columns/ColumnView.m; sourceTree = "<group>"; };
 		FB946A0B1408394700F7A625 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -58,8 +58,8 @@
 		FB9469DA140834CF00F7A625 = {
 			isa = PBXGroup;
 			children = (
-				FB946A0B1408394700F7A625 /* CoreGraphics.framework */,
-				FB946A06140835D900F7A625 /* CoreText.framework */,
+				FB946A081408381400F7A625 /* ColumnView.h */,
+				FB946A091408381400F7A625 /* ColumnView.m */,
 				FB9469ED140834CF00F7A625 /* Columns */,
 				FB9469E8140834CF00F7A625 /* Frameworks */,
 				FB9469E6140834CF00F7A625 /* Products */,
@@ -77,6 +77,8 @@
 		FB9469E8140834CF00F7A625 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB946A0B1408394700F7A625 /* CoreGraphics.framework */,
+				FB946A06140835D900F7A625 /* CoreText.framework */,
 				FB9469E9140834CF00F7A625 /* UIKit.framework */,
 				FB9469EB140834CF00F7A625 /* Foundation.framework */,
 			);
@@ -91,8 +93,6 @@
 				FB9469F9140834CF00F7A625 /* MainStoryboard.storyboard */,
 				FB9469FC140834CF00F7A625 /* ViewController.h */,
 				FB9469FD140834CF00F7A625 /* ViewController.m */,
-				FB946A081408381400F7A625 /* ColumnView.h */,
-				FB946A091408381400F7A625 /* ColumnView.m */,
 				FB9469EE140834CF00F7A625 /* Supporting Files */,
 			);
 			path = Columns;

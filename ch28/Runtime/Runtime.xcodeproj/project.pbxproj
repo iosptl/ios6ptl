@@ -14,6 +14,7 @@
 		FB0AB7B1140303A7007F02E5 /* MyMsgSend.c in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB7B0140303A7007F02E5 /* MyMsgSend.c */; };
 		FB0AB7B5140308DA007F02E5 /* PrintObjectMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB7B4140308DA007F02E5 /* PrintObjectMethods.m */; };
 		FB0AB7B8140309AE007F02E5 /* FastCall.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB7B7140309AE007F02E5 /* FastCall.m */; };
+		FBBF3A5716053A2F0093BD67 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBBF3A5616053A2F0093BD67 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +25,13 @@
 		FB0AB7A11402E3E8007F02E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB0AB7A31402E3E8007F02E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB0AB7A51402E3E8007F02E5 /* Runtime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runtime-Prefix.pch"; sourceTree = "<group>"; };
-		FB0AB7B0140303A7007F02E5 /* MyMsgSend.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = MyMsgSend.c; path = ../MyMsgSend.c; sourceTree = "<group>"; };
-		FB0AB7B2140303B2007F02E5 /* MyMsgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMsgSend.h; path = ../MyMsgSend.h; sourceTree = "<group>"; };
-		FB0AB7B3140308DA007F02E5 /* PrintObjectMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintObjectMethods.h; sourceTree = "<group>"; };
-		FB0AB7B4140308DA007F02E5 /* PrintObjectMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintObjectMethods.m; sourceTree = "<group>"; };
-		FB0AB7B6140309AE007F02E5 /* FastCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastCall.h; sourceTree = "<group>"; };
-		FB0AB7B7140309AE007F02E5 /* FastCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastCall.m; sourceTree = "<group>"; };
+		FB0AB7B0140303A7007F02E5 /* MyMsgSend.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyMsgSend.c; sourceTree = "<group>"; };
+		FB0AB7B2140303B2007F02E5 /* MyMsgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMsgSend.h; sourceTree = "<group>"; };
+		FB0AB7B3140308DA007F02E5 /* PrintObjectMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrintObjectMethods.h; path = Runtime/PrintObjectMethods.h; sourceTree = "<group>"; };
+		FB0AB7B4140308DA007F02E5 /* PrintObjectMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrintObjectMethods.m; path = Runtime/PrintObjectMethods.m; sourceTree = "<group>"; };
+		FB0AB7B6140309AE007F02E5 /* FastCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FastCall.h; path = Runtime/FastCall.h; sourceTree = "<group>"; };
+		FB0AB7B7140309AE007F02E5 /* FastCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FastCall.m; path = Runtime/FastCall.m; sourceTree = "<group>"; };
+		FBBF3A5616053A2F0093BD67 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,12 @@
 		FB0AB78A1402E3E8007F02E5 = {
 			isa = PBXGroup;
 			children = (
+				FB0AB7B3140308DA007F02E5 /* PrintObjectMethods.h */,
+				FB0AB7B4140308DA007F02E5 /* PrintObjectMethods.m */,
+				FB0AB7B2140303B2007F02E5 /* MyMsgSend.h */,
+				FB0AB7B0140303A7007F02E5 /* MyMsgSend.c */,
+				FB0AB7B6140309AE007F02E5 /* FastCall.h */,
+				FB0AB7B7140309AE007F02E5 /* FastCall.m */,
 				FB0AB79D1402E3E8007F02E5 /* Runtime */,
 				FB0AB7981402E3E8007F02E5 /* Frameworks */,
 				FB0AB7961402E3E8007F02E5 /* Products */,
@@ -74,12 +82,6 @@
 		FB0AB79D1402E3E8007F02E5 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
-				FB0AB7B6140309AE007F02E5 /* FastCall.h */,
-				FB0AB7B7140309AE007F02E5 /* FastCall.m */,
-				FB0AB7B3140308DA007F02E5 /* PrintObjectMethods.h */,
-				FB0AB7B4140308DA007F02E5 /* PrintObjectMethods.m */,
-				FB0AB7B2140303B2007F02E5 /* MyMsgSend.h */,
-				FB0AB7B0140303A7007F02E5 /* MyMsgSend.c */,
 				FB0AB7A31402E3E8007F02E5 /* main.m */,
 				FB0AB79E1402E3E8007F02E5 /* Supporting Files */,
 			);
@@ -89,6 +91,7 @@
 		FB0AB79E1402E3E8007F02E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FBBF3A5616053A2F0093BD67 /* Default-568h@2x.png */,
 				FB0AB79F1402E3E8007F02E5 /* Runtime-Info.plist */,
 				FB0AB7A01402E3E8007F02E5 /* InfoPlist.strings */,
 				FB0AB7A51402E3E8007F02E5 /* Runtime-Prefix.pch */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0AB7A21402E3E8007F02E5 /* InfoPlist.strings in Resources */,
+				FBBF3A5716053A2F0093BD67 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +201,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -214,7 +218,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

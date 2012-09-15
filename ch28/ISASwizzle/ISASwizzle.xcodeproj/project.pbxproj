@@ -13,6 +13,7 @@
 		FB0AB87614033EED007F02E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB87514033EED007F02E5 /* main.m */; };
 		FB0AB88914033F01007F02E5 /* MYNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB88614033F01007F02E5 /* MYNotificationCenter.m */; };
 		FB0AB88A14033F01007F02E5 /* NSObject+SetClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0AB88814033F01007F02E5 /* NSObject+SetClass.m */; };
+		FBBF3A6C16053FF80093BD67 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		FB0AB88614033F01007F02E5 /* MYNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYNotificationCenter.m; sourceTree = "<group>"; };
 		FB0AB88714033F01007F02E5 /* NSObject+SetClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SetClass.h"; sourceTree = "<group>"; };
 		FB0AB88814033F01007F02E5 /* NSObject+SetClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SetClass.m"; sourceTree = "<group>"; };
+		FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		FB0AB87014033EED007F02E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FBBF3A6B16053FF80093BD67 /* Default-568h@2x.png */,
 				FB0AB87114033EED007F02E5 /* ISASwizzle-Info.plist */,
 				FB0AB87214033EED007F02E5 /* InfoPlist.strings */,
 				FB0AB87714033EED007F02E5 /* ISASwizzle-Prefix.pch */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0AB87414033EED007F02E5 /* InfoPlist.strings in Resources */,
+				FBBF3A6C16053FF80093BD67 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +196,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -210,7 +214,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -258,6 +262,7 @@
 				FB0AB87F14033EED007F02E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
