@@ -39,6 +39,7 @@
 		ABE85FD41580895500C622FD /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FC91580895500C622FD /* MKNetworkOperation.m */; };
 		ABE85FD51580895500C622FD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85FCC1580895500C622FD /* Reachability.m */; };
 		ABE85FE3158193E600C622FD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE85FE2158193E600C622FD /* Security.framework */; };
+		ABF82F1D160436E300A3B8DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF82F1C160436E300A3B8DF /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		ABE85FCB1580895500C622FD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		ABE85FCC1580895500C622FD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		ABE85FE2158193E600C622FD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ABF82F1C160436E300A3B8DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		AB529405138CDBDA00E5F2C6 = {
 			isa = PBXGroup;
 			children = (
+				ABF82F1C160436E300A3B8DF /* Default-568h@2x.png */,
 				AB529446138CDDB600E5F2C6 /* Externals */,
 				AB52941A138CDBDA00E5F2C6 /* iHotelApp */,
 				AB529413138CDBDA00E5F2C6 /* Frameworks */,
@@ -322,6 +325,7 @@
 				AB52942E138CDBDA00E5F2C6 /* iHotelAppViewController.xib in Resources */,
 				AB1367B713A5CDCD007D5996 /* Errors_en_US.plist in Resources */,
 				AB45F0E2159C4E5600C03684 /* iHotelAppMenuViewController.xib in Resources */,
+				ABF82F1D160436E300A3B8DF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

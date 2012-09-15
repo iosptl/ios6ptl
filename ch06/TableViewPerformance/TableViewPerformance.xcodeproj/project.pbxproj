@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AB070C1B14062A68005805FA /* CustomDrawnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB070C1A14062A68005805FA /* CustomDrawnCell.m */; };
 		AB070C2914062A8F005805FA /* ABTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB070C2814062A8F005805FA /* ABTableViewCell.m */; };
-		AB070C2B14062BFB005805FA /* ios5.png in Resources */ = {isa = PBXBuildFile; fileRef = AB070C2A14062BFB005805FA /* ios5.png */; };
 		ABBFBD4F14035B4A00A37E50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBFBD4E14035B4A00A37E50 /* UIKit.framework */; };
 		ABBFBD5114035B4A00A37E50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBFBD5014035B4A00A37E50 /* Foundation.framework */; };
 		ABBFBD5314035B4A00A37E50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBFBD5214035B4A00A37E50 /* CoreGraphics.framework */; };
@@ -21,6 +20,7 @@
 		ABBFBD6814035B4A00A37E50 /* TableViewPerformanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBFBD6614035B4A00A37E50 /* TableViewPerformanceViewController.xib */; };
 		ABBFBD7014035D2900A37E50 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBFBD6F14035D2900A37E50 /* CustomCell.m */; };
 		ABBFBD7214035D3500A37E50 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBFBD7114035D3500A37E50 /* CustomCell.xib */; };
+		ABF82F2F1604515F00A3B8DF /* iOS6.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF82F2E1604515F00A3B8DF /* iOS6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		AB070C1A14062A68005805FA /* CustomDrawnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDrawnCell.m; sourceTree = "<group>"; };
 		AB070C2714062A8F005805FA /* ABTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTableViewCell.h; sourceTree = "<group>"; };
 		AB070C2814062A8F005805FA /* ABTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTableViewCell.m; sourceTree = "<group>"; };
-		AB070C2A14062BFB005805FA /* ios5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ios5.png; sourceTree = "<group>"; };
 		ABBFBD4A14035B4900A37E50 /* TableViewPerformance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewPerformance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBFBD4E14035B4A00A37E50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABBFBD5014035B4A00A37E50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,6 +45,7 @@
 		ABBFBD6E14035D2900A37E50 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		ABBFBD6F14035D2900A37E50 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		ABBFBD7114035D3500A37E50 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		ABF82F2E1604515F00A3B8DF /* iOS6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 		ABBFBD5414035B4A00A37E50 /* TableViewPerformance */ = {
 			isa = PBXGroup;
 			children = (
-				AB070C2A14062BFB005805FA /* ios5.png */,
+				ABF82F2E1604515F00A3B8DF /* iOS6.png */,
 				ABBFBD5D14035B4A00A37E50 /* TableViewPerformanceAppDelegate.h */,
 				ABBFBD5E14035B4A00A37E50 /* TableViewPerformanceAppDelegate.m */,
 				ABBFBD6014035B4A00A37E50 /* MainWindow.xib */,
@@ -176,7 +176,7 @@
 				ABBFBD6214035B4A00A37E50 /* MainWindow.xib in Resources */,
 				ABBFBD6814035B4A00A37E50 /* TableViewPerformanceViewController.xib in Resources */,
 				ABBFBD7214035D3500A37E50 /* CustomCell.xib in Resources */,
-				AB070C2B14062BFB005805FA /* ios5.png in Resources */,
+				ABF82F2F1604515F00A3B8DF /* iOS6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
