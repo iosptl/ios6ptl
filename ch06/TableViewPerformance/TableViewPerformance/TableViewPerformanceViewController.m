@@ -80,7 +80,7 @@
 }
 */
 
-// table with with normal XIB based cells
+// table with normal XIB based cells
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"CustomCell";
@@ -88,7 +88,8 @@
 	CustomCell *cell = (CustomCell*)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
 	if (cell == nil) {
 		
-		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:self options:nil];
+    
+		NSArray *nib = [[UINib nibWithNibName:@"CustomCell" bundle:nil] instantiateWithOwner:self options:nil];
 		cell = (CustomCell*)[nib objectAtIndex:0];
 	}
 	
@@ -96,7 +97,7 @@
     cell.titleLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
     cell.subTitleLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
     cell.timeTitleLabel.text = @"yesterday";
-    cell.imageView.image = [UIImage imageNamed:@"ios5"];
+    cell.thumbnailImage.image = [UIImage imageNamed:@"iOS6"];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 

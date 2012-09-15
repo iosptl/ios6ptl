@@ -69,7 +69,7 @@
 	LabelTextFieldCell *cell = (LabelTextFieldCell*)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
 	if (cell == nil) {
 		
-		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"LabelTextFieldCell" owner:self options:nil];
+    NSArray *nib = [[UINib nibWithNibName:@"LabelTextFieldCell" bundle:nil] instantiateWithOwner:self options:nil];
 		cell = (LabelTextFieldCell*)[nib objectAtIndex:0];
 	}
 	
