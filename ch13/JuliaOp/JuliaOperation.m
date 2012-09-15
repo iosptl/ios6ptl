@@ -24,7 +24,6 @@ complex long double f(const complex long double z,
 }
 
 - (void)main {
-//  printf("Start:%s\n", [NSThread currentThread].description.UTF8String);
   NSUInteger height = self.height;
   NSUInteger width = self.width;
   

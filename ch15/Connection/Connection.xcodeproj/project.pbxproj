@@ -31,8 +31,8 @@
 		FB11838B13E7563F00E13D59 /* ConnectionAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionAppDelegate.h; sourceTree = "<group>"; };
 		FB11838C13E7563F00E13D59 /* ConnectionAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionAppDelegate.m; sourceTree = "<group>"; };
 		FB11838F13E7563F00E13D59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		FB11839113E7563F00E13D59 /* ConnectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionViewController.h; sourceTree = "<group>"; };
-		FB11839213E7563F00E13D59 /* ConnectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionViewController.m; sourceTree = "<group>"; };
+		FB11839113E7563F00E13D59 /* ConnectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConnectionViewController.h; path = Connection/ConnectionViewController.h; sourceTree = "<group>"; };
+		FB11839213E7563F00E13D59 /* ConnectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ConnectionViewController.m; path = Connection/ConnectionViewController.m; sourceTree = "<group>"; };
 		FBB097CA13E84F2B00F732C1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FBC6861C13EC7946006238F6 /* My Example Server.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "My Example Server.cer"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +55,8 @@
 		FB11836D13E7563F00E13D59 = {
 			isa = PBXGroup;
 			children = (
+				FB11839113E7563F00E13D59 /* ConnectionViewController.h */,
+				FB11839213E7563F00E13D59 /* ConnectionViewController.m */,
 				FBB097CA13E84F2B00F732C1 /* Security.framework */,
 				FB11838213E7563F00E13D59 /* Connection */,
 				FB11837B13E7563F00E13D59 /* Frameworks */,
@@ -86,8 +88,6 @@
 				FB11838B13E7563F00E13D59 /* ConnectionAppDelegate.h */,
 				FB11838C13E7563F00E13D59 /* ConnectionAppDelegate.m */,
 				FB11838E13E7563F00E13D59 /* MainStoryboard.storyboard */,
-				FB11839113E7563F00E13D59 /* ConnectionViewController.h */,
-				FB11839213E7563F00E13D59 /* ConnectionViewController.m */,
 				FB11838313E7563F00E13D59 /* Supporting Files */,
 			);
 			path = Connection;

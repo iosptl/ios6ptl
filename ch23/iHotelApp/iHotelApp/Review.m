@@ -1,15 +1,17 @@
 //
 //  Review.m
 //  
-//
-//  Created by Mugunth Kumar on 28/05/11.
-//  Copyright 2011 Steinlogic. All rights reserved.
-//
 
 #import "Review.h"
 
 
 @implementation Review
+
+@synthesize rating = rating_;
+@synthesize reviewDate = reviewDate_;
+@synthesize reviewerName = reviewerName_;
+@synthesize reviewId = reviewId_;
+@synthesize reviewText = reviewText_;
 
 - (id)init
 {

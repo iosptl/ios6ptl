@@ -9,11 +9,9 @@
 #import "DirectoryViewController.h"
 
 @implementation DirectoryViewController
-@synthesize path=path_;
-@synthesize contents=contents_;
 
 - (void)setPath:(NSString *)path {
-  path_ = path;
+  _path = path;
   [self setTitle:[path lastPathComponent]];
 }
 
