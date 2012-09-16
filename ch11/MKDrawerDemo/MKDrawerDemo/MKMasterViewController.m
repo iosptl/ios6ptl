@@ -27,7 +27,8 @@
   @"Melbourne", @"Sydney", @"San Francisco", @"Los Angeles", @"New York", @"London",
   @"Tokyo", @"Paris", @"Milan"];
   
-  NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MKControlsCell" owner:self options:nil];
+  
+  NSArray *nib = [[UINib nibWithNibName:@"MKControlsCell" bundle:nil] instantiateWithOwner:self options:nil];
   self.controlsCell = (MKControlsCell*)[nib objectAtIndex:0];
   self.selectedIndexPath = nil;
 }

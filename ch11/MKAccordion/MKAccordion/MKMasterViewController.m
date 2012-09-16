@@ -113,7 +113,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
   
-  MKAccordionButton *button = [[[NSBundle mainBundle] loadNibNamed:@"MKAccordionButton" owner:self options:nil] objectAtIndex:0];
+  MKAccordionButton *button = [[[UINib nibWithNibName:@"MKAccordionButton" bundle:nil] instantiateWithOwner:self options:nil] objectAtIndex:0];
 	
   [button.mainButton setTitle:[[self.objects allKeys] objectAtIndex:section]
                      forState:UIControlStateNormal];

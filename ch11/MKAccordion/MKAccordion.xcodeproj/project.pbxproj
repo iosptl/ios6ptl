@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABA070CF1605757D003B5D7A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA070CE1605757D003B5D7A /* Default-568h@2x.png */; };
+		ABA070D21605759A003B5D7A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA070D11605759A003B5D7A /* QuartzCore.framework */; };
 		ABA4BBB515BE562E0008F660 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BBB415BE562E0008F660 /* UIKit.framework */; };
 		ABA4BBB715BE562E0008F660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BBB615BE562E0008F660 /* Foundation.framework */; };
 		ABA4BBB915BE562E0008F660 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BBB815BE562E0008F660 /* CoreGraphics.framework */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABA070CE1605757D003B5D7A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ABA070D11605759A003B5D7A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ABA4BBB015BE562E0008F660 /* MKAccordion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKAccordion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA4BBB415BE562E0008F660 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABA4BBB615BE562E0008F660 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA070D21605759A003B5D7A /* QuartzCore.framework in Frameworks */,
 				ABA4BBB515BE562E0008F660 /* UIKit.framework in Frameworks */,
 				ABA4BBB715BE562E0008F660 /* Foundation.framework in Frameworks */,
 				ABA4BBB915BE562E0008F660 /* CoreGraphics.framework in Frameworks */,
@@ -55,6 +60,7 @@
 		ABA4BBA515BE562D0008F660 = {
 			isa = PBXGroup;
 			children = (
+				ABA070CE1605757D003B5D7A /* Default-568h@2x.png */,
 				ABA4BBBA15BE562E0008F660 /* MKAccordion */,
 				ABA4BBB315BE562E0008F660 /* Frameworks */,
 				ABA4BBB115BE562E0008F660 /* Products */,
@@ -72,6 +78,7 @@
 		ABA4BBB315BE562E0008F660 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABA070D11605759A003B5D7A /* QuartzCore.framework */,
 				ABA4BBB415BE562E0008F660 /* UIKit.framework */,
 				ABA4BBB615BE562E0008F660 /* Foundation.framework */,
 				ABA4BBB815BE562E0008F660 /* CoreGraphics.framework */,
@@ -161,6 +168,7 @@
 				ABA4BBBF15BE562E0008F660 /* InfoPlist.strings in Resources */,
 				ABA4BBC815BE562E0008F660 /* MainStoryboard.storyboard in Resources */,
 				ABA4BBD815BE5BF30008F660 /* MKAccordionButton.xib in Resources */,
+				ABA070CF1605757D003B5D7A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +294,7 @@
 				ABA4BBD315BE562E0008F660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

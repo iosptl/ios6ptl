@@ -22,6 +22,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
   self.numberOfSections = 1;
   self.pageCount = 1;
+  self.title = NSLocalizedString(@"Infinite Scrolling", @"");
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABA070C016057502003B5D7A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA070BF16057502003B5D7A /* Default-568h@2x.png */; };
 		ABA4BC7D15BFC73B0008F660 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BC7C15BFC73B0008F660 /* UIKit.framework */; };
 		ABA4BC7F15BFC73B0008F660 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BC7E15BFC73B0008F660 /* Foundation.framework */; };
 		ABA4BC8115BFC73B0008F660 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA4BC8015BFC73B0008F660 /* CoreGraphics.framework */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABA070BF16057502003B5D7A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		ABA4BC7815BFC73B0008F660 /* MKDrawerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKDrawerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA4BC7C15BFC73B0008F660 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABA4BC7E15BFC73B0008F660 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,6 +57,7 @@
 		ABA4BC6D15BFC73B0008F660 = {
 			isa = PBXGroup;
 			children = (
+				ABA070BF16057502003B5D7A /* Default-568h@2x.png */,
 				ABA4BC8215BFC73B0008F660 /* MKDrawerDemo */,
 				ABA4BC7B15BFC73B0008F660 /* Frameworks */,
 				ABA4BC7915BFC73B0008F660 /* Products */,
@@ -161,6 +164,7 @@
 				ABA4BC8715BFC73B0008F660 /* InfoPlist.strings in Resources */,
 				ABA4BC9015BFC73B0008F660 /* MainStoryboard.storyboard in Resources */,
 				ABA4BCA415BFCA830008F660 /* MKControlsCell.xib in Resources */,
+				ABA070C016057502003B5D7A /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +290,7 @@
 				ABA4BC9B15BFC73C0008F660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
