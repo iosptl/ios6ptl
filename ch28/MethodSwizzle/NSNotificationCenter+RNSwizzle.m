@@ -11,12 +11,13 @@
 
 @implementation NSNotificationCenter (RNSwizzle)
 
-static IMP sOrigAddObserver = NULL;
+typedef void (*voidIMP)(id, SEL, ...);
+static voidIMP sOrigAddObserver = NULL;
 
 static void MYAddObserver(id self, SEL _cmd, id observer, 
                           SEL selector,
                           NSString *name,
-                          id sender) {
+                          id object) {
   NSLog(@"Adding observer: %@", observer);
   
   // Call the old implementation
@@ -24,7 +25,7 @@ static void MYAddObserver(id self, SEL _cmd, id observer,
            @"Original addObserver: method not found.");
   if (sOrigAddObserver) {
     sOrigAddObserver(self, _cmd, observer, selector, name, 
-                     sender);
+                     object);
   }
 }
 

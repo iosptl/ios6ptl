@@ -2,8 +2,27 @@
 //  ColumnView.m
 //  Columns
 //
-//  Created by Rob Napier on 8/26/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Rob Napier
+//
+//  This code is licensed under the MIT License:
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a
+//  copy of this software and associated documentation files (the "Software"),
+//  to deal in the Software without restriction, including without limitation
+//  the rights to use, copy, modify, merge, publish, distribute, sublicense,
+//  and/or sell copies of the Software, and to permit persons to whom the
+//  Software is furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+//  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+//  DEALINGS IN THE SOFTWARE.
 //
 
 #import "ColumnView.h"
@@ -11,38 +30,7 @@
 
 static const CFIndex kColumnCount = 3;
 
-@interface CustomTextPosition : UITextPosition
-@property (nonatomic, readwrite, assign) NSUInteger index;
-+ (CustomTextPosition *)textPositionForIndex:(NSUInteger)index;
-- (NSRange)rangeToPosition:(CustomTextPosition *)position;
-@end
-
-@implementation CustomTextPosition
-+ (CustomTextPosition *)textPositionForIndex:(NSUInteger)index {
-  CustomTextPosition *position = [CustomTextPosition new];
-  position.index = index;
-  return position;
-}
-
-- (NSRange)rangeToPosition:(CustomTextPosition *)position {
-  return NSMakeRange(self.index, position.index - position.index);
-}
-@end
-
-@interface CustomTextRange : UITextRange
-@property (nonatomic, readwrite, )
-- (NSRange)range;
-@end
-
-@implementation CustomTextRange
-- (NSRange)range {
-  return [(CustomTextPosition *)(self.start) rangeToPosition:(CustomTextPosition *)(self.end)];
-}
-@end
-
-
 @interface ColumnView ()
-@property (nonatomic, readwrite, strong) NSMutableAttributedString *storage;
 @property (nonatomic, readwrite, assign) CFIndex mode;
 @end
 
@@ -164,39 +152,27 @@ static const CFIndex kColumnCount = 3;
     // Flip the view's context. Core Text runs bottom to top, even 
     // on iPad, and the view is much simpler if we do everything in
     // Mac coordinates.
-//    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
-//    CGAffineTransformTranslate(transform, 0, -self.bounds.size.height);
-//    self.transform = transform;
+    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
+    CGAffineTransformTranslate(transform, 0, -self.bounds.size.height);
+    self.transform = transform;
     self.backgroundColor = [UIColor whiteColor];
   }
   return self;
 }
 
-- (NSAttributedString *)attributedText {
-  return [self.storage copy];
-}
-
-- (void)setAttributedText:(NSAttributedString *)attributedText {
-  _storage = [attributedText mutableCopy];
-}
-
 - (void)drawRect:(CGRect)rect
 {
-  if (self.storage == nil)
+  if (self.attributedString == nil)
   {
     return;
   }
   
+  // Initialize the context (always initialize your text matrix)
   CGContextRef context = UIGraphicsGetCurrentContext();
-
-  // Flip the context (and always initialize your text matrix)
-  CGContextSetTextMatrix( context, CGAffineTransformIdentity );
-  CGContextTranslateCTM( context, rect.origin.x, rect.origin.y );
-  CGContextScaleCTM( context, 1.0f, -1.0f );
-  CGContextTranslateCTM( context, rect.origin.x, - ( rect.origin.y + rect.size.height ) );
-
+  CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+  
   CFAttributedStringRef 
-  attrString = (__bridge CFTypeRef)self.storage;
+  attrString = (__bridge CFTypeRef)self.attributedString;
   
   CTFramesetterRef
   framesetter = CTFramesetterCreateWithAttributedString(attrString);
@@ -222,81 +198,9 @@ static const CFIndex kColumnCount = 3;
   CFRelease(framesetter);
 }
 
-//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-//  self.mode = (self.mode + 1 ) % 4;
-//  [self setNeedsDisplay];
-//}
-
-#pragma mark UITextInput
-- (NSString *)textInRange:(UITextRange *)range
-{
-  return [self.storage.string substringWithRange:range.range];
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+  self.mode = (self.mode + 1 ) % 4;
+  [self setNeedsDisplay];
 }
-
-- (void)replaceRange:(UITextRange *)range withText:(NSString *)text
-{
-  [self.storage replaceCharactersInRange:range.range withString:text];
-}
-
-//@property (readwrite, copy) UITextRange *selectedTextRange;
-//
-///* If text can be selected, it can be marked. Marked text represents provisionally
-// * inserted text that has yet to be confirmed by the user.  It requires unique visual
-// * treatment in its display.  If there is any marked text, the selection, whether a
-// * caret or an extended range, always resides witihin.
-// *
-// * Setting marked text either replaces the existing marked text or, if none is present,
-// * inserts it from the current selection. */
-//
-//@property (nonatomic, readonly) UITextRange *markedTextRange;                       // Nil if no marked text.
-//@property (nonatomic, copy) NSDictionary *markedTextStyle;                          // Describes how the marked text should be drawn.
-
-//- (void)setMarkedText:(NSString *)markedText selectedRange:(NSRange)selectedRange;  // selectedRange is a range within the markedText
-//- (void)unmarkText;
-//
-///* The end and beginning of the the text document. */
-- (UITextPosition *)beginningOfDocument {
-  return [CustomTextPosition textPositionForIndex:0];
-}
-
-- (UITextPosition *)endOfDocument {
-  return [CustomTextPosition textPositionForIndex:self.attributedText.length];
-}
-
-- (UITextRange *)textRangeFromPosition:(UITextPosition *)fromPosition toPosition:(UITextPosition *)toPosition {
-//- (UITextPosition *)positionFromPosition:(UITextPosition *)position offset:(NSInteger)offset;
-//- (UITextPosition *)positionFromPosition:(UITextPosition *)position inDirection:(UITextLayoutDirection)direction offset:(NSInteger)offset;
-//
-///* Simple evaluation of positions */
-//- (NSComparisonResult)comparePosition:(UITextPosition *)position toPosition:(UITextPosition *)other;
-//- (NSInteger)offsetFromPosition:(UITextPosition *)from toPosition:(UITextPosition *)toPosition;
-//
-///* A system-provied input delegate is assigned when the system is interested in input changes. */
-//@property (nonatomic, assign) id <UITextInputDelegate> inputDelegate;
-//
-///* A tokenizer must be provided to inform the text input system about text units of varying granularity. */
-//@property (nonatomic, readonly) id <UITextInputTokenizer> tokenizer;
-//
-///* Layout questions. */
-//- (UITextPosition *)positionWithinRange:(UITextRange *)range farthestInDirection:(UITextLayoutDirection)direction;
-//- (UITextRange *)characterRangeByExtendingPosition:(UITextPosition *)position inDirection:(UITextLayoutDirection)direction;
-//
-///* Writing direction */
-//- (UITextWritingDirection)baseWritingDirectionForPosition:(UITextPosition *)position inDirection:(UITextStorageDirection)direction;
-//- (void)setBaseWritingDirection:(UITextWritingDirection)writingDirection forRange:(UITextRange *)range;
-//
-///* Geometry used to provide, for example, a correction rect. */
-//- (CGRect)firstRectForRange:(UITextRange *)range;
-//- (CGRect)caretRectForPosition:(UITextPosition *)position;
-//- (NSArray *)selectionRectsForRange:(UITextRange *)range NS_AVAILABLE_IOS(6_0);       // Returns an array of UITextSelectionRects
-//
-///* Hit testing. */
-//- (UITextPosition *)closestPositionToPoint:(CGPoint)point;
-//- (UITextPosition *)closestPositionToPoint:(CGPoint)point withinRange:(UITextRange *)range;
-//- (UITextRange *)characterRangeAtPoint:(CGPoint)point;
-//
-//
-//@end
-
 
 @end

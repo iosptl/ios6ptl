@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FBBF3A4F160531360093BD67 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBBF3A4E160531360093BD67 /* Default-568h@2x.png */; };
 		FBC681E6141D173C00EDCC59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC681E5141D173C00EDCC59 /* UIKit.framework */; };
 		FBC681E8141D173C00EDCC59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC681E7141D173C00EDCC59 /* Foundation.framework */; };
 		FBC681EA141D173C00EDCC59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC681E9141D173C00EDCC59 /* CoreGraphics.framework */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FBBF3A4E160531360093BD67 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBC681E1141D173C00EDCC59 /* CoreFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC681E5141D173C00EDCC59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBC681E7141D173C00EDCC59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,8 +47,8 @@
 		FBC681D6141D173B00EDCC59 = {
 			isa = PBXGroup;
 			children = (
-				FBC681FC141D18A100EDCC59 /* MYStringConversion.c */,
 				FBC681FD141D18A100EDCC59 /* MYStringConversion.h */,
+				FBC681FC141D18A100EDCC59 /* MYStringConversion.c */,
 				FBC681F1141D173C00EDCC59 /* main.m */,
 				FBC681EB141D173C00EDCC59 /* CoreFoundation */,
 				FBC681E4141D173C00EDCC59 /* Frameworks */,
@@ -83,6 +85,7 @@
 		FBC681EC141D173C00EDCC59 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FBBF3A4E160531360093BD67 /* Default-568h@2x.png */,
 				FBC681ED141D173C00EDCC59 /* CoreFoundation-Info.plist */,
 				FBC681EE141D173C00EDCC59 /* InfoPlist.strings */,
 				FBC681F3141D173C00EDCC59 /* CoreFoundation-Prefix.pch */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC681F0141D173C00EDCC59 /* InfoPlist.strings in Resources */,
+				FBBF3A4F160531360093BD67 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +194,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -209,7 +213,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -258,6 +262,7 @@
 				FBC681FB141D173C00EDCC59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
