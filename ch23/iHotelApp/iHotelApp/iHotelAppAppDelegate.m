@@ -7,20 +7,18 @@
 
 #import "iHotelAppViewController.h"
 
+NSString* const kBaseURL = @"restfulengine.iosptl.com";
+
 @implementation iHotelAppAppDelegate
 
-
-@synthesize window=_window;
-
-@synthesize viewController=_viewController;
-
-@synthesize engine;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
      
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = self.navigationController;
+    self.engine = [[RESTfulEngine alloc] initWithHostName:kBaseURL];
+    [self.engine useCache];
     [self.window makeKeyAndVisible];
     return YES;
 }

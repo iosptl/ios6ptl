@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ABA070B21605742F003B5D7A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA070B11605742F003B5D7A /* Default-568h@2x.png */; };
+		ABA070E31605782B003B5D7A /* iOS6.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA070E21605782B003B5D7A /* iOS6.png */; };
 		ABC1C8B715AAD33E0033ECF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1C8B615AAD33E0033ECF0 /* UIKit.framework */; };
 		ABC1C8B915AAD33E0033ECF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1C8B815AAD33E0033ECF0 /* Foundation.framework */; };
 		ABC1C8BB15AAD33E0033ECF0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC1C8BA15AAD33E0033ECF0 /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		ABA070B11605742F003B5D7A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		ABA070E21605782B003B5D7A /* iOS6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iOS6.png; sourceTree = "<group>"; };
 		ABC1C8B215AAD33E0033ECF0 /* iOS6PullToRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS6PullToRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC1C8B615AAD33E0033ECF0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABC1C8B815AAD33E0033ECF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				ABA070B11605742F003B5D7A /* Default-568h@2x.png */,
+				ABA070E21605782B003B5D7A /* iOS6.png */,
 				ABC1C8BC15AAD33E0033ECF0 /* iOS6PullToRefresh */,
 				ABC1C8B515AAD33E0033ECF0 /* Frameworks */,
 				ABC1C8B315AAD33E0033ECF0 /* Products */,
@@ -177,6 +180,7 @@
 				ABC1C8DE15AADAB70033ECF0 /* RefreshArrow.png in Resources */,
 				ABC1C8DF15AADAB70033ECF0 /* RefreshArrow@2x.png in Resources */,
 				ABA070B21605742F003B5D7A /* Default-568h@2x.png in Resources */,
+				ABA070E31605782B003B5D7A /* iOS6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,10 +9,6 @@
 #import "NonRepeatingCellsExampleViewController.h"
 
 @implementation NonRepeatingCellsExampleViewController
-@synthesize mainTable = _mainTable;
-@synthesize headerCell = _headerCell;
-@synthesize bodyCell = _bodyCell;
-@synthesize footerCell = _footerCell;
 
 - (void)didReceiveMemoryWarning
 {
@@ -20,27 +16,6 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-    self.mainTable = nil;
-    self.headerCell = nil;
-    self.bodyCell = nil;
-    self.footerCell = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

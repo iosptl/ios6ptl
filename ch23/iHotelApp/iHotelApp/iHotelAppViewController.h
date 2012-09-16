@@ -4,17 +4,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RESTEngine.h"
+#import "RESTfulEngine.h"
 
-@interface iHotelAppViewController : UIViewController<RESTEngineDelegate> {
-    
-}
+@interface iHotelAppViewController : UIViewController
 
-@property (nonatomic, strong) RESTRequest *menuRequest; 
-
--(IBAction) loginButtonTapped:(id) sender;
--(IBAction) fetchMenuItems:(id) sender;
-
--(IBAction) simulateServerError:(id) sender;
--(IBAction) simulateRequestError:(id) sender;
 @end

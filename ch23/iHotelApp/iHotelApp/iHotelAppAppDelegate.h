@@ -4,7 +4,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RESTEngine.h"
+#import "RESTfulEngine.h"
 #define AppDelegate ((iHotelAppAppDelegate *)[UIApplication sharedApplication].delegate)
 
 @class iHotelAppViewController;
@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 
-@property (nonatomic, strong) IBOutlet iHotelAppViewController *viewController;
+@property (nonatomic, strong) IBOutlet UINavigationController *navigationController;
 
-@property (nonatomic, strong) RESTEngine *engine;
+@property (nonatomic, strong) RESTfulEngine *engine;
 @end

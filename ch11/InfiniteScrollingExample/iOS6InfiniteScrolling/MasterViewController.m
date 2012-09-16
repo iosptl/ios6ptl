@@ -79,7 +79,7 @@
   cell.textLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
   cell.detailTextLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
   
-  cell.imageView.image = [UIImage imageNamed:@"ios5"];
+  cell.imageView.image = [UIImage imageNamed:@"iOS6"];
   
   cell.selectionStyle = UITableViewCellSelectionStyleNone;
   return cell;
