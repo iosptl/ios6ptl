@@ -113,8 +113,8 @@
 - (BOOL) multitaskingCapable
 {
 	BOOL backgroundSupported = NO;
-	if ([self respondsToSelector:@selector(isMultitaskingSupported)])
-		backgroundSupported = self.multitaskingCapable;
+	if ([self respondsToSelector:@selector(multitaskingSupported)])
+		backgroundSupported = self.multitaskingSupported;
 	
 	return backgroundSupported;
 }

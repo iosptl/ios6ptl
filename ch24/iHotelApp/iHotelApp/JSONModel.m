@@ -15,7 +15,6 @@
 {
     if((self = [super init]))
     {
-        self = [self init];
         [self setValuesForKeysWithDictionary:jsonObject];
     }
     return self;

@@ -11,16 +11,6 @@
 
 @implementation Review
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
 //=========================================================== 
 //  Keyed Archiving
 //
