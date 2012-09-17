@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB95FB1B1607773200210BD7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB95FB1A1607773200210BD7 /* Default-568h@2x.png */; };
 		FBA0554B13CE43E100565C60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0554A13CE43E100565C60 /* UIKit.framework */; };
 		FBA0554D13CE43E100565C60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0554C13CE43E100565C60 /* Foundation.framework */; };
 		FBA0554F13CE43E100565C60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA0554E13CE43E100565C60 /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB95FB1A1607773200210BD7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBA0554613CE43E100565C60 /* ViewAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA0554A13CE43E100565C60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBA0554C13CE43E100565C60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +97,7 @@
 		FBA0555113CE43E100565C60 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB95FB1A1607773200210BD7 /* Default-568h@2x.png */,
 				FBA0555213CE43E100565C60 /* ViewAnimation-Info.plist */,
 				FBA0555313CE43E100565C60 /* InfoPlist.strings */,
 				FBA0555613CE43E100565C60 /* main.m */,
@@ -155,6 +158,7 @@
 			files = (
 				FBA0555513CE43E100565C60 /* InfoPlist.strings in Resources */,
 				FBA0555E13CE43E100565C60 /* MainStoryboard.storyboard in Resources */,
+				FB95FB1B1607773200210BD7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
