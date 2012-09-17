@@ -11,6 +11,7 @@
 		FB23C83D13F1AA3900D8D380 /* CPCryptController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB23C83C13F1AA3900D8D380 /* CPCryptController.m */; };
 		FB7CBB5413F16C5700907980 /* RNCryptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7CBB5313F16C5700907980 /* RNCryptManager.m */; };
 		FB7CBB5713F1730F00907980 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7CBB5613F1730F00907980 /* Security.framework */; };
+		FB95FB141607749E00210BD7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB95FB131607749E00210BD7 /* Default-568h@2x.png */; };
 		FB9616D313F168C1002129A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9616D213F168C1002129A8 /* UIKit.framework */; };
 		FB9616D513F168C1002129A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9616D413F168C1002129A8 /* Foundation.framework */; };
 		FB9616DB13F168C1002129A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB9616D913F168C1002129A8 /* InfoPlist.strings */; };
@@ -33,6 +34,7 @@
 		FB7CBB5213F16C5700907980 /* RNCryptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNCryptManager.h; path = CryptPic/RNCryptManager.h; sourceTree = "<group>"; };
 		FB7CBB5313F16C5700907980 /* RNCryptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNCryptManager.m; path = CryptPic/RNCryptManager.m; sourceTree = "<group>"; };
 		FB7CBB5613F1730F00907980 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FB95FB131607749E00210BD7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB9616CE13F168C1002129A8 /* CryptPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9616D213F168C1002129A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB9616D413F168C1002129A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,7 +74,6 @@
 			children = (
 				FB7CBB5213F16C5700907980 /* RNCryptManager.h */,
 				FB7CBB5313F16C5700907980 /* RNCryptManager.m */,
-				FB7CBB5613F1730F00907980 /* Security.framework */,
 				FB9616D613F168C1002129A8 /* CryptPic */,
 				FB9616D113F168C1002129A8 /* Frameworks */,
 				FB9616CF13F168C1002129A8 /* Products */,
@@ -90,6 +91,7 @@
 		FB9616D113F168C1002129A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB7CBB5613F1730F00907980 /* Security.framework */,
 				FB9616D213F168C1002129A8 /* UIKit.framework */,
 				FB9616D413F168C1002129A8 /* Foundation.framework */,
 			);
@@ -122,6 +124,7 @@
 		FB9616D713F168C1002129A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FB95FB131607749E00210BD7 /* Default-568h@2x.png */,
 				FB9616D813F168C1002129A8 /* CryptPic-Info.plist */,
 				FB9616D913F168C1002129A8 /* InfoPlist.strings */,
 				FB9616DC13F168C1002129A8 /* main.m */,
@@ -187,6 +190,7 @@
 				FB9616EB13F168C1002129A8 /* first@2x.png in Resources */,
 				FB9616F013F168C2002129A8 /* second.png in Resources */,
 				FB9616F213F168C2002129A8 /* second@2x.png in Resources */,
+				FB95FB141607749E00210BD7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
