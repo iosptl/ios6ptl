@@ -236,13 +236,11 @@ static double Distance(CGPoint a, CGPoint b) {
     [self prepareContext:context forRun:run];
     
     // Fetch the glyphs as a CGGlyph* array
-    __attribute__((objc_precise_lifetime))
     NSMutableData *glyphsData = [self glyphDataForRun:run];
     CGGlyph *glyphs = [glyphsData mutableBytes];
 
     // Fetch the advances as a CGSize* array. An advance is the
     // distance from one glyph to another.
-    __attribute__((objc_precise_lifetime))
     NSMutableData *advancesData = [self advanceDataForRun:run];
     CGSize *advances = [advancesData mutableBytes];
     
