@@ -7,6 +7,7 @@
 //
 
 #import "MKPhotoCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation MKPhotoCell
 
