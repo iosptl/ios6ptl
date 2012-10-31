@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1A390C16419F5700E387DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1A390B16419F5700E387DC /* Default-568h@2x.png */; };
 		FB1EACF91406A22600B2D03F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1EACF81406A22600B2D03F /* UIKit.framework */; };
 		FB1EACFB1406A22600B2D03F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1EACFA1406A22600B2D03F /* Foundation.framework */; };
 		FB1EAD011406A22600B2D03F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB1EACFF1406A22600B2D03F /* InfoPlist.strings */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1A390B16419F5700E387DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB1EACF41406A22600B2D03F /* SimpleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1EACF81406A22600B2D03F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB1EACFA1406A22600B2D03F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +59,7 @@
 		FB1EACE91406A22600B2D03F = {
 			isa = PBXGroup;
 			children = (
+				FB1A390B16419F5700E387DC /* Default-568h@2x.png */,
 				FB1EAD1A1406ABE700B2D03F /* CoreGraphics.framework */,
 				FB1EAD181406ABD100B2D03F /* QuartzCore.framework */,
 				FB1EAD151406AAD000B2D03F /* CoreTextLabel.h */,
@@ -161,6 +164,7 @@
 			files = (
 				FB1EAD011406A22600B2D03F /* InfoPlist.strings in Resources */,
 				FB1EAD0A1406A22600B2D03F /* MainStoryboard.storyboard in Resources */,
+				FB1A390C16419F5700E387DC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

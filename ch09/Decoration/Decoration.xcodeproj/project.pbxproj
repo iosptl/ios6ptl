@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BBF5B16419951002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF5A16419951002140CF /* Default-568h@2x.png */; };
 		FB8FCA2913D7222A0051C3FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8FCA2813D7222A0051C3FA /* UIKit.framework */; };
 		FB8FCA2B13D7222A0051C3FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8FCA2A13D7222A0051C3FA /* Foundation.framework */; };
 		FB8FCA2D13D7222A0051C3FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8FCA2C13D7222A0051C3FA /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BBF5A16419951002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB8FCA2413D7222A0051C3FA /* Decoration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decoration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8FCA2813D7222A0051C3FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB8FCA2A13D7222A0051C3FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +55,7 @@
 		FB8FCA1913D7222A0051C3FA = {
 			isa = PBXGroup;
 			children = (
+				FB1BBF5A16419951002140CF /* Default-568h@2x.png */,
 				FB8FCA3D13D7222A0051C3FA /* DecorationViewController.h */,
 				FB8FCA3E13D7222A0051C3FA /* DecorationViewController.m */,
 				FB8FCA4513D722680051C3FA /* QuartzCore.framework */,
@@ -154,6 +157,7 @@
 			files = (
 				FB8FCA3313D7222A0051C3FA /* InfoPlist.strings in Resources */,
 				FB8FCA3C13D7222A0051C3FA /* MainStoryboard.storyboard in Resources */,
+				FB1BBF5B16419951002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

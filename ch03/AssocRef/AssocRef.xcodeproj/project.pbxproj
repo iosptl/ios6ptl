@@ -15,6 +15,7 @@
 		FB2406C214212AA30092C720 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2406C114212AA30092C720 /* AppDelegate.m */; };
 		FB2406C514212AA30092C720 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2406C314212AA30092C720 /* MainStoryboard.storyboard */; };
 		FB2406C814212AA30092C720 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2406C714212AA30092C720 /* ViewController.m */; };
+		FB35F1201641969F003F59CA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB35F11F1641969F003F59CA /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		FB2406C414212AA30092C720 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		FB2406C614212AA30092C720 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FB2406C714212AA30092C720 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = AssocRef/ViewController.m; sourceTree = "<group>"; };
+		FB35F11F1641969F003F59CA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		FB2406A214212AA20092C720 = {
 			isa = PBXGroup;
 			children = (
+				FB35F11F1641969F003F59CA /* Default-568h@2x.png */,
 				FB2406C714212AA30092C720 /* ViewController.m */,
 				FB2406B714212AA30092C720 /* AssocRef */,
 				FB2406B014212AA30092C720 /* Frameworks */,
@@ -150,6 +153,7 @@
 			files = (
 				FB2406BC14212AA30092C720 /* InfoPlist.strings in Resources */,
 				FB2406C514212AA30092C720 /* MainStoryboard.storyboard in Resources */,
+				FB35F1201641969F003F59CA /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

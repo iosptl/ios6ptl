@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BBF33164198FB002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF32164198FB002140CF /* Default-568h@2x.png */; };
 		FB7213211425125C00ED8BCD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7213201425125C00ED8BCD /* UIKit.framework */; };
 		FB7213231425125C00ED8BCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7213221425125C00ED8BCD /* Foundation.framework */; };
 		FB7213251425125C00ED8BCD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7213241425125C00ED8BCD /* CoreGraphics.framework */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BBF32164198FB002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB72131C1425125C00ED8BCD /* TimeConsuming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeConsuming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7213201425125C00ED8BCD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB7213221425125C00ED8BCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,6 +52,7 @@
 		FB7213111425125C00ED8BCD = {
 			isa = PBXGroup;
 			children = (
+				FB1BBF32164198FB002140CF /* Default-568h@2x.png */,
 				FB7213361425125C00ED8BCD /* ViewController.m */,
 				FB7213261425125C00ED8BCD /* TimeConsuming */,
 				FB72131F1425125C00ED8BCD /* Frameworks */,
@@ -150,6 +153,7 @@
 			files = (
 				FB72132B1425125C00ED8BCD /* InfoPlist.strings in Resources */,
 				FB7213341425125C00ED8BCD /* MainStoryboard.storyboard in Resources */,
+				FB1BBF33164198FB002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

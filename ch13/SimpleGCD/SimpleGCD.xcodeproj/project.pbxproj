@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BBFAB16419B7B002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBFAA16419B7B002140CF /* Default-568h@2x.png */; };
 		FBE30D0013F9BE6D002686F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE30CFF13F9BE6D002686F2 /* UIKit.framework */; };
 		FBE30D0213F9BE6D002686F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE30D0113F9BE6D002686F2 /* Foundation.framework */; };
 		FBE30D0813F9BE6D002686F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBE30D0613F9BE6D002686F2 /* InfoPlist.strings */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BBFAA16419B7B002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBE30CFB13F9BE6D002686F2 /* SimpleGCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE30CFF13F9BE6D002686F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBE30D0113F9BE6D002686F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +49,7 @@
 		FBE30CF013F9BE6D002686F2 = {
 			isa = PBXGroup;
 			children = (
+				FB1BBFAA16419B7B002140CF /* Default-568h@2x.png */,
 				FBE30D0313F9BE6D002686F2 /* SimpleGCD */,
 				FBE30CFE13F9BE6D002686F2 /* Frameworks */,
 				FBE30CFC13F9BE6D002686F2 /* Products */,
@@ -146,6 +149,7 @@
 			files = (
 				FBE30D0813F9BE6D002686F2 /* InfoPlist.strings in Resources */,
 				FBE30D1113F9BE6D002686F2 /* MainStoryboard.storyboard in Resources */,
+				FB1BBFAB16419B7B002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

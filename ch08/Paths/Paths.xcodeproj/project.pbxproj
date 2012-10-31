@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BBF2C164198ED002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF2B164198ED002140CF /* Default-568h@2x.png */; };
 		FBF62EC41426A29000804CA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF62EC31426A29000804CA5 /* UIKit.framework */; };
 		FBF62EC61426A29000804CA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF62EC51426A29000804CA5 /* Foundation.framework */; };
 		FBF62EC81426A29000804CA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF62EC71426A29000804CA5 /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BBF2B164198ED002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBF62EBF1426A29000804CA5 /* Paths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF62EC31426A29000804CA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBF62EC51426A29000804CA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +55,7 @@
 		FBF62EB41426A28F00804CA5 = {
 			isa = PBXGroup;
 			children = (
+				FB1BBF2B164198ED002140CF /* Default-568h@2x.png */,
 				FBF62EE01426A2A900804CA5 /* FlowerView.h */,
 				FBF62EE11426A2A900804CA5 /* FlowerView.m */,
 				FBF62EC91426A29000804CA5 /* Paths */,
@@ -155,6 +158,7 @@
 			files = (
 				FBF62ECE1426A29000804CA5 /* InfoPlist.strings in Resources */,
 				FBF62ED71426A29000804CA5 /* MainStoryboard.storyboard in Resources */,
+				FB1BBF2C164198ED002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

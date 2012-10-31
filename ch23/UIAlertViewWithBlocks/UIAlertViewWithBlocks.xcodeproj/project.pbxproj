@@ -15,6 +15,7 @@
 		AB8FB47E13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FB47D13ED01E7008DA91D /* UIAlertViewWithBlocksAppDelegate.m */; };
 		AB8FB48513ED01E7008DA91D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8FB48313ED01E7008DA91D /* MainWindow.xib */; };
 		AB8FB49413ED01F3008DA91D /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FB49313ED01F3008DA91D /* UIAlertView+Blocks.m */; };
+		FB1A38F216419CF200E387DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1A38F116419CF200E387DC /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		AB8FB48413ED01E7008DA91D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		AB8FB49213ED01F3008DA91D /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		AB8FB49313ED01F3008DA91D /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		FB1A38F116419CF200E387DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		AB8FB45E13ED01E7008DA91D = {
 			isa = PBXGroup;
 			children = (
+				FB1A38F116419CF200E387DC /* Default-568h@2x.png */,
 				AB8FB47313ED01E7008DA91D /* UIAlertViewWithBlocks */,
 				AB8FB46C13ED01E7008DA91D /* Frameworks */,
 				AB8FB46A13ED01E7008DA91D /* Products */,
@@ -150,6 +153,7 @@
 			files = (
 				AB8FB47813ED01E7008DA91D /* InfoPlist.strings in Resources */,
 				AB8FB48513ED01E7008DA91D /* MainWindow.xib in Resources */,
+				FB1A38F216419CF200E387DC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BBF1F164198C2002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF1E164198C2002140CF /* Default-568h@2x.png */; };
 		FB423B2A13C506530009C21A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB423B2913C506530009C21A /* UIKit.framework */; };
 		FB423B2C13C506530009C21A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB423B2B13C506530009C21A /* Foundation.framework */; };
 		FB423B2E13C506530009C21A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB423B2D13C506530009C21A /* CoreGraphics.framework */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BBF1E164198C2002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB423B2513C506530009C21A /* Graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB423B2913C506530009C21A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB423B2B13C506530009C21A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +56,7 @@
 		FB423B1A13C506530009C21A = {
 			isa = PBXGroup;
 			children = (
+				FB1BBF1E164198C2002140CF /* Default-568h@2x.png */,
 				FB423B4A13C506820009C21A /* GraphView.h */,
 				FB423B4B13C506820009C21A /* GraphView.m */,
 				FB423B2F13C506530009C21A /* Graph */,
@@ -130,7 +133,7 @@
 		FB423B1C13C506530009C21A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = FB423B1F13C506530009C21A /* Build configuration list for PBXProject "Graph" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -157,6 +160,7 @@
 				FB423B3413C506530009C21A /* InfoPlist.strings in Resources */,
 				FB423B3D13C506530009C21A /* MainStoryboard.storyboard in Resources */,
 				FB423B3F13C506530009C21A /* GraphViewController.h in Resources */,
+				FB1BBF1F164198C2002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

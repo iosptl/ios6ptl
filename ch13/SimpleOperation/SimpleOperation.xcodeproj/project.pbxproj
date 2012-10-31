@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1A38BC16419B8B00E387DC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1A38BB16419B8B00E387DC /* Default-568h@2x.png */; };
 		FBE30D2A13F9C700002686F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE30D2913F9C700002686F2 /* UIKit.framework */; };
 		FBE30D2C13F9C700002686F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE30D2B13F9C700002686F2 /* Foundation.framework */; };
 		FBE30D3213F9C700002686F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBE30D3013F9C700002686F2 /* InfoPlist.strings */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1A38BB16419B8B00E387DC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FBE30D2513F9C700002686F2 /* SimpleOperation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleOperation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE30D2913F9C700002686F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FBE30D2B13F9C700002686F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +49,7 @@
 		FBE30D1A13F9C700002686F2 = {
 			isa = PBXGroup;
 			children = (
+				FB1A38BB16419B8B00E387DC /* Default-568h@2x.png */,
 				FBE30D3C13F9C700002686F2 /* ViewController.h */,
 				FBE30D3D13F9C700002686F2 /* ViewController.m */,
 				FBE30D2D13F9C700002686F2 /* SimpleOperation */,
@@ -146,6 +149,7 @@
 			files = (
 				FBE30D3213F9C700002686F2 /* InfoPlist.strings in Resources */,
 				FBE30D3B13F9C700002686F2 /* MainStoryboard.storyboard in Resources */,
+				FB1A38BC16419B8B00E387DC /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

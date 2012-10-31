@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BBF3A16419906002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF3916419906002140CF /* Default-568h@2x.png */; };
 		FB6BB8F713BBD1080023B4AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6BB8F613BBD1080023B4AD /* UIKit.framework */; };
 		FB6BB8F913BBD1080023B4AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6BB8F813BBD1080023B4AD /* Foundation.framework */; };
 		FB6BB8FB13BBD1080023B4AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6BB8FA13BBD1080023B4AD /* CoreGraphics.framework */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BBF3916419906002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB6BB8F213BBD1080023B4AD /* Transforms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transforms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6BB8F613BBD1080023B4AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB6BB8F813BBD1080023B4AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +56,7 @@
 		FB6BB8E713BBD1080023B4AD = {
 			isa = PBXGroup;
 			children = (
+				FB1BBF3916419906002140CF /* Default-568h@2x.png */,
 				FB6BB91413BBD1150023B4AD /* FlowerTransformView.h */,
 				FB6BB91513BBD1150023B4AD /* FlowerTransformView.m */,
 				FB6BB8FC13BBD1080023B4AD /* Transforms */,
@@ -130,7 +133,7 @@
 		FB6BB8E913BBD1080023B4AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = FB6BB8EC13BBD1080023B4AD /* Build configuration list for PBXProject "Transforms" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -157,6 +160,7 @@
 				FB6BB90113BBD1080023B4AD /* InfoPlist.strings in Resources */,
 				FB6BB90A13BBD1080023B4AD /* MainStoryboard.storyboard in Resources */,
 				FB6BB90C13BBD1080023B4AD /* TransformsViewController.h in Resources */,
+				FB1BBF3A16419906002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

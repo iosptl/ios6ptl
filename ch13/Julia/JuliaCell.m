@@ -65,11 +65,13 @@ complex long double f(complex long double z, complex long double c) {
                                                kCGImageAlphaNoneSkipLast);
   CGColorSpaceRelease(colorspace);
   
-  UIImage *image = [UIImage imageWithCGImage:CGBitmapContextCreateImage(context)
+  CGImageRef cgImage = CGBitmapContextCreateImage(context);
+  UIImage *image = [UIImage imageWithCGImage:cgImage
                     scale:self.contentScaleFactor orientation:UIImageOrientationUp];
   self.imageView.image = image;
   free(bits);
-
+  CGImageRelease(cgImage);
+  CGContextRelease(context);
 }
 
 - (void)configureWithSeed:(NSUInteger)seed

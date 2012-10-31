@@ -60,7 +60,7 @@ enum PhotoOrientation {
         [self.photoOrientation addObject:[NSNumber numberWithInt:PhotoOrientationPortrait]];
     }];
     
-    dispatch_async(dispatch_get_current_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
       
       self.photosList = photosArray;
       [self.collectionView reloadData];

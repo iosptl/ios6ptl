@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1BBF1816419863002140CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1BBF1716419863002140CF /* Default-568h@2x.png */; };
 		FB35E2D713BA633B0040212F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB35E2D613BA633B0040212F /* UIKit.framework */; };
 		FB35E2D913BA633B0040212F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB35E2D813BA633B0040212F /* Foundation.framework */; };
 		FB35E2DB13BA633B0040212F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB35E2DA13BA633B0040212F /* CoreGraphics.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB1BBF1716419863002140CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB35E2D213BA633B0040212F /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB35E2D613BA633B0040212F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB35E2D813BA633B0040212F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +59,7 @@
 		FB35E2C713BA633B0040212F = {
 			isa = PBXGroup;
 			children = (
+				FB1BBF1716419863002140CF /* Default-568h@2x.png */,
 				FB35E2F913BA9F020040212F /* MYView.h */,
 				FB35E2FA13BA9F020040212F /* MYView.m */,
 				FB35E2F713BA7E470040212F /* CoreImage.framework */,
@@ -134,7 +137,7 @@
 		FB35E2C913BA633B0040212F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = FB35E2CC13BA633B0040212F /* Build configuration list for PBXProject "Drawing" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -161,6 +164,7 @@
 				FB35E2E113BA633B0040212F /* InfoPlist.strings in Resources */,
 				FB35E2EC13BA633B0040212F /* DrawingViewController.h in Resources */,
 				FB76A49614269E4A00C31B11 /* MainStoryboard.storyboard in Resources */,
+				FB1BBF1816419863002140CF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

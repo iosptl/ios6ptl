@@ -18,6 +18,7 @@
 		FB1000D91417E41600431287 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1000D81417E41600431287 /* ViewController.m */; };
 		FB1000E11417E46B00431287 /* RNObserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1000E01417E46B00431287 /* RNObserverManager.m */; };
 		FB2A1C77141911BB004303E7 /* RNMainThreadTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2A1C76141911BB004303E7 /* RNMainThreadTrampoline.m */; };
+		FB5DB1F7164196B1004448BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB5DB1F6164196B1004448BD /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +36,11 @@
 		FB1000D51417E41600431287 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		FB1000D71417E41600431287 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FB1000D81417E41600431287 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FB1000DF1417E46B00431287 /* RNObserverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RNObserverManager.h; sourceTree = "<group>"; };
+		FB1000DF1417E46B00431287 /* RNObserverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNObserverManager.h; sourceTree = "<group>"; };
 		FB1000E01417E46B00431287 /* RNObserverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNObserverManager.m; sourceTree = "<group>"; };
 		FB2A1C75141911BB004303E7 /* RNMainThreadTrampoline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMainThreadTrampoline.h; sourceTree = "<group>"; };
 		FB2A1C76141911BB004303E7 /* RNMainThreadTrampoline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMainThreadTrampoline.m; sourceTree = "<group>"; };
+		FB5DB1F6164196B1004448BD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		FB1000B01417E41500431287 = {
 			isa = PBXGroup;
 			children = (
+				FB5DB1F6164196B1004448BD /* Default-568h@2x.png */,
 				FB1000DF1417E46B00431287 /* RNObserverManager.h */,
 				FB1000E01417E46B00431287 /* RNObserverManager.m */,
 				FB2A1C75141911BB004303E7 /* RNMainThreadTrampoline.h */,
@@ -164,6 +167,7 @@
 				FB1000CA1417E41500431287 /* InfoPlist.strings in Resources */,
 				FB1000D31417E41500431287 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FB1000D61417E41600431287 /* MainStoryboard_iPad.storyboard in Resources */,
+				FB5DB1F7164196B1004448BD /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

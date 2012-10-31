@@ -19,6 +19,7 @@
 		ABBFBD6214035B4A00A37E50 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBFBD6014035B4A00A37E50 /* MainWindow.xib */; };
 		ABBFBD6514035B4A00A37E50 /* NonRepeatingCellsExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBFBD6414035B4A00A37E50 /* NonRepeatingCellsExampleViewController.m */; };
 		ABBFBD6814035B4A00A37E50 /* NonRepeatingCellsExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBFBD6614035B4A00A37E50 /* NonRepeatingCellsExampleViewController.xib */; };
+		FB829197164196C700B2959C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB829196164196C700B2959C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		ABBFBD6314035B4A00A37E50 /* NonRepeatingCellsExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NonRepeatingCellsExampleViewController.h; sourceTree = "<group>"; };
 		ABBFBD6414035B4A00A37E50 /* NonRepeatingCellsExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NonRepeatingCellsExampleViewController.m; sourceTree = "<group>"; };
 		ABBFBD6714035B4A00A37E50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NonRepeatingCellsExampleViewController.xib; sourceTree = "<group>"; };
+		FB829196164196C700B2959C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		ABBFBD3F14035B4900A37E50 = {
 			isa = PBXGroup;
 			children = (
+				FB829196164196C700B2959C /* Default-568h@2x.png */,
 				ABBFBD5414035B4A00A37E50 /* NonRepeatingCellsExample */,
 				ABBFBD4D14035B4A00A37E50 /* Frameworks */,
 				ABBFBD4B14035B4900A37E50 /* Products */,
@@ -169,6 +172,7 @@
 				ABBFBD5914035B4A00A37E50 /* InfoPlist.strings in Resources */,
 				ABBFBD6214035B4A00A37E50 /* MainWindow.xib in Resources */,
 				ABBFBD6814035B4A00A37E50 /* NonRepeatingCellsExampleViewController.xib in Resources */,
+				FB829197164196C700B2959C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
