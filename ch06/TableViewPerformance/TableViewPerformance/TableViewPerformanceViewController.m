@@ -58,7 +58,7 @@
     cell.textLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
     
-    cell.imageView.image = [UIImage imageNamed:@"ios5"];
+    cell.imageView.image = [UIImage imageNamed:@"iOS6"];
 
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -105,7 +105,7 @@
     [cell setTitle:[NSString stringWithFormat:@"Row %d", indexPath.row] 
           subTitle:[NSString stringWithFormat:@"Row %d", indexPath.row] 
               time:@"yesterday"
-         thumbnail:[UIImage imageNamed:@"ios5"]];
+         thumbnail:[UIImage imageNamed:@"iOS6"]];
     
 	// other initialization goes here
 	return cell;
