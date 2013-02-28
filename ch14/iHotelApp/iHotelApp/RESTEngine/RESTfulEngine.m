@@ -10,6 +10,14 @@
 
 @implementation RESTfulEngine
 
+- (id) initWithHostName:(NSString*) hostName {
+  self = [super initWithHostName:hostName];
+  if (self) {
+    [self registerOperationSubclass:[RESTfulOperation class]];
+  }
+  return self;
+}
+
 -(NSString*) accessToken
 {
     if(!_accessToken)
