@@ -70,7 +70,7 @@
     cell.inputText.text = [self.data objectAtIndex:indexPath.row];
 	__weak NSMutableArray *dataWeak = self.data;
     cell.onTextEntered = ^(NSString* enteredString) {
-        [dataWeak insertObject:enteredString atIndex:indexPath.row];
+        [dataWeak setObject:enteredString atIndexedSubscript:indexPath.row];
     };
 
 	return cell;
