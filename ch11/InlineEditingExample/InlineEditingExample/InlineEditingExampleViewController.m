@@ -50,7 +50,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 15;
+    return [self.data count];
 }
 
 
@@ -68,9 +68,9 @@
 	
 	// other initialization goes here
     cell.inputText.text = [self.data objectAtIndex:indexPath.row];
+	__weak NSMutableArray *dataWeak = self.data;
     cell.onTextEntered = ^(NSString* enteredString) {
-        
-        [self.data insertObject:enteredString atIndex:indexPath.row];
+        [dataWeak setObject:enteredString atIndexedSubscript:indexPath.row];
     };
 
 	return cell;
