@@ -68,9 +68,9 @@
 	
 	// other initialization goes here
     cell.inputText.text = [self.data objectAtIndex:indexPath.row];
+	__weak NSMutableArray *dataWeak = self.data;
     cell.onTextEntered = ^(NSString* enteredString) {
-        
-        [self.data insertObject:enteredString atIndex:indexPath.row];
+        [dataWeak insertObject:enteredString atIndex:indexPath.row];
     };
 
 	return cell;
