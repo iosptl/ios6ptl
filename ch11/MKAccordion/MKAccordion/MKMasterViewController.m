@@ -51,8 +51,6 @@
     [self.tableView insertRowsAtIndexPaths:indexPaths
                           withRowAnimation:UITableViewRowAnimationFade];
   });
-  
-  [self.tableView endUpdates];
 }
 
 - (void)viewDidLoad
