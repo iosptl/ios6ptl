@@ -59,11 +59,13 @@
   
   self.loading = NO;
   
-  if(NSClassFromString(@"UIRefreshControl")) {
-    
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(refreshedByPullingTable:) forControlEvents:UIControlEventValueChanged];
-  } else {
+//  if(NSClassFromString(@"UIRefreshControl")) {
+//    
+//    self.refreshControl = [[UIRefreshControl alloc] init];
+//    [self.refreshControl addTarget:self action:@selector(refreshedByPullingTable:) forControlEvents:UIControlEventValueChanged];
+//  }
+//  else
+  {
     
     self.refreshHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.tableView.bounds.size.width, self.tableView.bounds.size.height)];
     
@@ -175,18 +177,22 @@
   
   if(indexPath.section == self.numberOfSections)  {
     
-    static NSString *CellIdentifier = @"LoadingCell";
-		
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-		if (cell == nil)
-		{
-			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-      UIActivityIndicatorView *newSpin = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-      [newSpin startAnimating];
-      [newSpin setFrame:CGRectMake( 15, 12, 20, 20) ];
-      [cell addSubview:newSpin];      
-		}
-    
+      static NSString *CellIdentifier = @"LoadingCell";
+      
+      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+      if (cell == nil)
+      {
+          cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+          UIActivityIndicatorView *newSpin = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+          [newSpin startAnimating];
+          [newSpin setFrame:CGRectMake( 15, 12, 20, 20) ];
+          [newSpin setTag:101];
+          [cell addSubview:newSpin];
+      }
+      
+      [(UIActivityIndicatorView *)[cell viewWithTag:101] startAnimating];      
+      
+      
     cell.textLabel.text = NSLocalizedString(@"Loading…", @"");
     cell.textLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0.5 alpha:1.0];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
